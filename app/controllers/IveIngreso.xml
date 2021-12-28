@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="IveIngreso" conflictDetection="overwriteChanges" label="Ive Ingreso" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"IVE_INGRESO"."ID_IVE_INGRESOS" "IDIveIngresos"
+	,"IVE_INGRESO"."IVE_ARCHIVOS_COD_IVE" "IveArchivosCodIve"
+	,"IVE_INGRESO"."LLAVE" "Llave"
+	,"IVE_INGRESO"."DICCIONARIO" "Diccionario"
+	,"IVE_INGRESO"."MONTOAPROXIMADO" "Montoaproximado"
+	,"IVE_INGRESO"."MON_TIPOPERSONA" "MonTipopersona"
+from "dbo"."IVE_INGRESO" "IVE_INGRESO"
+]]></text>
+    </command>
+    <command id="ID_IVE_INGRESOSIdentityCommand" type="Text" event="Inserted">
+      <text><![CDATA[select @@identity]]></text>
+      <output>
+        <fieldOutput fieldName="IDIveIngresos" />
+      </output>
+    </command>
+  </commands>
+  <fields>
+    <field name="IDIveIngresos" type="Int32" allowNulls="false" isPrimaryKey="true" label="Id Ive Ingresos" readOnly="true" />
+    <field name="IveArchivosCodIve" type="String" allowNulls="false" label="Ive Archivos Cod Ive" length="50" showInSummary="true" />
+    <field name="Llave" type="String" allowNulls="false" label="Llave" length="50" showInSummary="true" />
+    <field name="Diccionario" type="String" allowNulls="false" label="Diccionario" length="50" showInSummary="true" />
+    <field name="Montoaproximado" type="Double" label="Montoaproximado" showInSummary="true" />
+    <field name="MonTipopersona" type="Int32" allowNulls="false" label="Mon Tipopersona" showInSummary="true" />
+  </fields>
+  <views>
+    <view id="createForm1" type="Form" commandId="command1" label="New Ive Ingreso">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category headerText="FORMULARIO PARA INICIO DE RELACIONES" id="c9" flow="NewColumn" />
+        <category headerText="FORMULARIO IVE-NF-30" id="c8" />
+        <category id="c1">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="IveArchivosCodIve" columns="50" />
+            <dataField fieldName="Llave" columns="50" />
+            <dataField fieldName="Diccionario" columns="50" />
+            <dataField fieldName="Montoaproximado" columns="15" />
+            <dataField fieldName="MonTipopersona" columns="15" />
+          </dataFields>
+        </category>
+        <category headerText="Número o Código de Cliente" id="c2" />
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" commandArgument="Save" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" commandArgument="Save" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" commandArgument="SaveAndNew" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenLastCommandArgument="Save" whenView="createForm1" commandName="Select" whenClientScript="this.hasDetails()" />
+      <action id="a14" whenLastCommandName="Insert" whenLastCommandArgument="SaveAndNew" commandName="New" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" cssClass="EditIcon" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a5" />
+      <action id="a6" commandName="Import" commandArgument="createForm1" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag7" scope="ActionBar" headerText="Report">
+      <action id="a1" commandName="ReportAsPdf" />
+      <action id="a2" commandName="ReportAsImage" />
+      <action id="a3" commandName="ReportAsExcel" />
+      <action id="a4" commandName="ReportAsWord" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>

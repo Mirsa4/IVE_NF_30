@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="FORMULARIO_IVE_NF_30" alias="FORMULARIO_IVE_NF_30" created="2021-12-16T10:31:30" modified="2021-12-16T10:31:42" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys>
+    <foreignKey id="TheID_EMPRESA" parentTableSchema="dbo" parentTableName="ive_empresa" x="329" y="204">
+      <foreignKeyColumn columnName="ID_EMPRESA" parentColumnName="ID_EMPRESA" />
+    </foreignKey>
+  </foreignKeys>
+  <columns>
+    <column name="IVE_ARCHIVO_COD" fieldName="IveArchivoCod" label="Ive Archivo Cod" />
+    <column name="ID_EMPRESA" fieldName="IDEmpresa" label="Id Empresa" aliasColumnName="NOMBRE_EMPRESA" aliasForeignKey="TheID_EMPRESA" />
+    <column name="NOMBRE_EMPRESA" fieldName="TheidEmpresanombreEmpresa" label="IDEMPRESA Nombre Empresa" foreignKey="TheID_EMPRESA" />
+  </columns>
+</dataModel>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="ive_empresa" alias="ive_empresa" created="2021-12-14T17:26:15" modified="2021-12-14T17:26:18" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column name="ID_EMPRESA" fieldName="IDEmpresa" label="Id Empresa" />
+    <column name="NIT" fieldName="Nit" label="Nit" />
+    <column name="NOMBRE_EMPRESA" fieldName="NombreEmpresa" label="Nombre Empresa" />
+    <column name="DIRECCION" fieldName="Direccion" label="Direccion" />
+    <column name="TELEFONO" fieldName="Telefono" label="Telefono" />
+    <column name="ESTADO" fieldName="Estado" label="Estado" />
+  </columns>
+</dataModel>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="IVE_DATOS_PERSONALES" alias="IVE_DATOS_PERSONALES" created="2021-12-10T12:40:30" modified="2021-12-10T12:40:30" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column name="ID_IVE_DP" fieldName="IDIveDp" label="Id Ive Dp" />
+    <column name="LLAVE" fieldName="Llave" label="Llave" />
+    <column name="DICCIONARIO" fieldName="Diccionario" label="Diccionario" />
+    <column name="PRIMERAPELLIDO" fieldName="Primerapellido" label="Primerapellido" />
+    <column name="SEGUNDOAPELLIDO" fieldName="Segundoapellido" label="Segundoapellido" />
+    <column name="APELLIDOCASADA" fieldName="Apellidocasada" label="Apellidocasada" />
+    <column name="PRIMERNOMBRE" fieldName="Primernombre" label="Primernombre" />
+    <column name="SEGUNDONOMBRE" fieldName="Segundonombre" label="Segundonombre" />
+    <column name="OTROSNOMBRES" fieldName="Otrosnombres" label="Otrosnombres" />
+    <column name="FECHANACIMIENTO" fieldName="Fechanacimiento" label="Fechanacimiento" />
+    <column name="NACIONALIDAD1" fieldName="Nacionalidad1" label="Nacionalidad1" />
+    <column name="NACIONALIDAD2" fieldName="Nacionalidad2" label="Nacionalidad2" />
+    <column name="CONDICIONMIGRATORIA" fieldName="Condicionmigratoria" label="Condicionmigratoria" />
+    <column name="OTRACONDICIONMIGRATORIA" fieldName="Otracondicionmigratoria" label="Otracondicionmigratoria" />
+    <column name="ESTADOCIVIL" fieldName="Estadocivil" label="Estadocivil" />
+    <column name="PROFESIONOFICIO" fieldName="Profesionoficio" label="Profesionoficio" />
+    <column name="TIPODOCUMENTOIDENTIFICACION" fieldName="Tipodocumentoidentificacion" label="Tipodocumentoidentificacion" />
+    <column name="NUMERODOCUMENTOIDENTIFICACIÓN" fieldName="Numerodocumentoidentificacin" label="Numerodocumentoidentificación" />
+    <column name="EMISIONPASAPORTE" fieldName="Emisionpasaporte" label="Emisionpasaporte" />
+    <column name="NIT" fieldName="Nit" label="Nit" />
+    <column name="TELEFONO1" fieldName="Telefono1" label="Telefono1" />
+    <column name="TELEFONO2" fieldName="Telefono2" label="Telefono2" />
+    <column name="EMAIL" fieldName="Email" label="Email" />
+    <column name="DIRECCIONRESIDENCIA" fieldName="Direccionresidencia" label="Direccionresidencia" />
+    <column name="PEP" fieldName="Pep" label="Pep" />
+    <column name="CPE" fieldName="Cpe" label="Cpe" />
+    <column name="EMISIONDEPTO" fieldName="Emisiondepto" label="Emisiondepto" />
+    <column name="EMISIONMUNICIPIO" fieldName="Emisionmunicipio" label="Emisionmunicipio" />
+    <column name="RAZON_SOCIAL_PI" fieldName="RazonSocialPi" label="Razon Social Pi" />
+  </columns>
+</dataModel>

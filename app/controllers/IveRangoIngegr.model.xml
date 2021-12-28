@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="IVE_RANGO_INGEGR" alias="IVE_RANGO_INGEGR" created="2021-12-10T12:40:32" modified="2021-12-10T12:40:32" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column name="ID_IVE_RANGO_INGERGR" fieldName="IDIveRangoIngergr" label="Id Ive Rango Ingergr" />
+    <column name="ID" fieldName="ID" label="Id" />
+    <column name="RANGO" fieldName="Rango" label="Rango" />
+    <column name="TIPO_RANGO" fieldName="TipoRango" label="Tipo Rango" />
+    <column name="TIPO_PERSONA" fieldName="TipoPersona" label="Tipo Persona" />
+  </columns>
+</dataModel>

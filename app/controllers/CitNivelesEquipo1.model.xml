@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="CIT_NIVELES_EQUIPO" alias="CIT_NIVELES_EQUIPO" created="2021-12-15T11:27:36" modified="2021-12-15T11:27:39" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column name="ID_NIVEL_EQUIPO" fieldName="IDNivelEquipo" label="Id Nivel Equipo" />
+    <column name="DESCRIPCION" fieldName="Descripcion" label="Descripcion" />
+  </columns>
+</dataModel>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="IVE_INGRESO" alias="IVE_INGRESO" created="2021-12-07T17:06:59" modified="2021-12-07T17:07:01" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column name="ID_IVE_INGRESOS" fieldName="IDIveIngresos" label="Id Ive Ingresos" />
+    <column name="IVE_ARCHIVOS_COD_IVE" fieldName="IveArchivosCodIve" label="Ive Archivos Cod Ive" />
+    <column name="LLAVE" fieldName="Llave" label="Llave" />
+    <column name="DICCIONARIO" fieldName="Diccionario" label="Diccionario" />
+    <column name="MONTOAPROXIMADO" fieldName="Montoaproximado" label="Montoaproximado" />
+    <column name="MON_TIPOPERSONA" fieldName="MonTipopersona" label="Mon Tipopersona" />
+  </columns>
+</dataModel>

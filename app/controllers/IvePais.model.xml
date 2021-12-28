@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="IVE_PAIS" alias="IVE_PAIS" created="2021-12-13T10:26:47" modified="2021-12-13T10:26:49" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column name="ID_PAIS" fieldName="IDPais" label="Id Pais" />
+    <column name="NOMBRE" fieldName="Nombre" label="Nombre" />
+    <column name="ABREV" fieldName="Abrev" label="Abrev" />
+  </columns>
+</dataModel>

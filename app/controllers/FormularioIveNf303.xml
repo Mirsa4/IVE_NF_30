@@ -1,0 +1,687 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="FormularioIveNf303" conflictDetection="overwriteChanges" label="Formulario Ive Nf303" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"FORMULARIO_IVE_NF_30"."IVE_ARCHIVO_COD" "IveArchivoCod"
+	,"FORMULARIO_IVE_NF_30"."FECHA_FOMULARIO" "FechaFomulario"
+	,"FORMULARIO_IVE_NF_30"."ID_IVE_DEPARTAMENTO" "IDIveDepartamento"
+	,"TheID_IVE_DEPARTAMENTO"."NOMBRE" "TheidIveDepartamentonombre"
+	,"TheID_IVE_DEPARTAMENTODEPTO"."NOMBRE" "TheidIveDepartamentodeptonombre"
+	,"FORMULARIO_IVE_NF_30"."ID_IVE_MUNICIPIO" "IDIveMunicipio"
+	,"TheID_IVE_MUNICIPIO"."NOMBRE" "TheidIveMunicipionombre"
+	,"FORMULARIO_IVE_NF_30"."ID_EMPRESA" "IDEmpresa"
+	,"FORMULARIO_IVE_NF_30"."ID_PAIS" "IDPais"
+	,"TheID_PAIS"."NOMBRE" "TheidPaisnombre"
+	,"FORMULARIO_IVE_NF_30"."TIPO_PERSONA" "TipoPersona"
+	,"FORMULARIO_IVE_NF_30"."LUGAR_NACIMIENTO_PAIS" "LugarNacimientoPais"
+	,"FORMULARIO_IVE_NF_30"."LUGAR_NACIMIENTO_DEP" "LugarNacimientoDep"
+	,"FORMULARIO_IVE_NF_30"."GENERO" "Genero"
+	,"FORMULARIO_IVE_NF_30"."ESTADO_CIVIL" "EstadoCivil"
+	,"FORMULARIO_IVE_NF_30"."TIPO_IDENTIFICACION" "TipoIdentificacion"
+	,"FORMULARIO_IVE_NF_30"."CONDICION_MIGRATORIA" "CondicionMigratoria"
+	,"FORMULARIO_IVE_NF_30"."PAIS_SEDE_CL" "PaisSedeCL"
+	,"FORMULARIO_IVE_NF_30"."DEP_PI" "DepPI"
+	,"FORMULARIO_IVE_NF_30"."MUNI_PI" "MuniPI"
+	,"FORMULARIO_IVE_NF_30"."PAIS_PI" "PaisPI"
+	,"FORMULARIO_IVE_NF_30"."PAIS_PROVEEDOR" "PaisProveedor"
+	,"FORMULARIO_IVE_NF_30"."PAIS_CLIENTE_PJ" "PaisClientePJ"
+	,"FORMULARIO_IVE_NF_30"."MONEDA_INGRESO_PI" "MonedaIngresoPI"
+	,"FORMULARIO_IVE_NF_30"."MONTO_INGRESO_PI" "MontoIngresoPI"
+	,"FORMULARIO_IVE_NF_30"."MONEDA_EGRESO_PI" "MonedaEgresoPI"
+	,"FORMULARIO_IVE_NF_30"."MONTO_EGRESO_PI" "MontoEgresoPI"
+	,"FORMULARIO_IVE_NF_30"."MONEDA_EGRESO_PJ" "MonedaEgresoPJ"
+	,"FORMULARIO_IVE_NF_30"."MONTO_EGRESO_PJ" "MontoEgresoPJ"
+	,"FORMULARIO_IVE_NF_30"."INDICA_PARENTESCO" "IndicaParentesco"
+	,"FORMULARIO_IVE_NF_30"."INDICA_MOTIVO" "IndicaMotivo"
+	,"FORMULARIO_IVE_NF_30"."GENERO_PEP" "GeneroPep"
+	,"FORMULARIO_IVE_NF_30"."PRIMER_APELLIDO" "PrimerApellido"
+	,"FORMULARIO_IVE_NF_30"."SEGUNDO_APELLIDO" "SegundoApellido"
+	,"FORMULARIO_IVE_NF_30"."APELLIDO_CASADA" "ApellidoCasada"
+	,"FORMULARIO_IVE_NF_30"."PRIMER_NOMBRE" "PrimerNombre"
+	,"FORMULARIO_IVE_NF_30"."OTROS_NOMBRES" "OtrosNombres"
+	,"FORMULARIO_IVE_NF_30"."SEGUNDO_NOMBRE" "SegundoNombre"
+	,"FORMULARIO_IVE_NF_30"."LUGAR_NACIMIENTO_MUNI" "LugarNacimientoMuni"
+	,"FORMULARIO_IVE_NF_30"."PROFESION_OFICIO" "ProfesionOficio"
+	,"FORMULARIO_IVE_NF_30"."NUMERO_IDENTIFICACION" "NumeroIdentificacion"
+	,"FORMULARIO_IVE_NF_30"."DEP_EMISION" "DepEmision"
+	,"FORMULARIO_IVE_NF_30"."MUNI_EMISION" "MuniEmision"
+	,"FORMULARIO_IVE_NF_30"."PAIS_EMISION" "PaisEmision"
+	,"FORMULARIO_IVE_NF_30"."RAZON_SOCIAL_PJ" "RazonSocialPJ"
+	,"FORMULARIO_IVE_NF_30"."FECHA_NACIMIENTO_O_NEGOCIO_PJ" "FechaNacimientoONegocioPJ"
+	,"FORMULARIO_IVE_NF_30"."NACIONALIDAD_PI_PAIS_CONSTITUCION_PJ" "NacionalidadPIPaisConstitucionPJ"
+	,"FORMULARIO_IVE_NF_30"."OTRA_NACIONALIDAD_PI" "OtraNacionalidadPI"
+	,"FORMULARIO_IVE_NF_30"."NUM_NIT" "NumNit"
+	,"FORMULARIO_IVE_NF_30"."TELEFONO_LF" "TelefonoLF"
+	,"FORMULARIO_IVE_NF_30"."CELULAR" "Celular"
+	,"FORMULARIO_IVE_NF_30"."EMAIL" "Email"
+	,"FORMULARIO_IVE_NF_30"."DIRECCION_PARTICULAR_SEDE" "DireccionParticularSede"
+	,"FORMULARIO_IVE_NF_30"."ZONA" "Zona"
+	,"FORMULARIO_IVE_NF_30"."DIREC_MUNI" "DirecMuni"
+	,"FORMULARIO_IVE_NF_30"."DIREC_DEP" "DirecDep"
+	,"FORMULARIO_IVE_NF_30"."FUENTE_INGRESO_CLIENTE" "FuenteIngresoCliente"
+	,"FORMULARIO_IVE_NF_30"."DIREC_PAIS" "DirecPais"
+	,"FORMULARIO_IVE_NF_30"."ACTUACION_CLIENTE_SOLICITANTE" "ActuacionClienteSolicitante"
+	,"FORMULARIO_IVE_NF_30"."NO_ACTUA" "NOActua"
+	,"FORMULARIO_IVE_NF_30"."OTRAS_FUENTES_INGRESO" "OtrasFuentesIngreso"
+	,"FORMULARIO_IVE_NF_30"."ZONA_PI" "ZonaPI"
+	,"FORMULARIO_IVE_NF_30"."DIRECCION_EMPRESA_PI" "DireccionEmpresaPI"
+	,"FORMULARIO_IVE_NF_30"."TELEFONO_PI" "TelefonoPI"
+	,"FORMULARIO_IVE_NF_30"."NUM_NIT_PI" "NumNitPI"
+	,"FORMULARIO_IVE_NF_30"."MUNI_SEDE_EMP_CL" "MuniSedeEmpCL"
+	,"FORMULARIO_IVE_NF_30"."DEP_SEDE_EMP_CL" "DepSedeEmpCL"
+	,"FORMULARIO_IVE_NF_30"."ZONA_SEDE_EM_CL" "ZonaSedeEMCL"
+	,"FORMULARIO_IVE_NF_30"."DIRECCION_SEDE_EM_PI" "DireccionSedeEMPI"
+	,"FORMULARIO_IVE_NF_30"."TELEFONO_EMPRESA_CLIENTE" "TelefonoEmpresaCliente"
+	,"FORMULARIO_IVE_NF_30"."PUESTO_DESEMPENA_CLIENTE" "PuestoDesempenaCliente"
+	,"FORMULARIO_IVE_NF_30"."NOMBRE_EMPRESA_TRAB_CLIENTE" "NombreEmpresaTrabCliente"
+	,"FORMULARIO_IVE_NF_30"."ACTIVIDAD_ECONOMICA_PJ" "ActividadEconomicaPJ"
+	,"FORMULARIO_IVE_NF_30"."NO_AGENCIAS" "NOAgencias"
+	,"FORMULARIO_IVE_NF_30"."NOMBRE_PROVEEDOR" "NombreProveedor"
+	,"FORMULARIO_IVE_NF_30"."CANT_EMPLEADOS" "CantEmpleados"
+	,"FORMULARIO_IVE_NF_30"."NOMBRE_CLIENTE_PJ" "NombreClientePJ"
+	,"FORMULARIO_IVE_NF_30"."TIPO_INGRESO_EGRESO_PI" "TipoIngresoEgresoPI"
+	,"FORMULARIO_IVE_NF_30"."TIPO_EGRESO_INGRESO_PI" "TipoEgresoIngresoPI"
+	,"FORMULARIO_IVE_NF_30"."MONEDA_INGRESO_PJ" "MonedaIngresoPJ"
+	,"FORMULARIO_IVE_NF_30"."MONTO_INGRESO_PJ" "MontoIngresoPJ"
+	,"FORMULARIO_IVE_NF_30"."TIPO_INGRESO_EGRESO_PJ" "TipoIngresoEgresoPJ"
+	,"FORMULARIO_IVE_NF_30"."TIPO_EGRESO_INGRESO_PJ" "TipoEgresoIngresoPJ"
+	,"FORMULARIO_IVE_NF_30"."TIPO_PROD_SERVICIO_SOLICITADO" "TipoProdServicioSolicitado"
+	,"FORMULARIO_IVE_NF_30"."VALOR_TOTAL_PROD_SERVICIO" "ValorTotalProdServicio"
+	,"FORMULARIO_IVE_NF_30"."DESCRIP_DAT_GENERALES" "DescripDatGenerales"
+	,"FORMULARIO_IVE_NF_30"."MONTO_INICIAL_MANEJAR" "MontoInicialManejar"
+	,"FORMULARIO_IVE_NF_30"."MONTO_MENSUAL_MANEJAR" "MontoMensualManejar"
+	,"FORMULARIO_IVE_NF_30"."PROPOSITO_DESTINO_SERVICIO" "PropositoDestinoServicio"
+	,"FORMULARIO_IVE_NF_30"."PROCEDENCIA_FONDOS" "ProcedenciaFondos"
+	,"FORMULARIO_IVE_NF_30"."TRASLADO__FONDOS" "TrasladoFondos"
+	,"FORMULARIO_IVE_NF_30"."TRANSFERENCIAS_A_NIVEL" "TransferenciasANivel"
+	,"FORMULARIO_IVE_NF_30"."ES_PEP" "ESPep"
+	,"FORMULARIO_IVE_NF_30"."PARENTESCO_PEP" "ParentescoPep"
+	,"FORMULARIO_IVE_NF_30"."DONDE_TRABAJA_PEP" "DondeTrabajaPep"
+	,"FORMULARIO_IVE_NF_30"."PAIS_INSTITUCION_ENTE" "PaisInstitucionEnte"
+	,"FORMULARIO_IVE_NF_30"."PROCEDENCIA_RIQUEZA_PEP" "ProcedenciaRiquezaPep"
+	,"FORMULARIO_IVE_NF_30"."SEGUNDO_APELLIDO_PEP" "SegundoApellidoPep"
+	,"FORMULARIO_IVE_NF_30"."APELLIDO_CADADA_PEP" "ApellidoCadadaPep"
+	,"FORMULARIO_IVE_NF_30"."PRIMER_NOMBRE_PEP" "PrimerNombrePep"
+	,"FORMULARIO_IVE_NF_30"."SEGUNDO_NOMBRE_PEP" "SegundoNombrePep"
+	,"FORMULARIO_IVE_NF_30"."OTRO_NOMBRE_PEP" "OtroNombrePep"
+	,"FORMULARIO_IVE_NF_30"."PUESTO_DESEMP_PEP" "PuestoDesempPep"
+	,"FORMULARIO_IVE_NF_30"."PERSONA_DESEMP_CARGO_POLITICO" "PersonaDesempCargoPolitico"
+	,"FORMULARIO_IVE_NF_30"."SOLICITANTE_ASOCIADO_PEP" "SolicitanteAsociadoPep"
+	,"FORMULARIO_IVE_NF_30"."PRIMER_REF_SOLICITANTE" "PrimerRefSolicitante"
+	,"FORMULARIO_IVE_NF_30"."PRIMER_APELLIDO_PEP" "PrimerApellidoPep"
+	,"FORMULARIO_IVE_NF_30"."SEG_REF_SOLICITANTE" "SegRefSolicitante"
+	,"FORMULARIO_IVE_NF_30"."FECHA_MODIFICA" "FechaModifica"
+	,"FORMULARIO_IVE_NF_30"."USUARIO_MODIFICA" "UsuarioModifica"
+	,"FORMULARIO_IVE_NF_30"."FECHA_CREA" "FechaCrea"
+	,"FORMULARIO_IVE_NF_30"."USUARIO_CREA" "UsuarioCrea"
+	,"FORMULARIO_IVE_NF_30"."CEL_MOV.REF:LAB_DOS" "CelMovreflabDos"
+	,"FORMULARIO_IVE_NF_30"."CEL_MOV_REF_LAB_UNO" "CelMovRefLabUno"
+	,"FORMULARIO_IVE_NF_30"."TELEF_LINEA_DOS" "TelefLineaDos"
+	,"FORMULARIO_IVE_NF_30"."TELEF_LINEA_UNO" "TelefLineaUno"
+	,"FORMULARIO_IVE_NF_30"."SEG_REF_LAB_SOLICITANTE" "SegRefLabSolicitante"
+	,"FORMULARIO_IVE_NF_30"."PRIM_REF_LAB_SOLICITANTE" "PrimRefLabSolicitante"
+	,"FORMULARIO_IVE_NF_30"."CEL_SEG_REF" "CelSegRef"
+	,"FORMULARIO_IVE_NF_30"."CEL_PRIM_REF" "CelPrimRef"
+from "dbo"."FORMULARIO_IVE_NF_30" "FORMULARIO_IVE_NF_30"
+	left join "dbo"."IVE_DEPARTAMENTO" "TheID_IVE_DEPARTAMENTO" on "FORMULARIO_IVE_NF_30"."ID_IVE_DEPARTAMENTO" = "TheID_IVE_DEPARTAMENTO"."ID_IVE_DEPARTAMENTO"
+	left join "dbo"."IVE_MUNICIPIO" "TheID_IVE_DEPARTAMENTODEPTO" on "TheID_IVE_DEPARTAMENTO"."DEPTO" = "TheID_IVE_DEPARTAMENTODEPTO"."ID_IVE_MUNICIPIO"
+	left join "dbo"."IVE_MUNICIPIO" "TheID_IVE_MUNICIPIO" on "FORMULARIO_IVE_NF_30"."ID_IVE_MUNICIPIO" = "TheID_IVE_MUNICIPIO"."ID_IVE_MUNICIPIO"
+	left join "dbo"."IVE_PAIS" "TheID_PAIS" on "FORMULARIO_IVE_NF_30"."ID_PAIS" = "TheID_PAIS"."ID_PAIS"
+]]></text>
+    </command>
+    <command id="IVE_ARCHIVO_CODIdentityCommand" type="Text" event="Inserted">
+      <text><![CDATA[select @@identity]]></text>
+      <output>
+        <fieldOutput fieldName="IveArchivoCod" />
+      </output>
+    </command>
+  </commands>
+  <fields>
+    <field name="IveArchivoCod" type="Int32" allowNulls="false" isPrimaryKey="true" label="Ive Archivo Cod" readOnly="true" />
+    <field name="FechaFomulario" type="DateTime" allowNulls="false" label="Fecha Fomulario" showInSummary="true" />
+    <field name="IDIveDepartamento" type="Int32" label="Id Ive Departamento" showInSummary="true">
+      <items style="Lookup" dataController="IveDepartamento" newDataView="createForm1" dataValueField="IDIveDepartamento" dataTextField="Nombre" copy="TheidIveDepartamentodeptonombre=Nombre" />
+    </field>
+    <field name="TheidIveDepartamentonombre" type="String" readOnly="true" label="IDIVEDEPARTAMENTO Nombre" length="50" />
+    <field name="TheidIveDepartamentodeptonombre" type="String" readOnly="true" label="IDIVEDEPARTAMENTODEPTO Nombre" length="50" />
+    <field name="IDIveMunicipio" type="Int32" label="Id Ive Municipio" showInSummary="true">
+      <items />
+    </field>
+    <field name="TheidIveMunicipionombre" type="String" readOnly="true" label="IDIVEMUNICIPIO Nombre" length="50" />
+    <field name="IDEmpresa" type="Int32" label="Id Empresa" showInSummary="true" />
+    <field name="IDPais" type="Int32" label="Id Pais" showInSummary="true">
+      <items style="Lookup" dataController="IvePais" newDataView="createForm1" dataValueField="IDPais" dataTextField="Nombre" />
+    </field>
+    <field name="TheidPaisnombre" type="String" readOnly="true" label="IDPAIS Nombre" length="50" />
+    <field name="TipoPersona" type="Int32" label="Tipo Persona" />
+    <field name="LugarNacimientoPais" type="Int32" label="Lugar Nacimiento Pais" />
+    <field name="LugarNacimientoDep" type="Int32" label="Lugar Nacimiento Dep" />
+    <field name="Genero" type="Int32" label="Genero" />
+    <field name="EstadoCivil" type="Int32" label="Estado Civil" />
+    <field name="TipoIdentificacion" type="Int32" label="Tipo Identificacion" />
+    <field name="CondicionMigratoria" type="Int32" label="Condicion Migratoria" />
+    <field name="PaisSedeCL" type="Int32" label="Pais Sede CL" />
+    <field name="DepPI" type="Int32" label="Dep PI" />
+    <field name="MuniPI" type="Int32" label="Muni PI" />
+    <field name="PaisPI" type="Int32" label="Pais PI" />
+    <field name="PaisProveedor" type="Int32" label="Pais Proveedor" />
+    <field name="PaisClientePJ" type="Int32" label="Pais Cliente PJ" />
+    <field name="MonedaIngresoPI" type="Int32" label="Moneda Ingreso PI" />
+    <field name="MontoIngresoPI" type="Int32" label="Monto Ingreso PI" />
+    <field name="MonedaEgresoPI" type="Int32" label="Moneda Egreso PI" />
+    <field name="MontoEgresoPI" type="Int32" label="Monto Egreso PI" />
+    <field name="MonedaEgresoPJ" type="Int32" label="Moneda Egreso PJ" />
+    <field name="MontoEgresoPJ" type="Int32" label="Monto Egreso PJ" />
+    <field name="IndicaParentesco" type="Int32" label="Indica Parentesco" />
+    <field name="IndicaMotivo" type="Int32" label="Indica Motivo" />
+    <field name="GeneroPep" type="Int32" label="Genero Pep" />
+    <field name="PrimerApellido" type="String" label="Primer Apellido" length="100" />
+    <field name="SegundoApellido" type="String" label="Segundo Apellido" length="100" />
+    <field name="ApellidoCasada" type="String" label="Apellido Casada" length="100" />
+    <field name="PrimerNombre" type="String" label="Primer Nombre" length="100" />
+    <field name="OtrosNombres" type="String" label="Otros Nombres" length="100" />
+    <field name="SegundoNombre" type="String" label="Segundo Nombre" length="100" />
+    <field name="LugarNacimientoMuni" type="Int32" label="Lugar Nacimiento Muni" />
+    <field name="ProfesionOficio" type="String" label="Profesion Oficio" length="100" />
+    <field name="NumeroIdentificacion" type="String" label="Numero Identificacion" length="100" />
+    <field name="DepEmision" type="String" label="Dep Emision" length="100" />
+    <field name="MuniEmision" type="String" label="Muni Emision" length="100" />
+    <field name="PaisEmision" type="String" label="Pais Emision" length="100" />
+    <field name="RazonSocialPJ" type="String" label="Razon Social PJ" length="300" />
+    <field name="FechaNacimientoONegocioPJ" type="DateTime" dataFormatString="g" label="Fecha Nacimiento O Negocio PJ" />
+    <field name="NacionalidadPIPaisConstitucionPJ" type="Int32" label="Nacionalidad PI Pais Constitucion PJ" />
+    <field name="OtraNacionalidadPI" type="Int32" label="Otra Nacionalidad PI" />
+    <field name="NumNit" type="String" label="Num Nit" length="50" />
+    <field name="TelefonoLF" type="String" label="Telefono LF" length="50" />
+    <field name="Celular" type="String" label="Celular" length="50" />
+    <field name="Email" type="String" label="Email" length="100" />
+    <field name="DireccionParticularSede" type="String" label="Direccion Particular Sede" length="500" />
+    <field name="Zona" type="String" label="Zona" length="100" />
+    <field name="DirecMuni" type="Int32" label="Direc Muni" />
+    <field name="DirecDep" type="Int32" label="Direc Dep" />
+    <field name="FuenteIngresoCliente" type="String" label="Fuente Ingreso Cliente" length="300" />
+    <field name="DirecPais" type="Int32" label="Direc Pais" />
+    <field name="ActuacionClienteSolicitante" type="String" label="Actuacion Cliente Solicitante" length="10" />
+    <field name="NOActua" type="String" label="NO Actua" length="300" />
+    <field name="OtrasFuentesIngreso" type="String" label="Otras Fuentes Ingreso" length="300" />
+    <field name="ZonaPI" type="String" label="Zona PI" length="300" />
+    <field name="DireccionEmpresaPI" type="String" label="Direccion Empresa PI" length="300" />
+    <field name="TelefonoPI" type="String" label="Telefono PI" length="50" />
+    <field name="NumNitPI" type="String" label="Num Nit PI" length="50" />
+    <field name="MuniSedeEmpCL" type="Int32" label="Muni Sede Emp CL" />
+    <field name="DepSedeEmpCL" type="Int32" label="Dep Sede Emp CL" />
+    <field name="ZonaSedeEMCL" type="String" label="Zona Sede EM CL" length="300" />
+    <field name="DireccionSedeEMPI" type="String" label="Direccion Sede EM PI" length="300" />
+    <field name="TelefonoEmpresaCliente" type="String" label="Telefono Empresa Cliente" length="50" />
+    <field name="PuestoDesempenaCliente" type="String" label="Puesto Desempena Cliente" length="300" />
+    <field name="NombreEmpresaTrabCliente" type="String" label="Nombre Empresa Trab Cliente" length="300" />
+    <field name="ActividadEconomicaPJ" type="String" label="Actividad Economica PJ" length="300" />
+    <field name="NOAgencias" type="Int32" label="NO Agencias" />
+    <field name="NombreProveedor" type="String" label="Nombre Proveedor" length="100" />
+    <field name="CantEmpleados" type="Int32" label="Cant Empleados" />
+    <field name="NombreClientePJ" type="String" label="Nombre Cliente PJ" length="100" />
+    <field name="TipoIngresoEgresoPI" type="Int32" label="Tipo Ingreso Egreso PI" />
+    <field name="TipoEgresoIngresoPI" type="Int32" label="Tipo Egreso Ingreso PI" />
+    <field name="MonedaIngresoPJ" type="Int32" label="Moneda Ingreso PJ" />
+    <field name="MontoIngresoPJ" type="Int32" label="Monto Ingreso PJ" />
+    <field name="TipoIngresoEgresoPJ" type="Int32" label="Tipo Ingreso Egreso PJ" />
+    <field name="TipoEgresoIngresoPJ" type="Int32" label="Tipo Egreso Ingreso PJ" />
+    <field name="TipoProdServicioSolicitado" type="String" label="Tipo Prod Servicio Solicitado" length="300" />
+    <field name="ValorTotalProdServicio" type="Double" label="Valor Total Prod Servicio" />
+    <field name="DescripDatGenerales" type="String" label="Descrip Dat Generales" length="300" />
+    <field name="MontoInicialManejar" type="Double" label="Monto Inicial Manejar" />
+    <field name="MontoMensualManejar" type="Double" label="Monto Mensual Manejar" />
+    <field name="PropositoDestinoServicio" type="String" label="Proposito Destino Servicio" length="300" />
+    <field name="ProcedenciaFondos" type="String" label="Procedencia Fondos" length="300" />
+    <field name="TrasladoFondos" type="String" label="Traslado Fondos" length="10" />
+    <field name="TransferenciasANivel" type="String" label="Transferencias A Nivel" length="50" />
+    <field name="ESPep" type="String" label="ES Pep" length="10" />
+    <field name="ParentescoPep" type="String" label="Parentesco Pep" length="10" />
+    <field name="DondeTrabajaPep" type="String" label="Donde Trabaja Pep" length="300" />
+    <field name="PaisInstitucionEnte" type="String" label="Pais Institucion Ente" length="300" />
+    <field name="ProcedenciaRiquezaPep" type="String" label="Procedencia Riqueza Pep" length="500" />
+    <field name="SegundoApellidoPep" type="String" label="Segundo Apellido Pep" length="100" />
+    <field name="ApellidoCadadaPep" type="String" label="Apellido Cadada Pep" length="100" />
+    <field name="PrimerNombrePep" type="String" label="Primer Nombre Pep" length="100" />
+    <field name="SegundoNombrePep" type="String" label="Segundo Nombre Pep" length="100" />
+    <field name="OtroNombrePep" type="String" label="Otro Nombre Pep" length="100" />
+    <field name="PuestoDesempPep" type="String" label="Puesto Desemp Pep" length="300" />
+    <field name="PersonaDesempCargoPolitico" type="String" label="Persona Desemp Cargo Politico" length="10" />
+    <field name="SolicitanteAsociadoPep" type="String" label="Solicitante Asociado Pep" length="10" />
+    <field name="PrimerRefSolicitante" type="String" label="Primer Ref Solicitante" length="200" />
+    <field name="PrimerApellidoPep" type="String" label="Primer Apellido Pep" length="100" />
+    <field name="SegRefSolicitante" type="String" label="Seg Ref Solicitante" length="200" />
+    <field name="FechaModifica" type="DateTime" dataFormatString="g" label="Fecha Modifica" />
+    <field name="UsuarioModifica" type="String" label="Usuario Modifica" length="200" />
+    <field name="FechaCrea" type="DateTime" dataFormatString="g" label="Fecha Crea" />
+    <field name="UsuarioCrea" type="String" label="Usuario Crea" length="200" />
+    <field name="CelMovreflabDos" type="String" label="Cel Mov.ref:lab Dos" length="50" />
+    <field name="CelMovRefLabUno" type="String" label="Cel Mov Ref Lab Uno" length="50" />
+    <field name="TelefLineaDos" type="String" label="Telef Linea Dos" length="50" />
+    <field name="TelefLineaUno" type="String" label="Telef Linea Uno" length="50" />
+    <field name="SegRefLabSolicitante" type="String" label="Seg Ref Lab Solicitante" length="300" />
+    <field name="PrimRefLabSolicitante" type="String" label="Prim Ref Lab Solicitante" length="300" />
+    <field name="CelSegRef" type="String" label="Cel Seg Ref" length="50" />
+    <field name="CelPrimRef" type="String" label="Cel Prim Ref" length="50" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="Formulario Ive Nf303">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="FechaFomulario" columns="10" />
+        <dataField fieldName="IDIveDepartamento" aliasFieldName="TheidIveDepartamentonombre" />
+        <dataField fieldName="TheidIveDepartamentodeptonombre" columns="50" />
+        <dataField fieldName="IDIveMunicipio" aliasFieldName="TheidIveMunicipionombre" />
+        <dataField fieldName="IDEmpresa" columns="15" />
+        <dataField fieldName="IDPais" aliasFieldName="TheidPaisnombre" />
+        <dataField fieldName="TipoPersona" columns="15" />
+        <dataField fieldName="LugarNacimientoPais" columns="15" />
+        <dataField fieldName="LugarNacimientoDep" columns="15" />
+        <dataField fieldName="Genero" columns="15" />
+        <dataField fieldName="EstadoCivil" columns="15" />
+        <dataField fieldName="TipoIdentificacion" columns="15" />
+        <dataField fieldName="CondicionMigratoria" columns="15" />
+        <dataField fieldName="PaisSedeCL" columns="15" />
+        <dataField fieldName="DepPI" columns="15" />
+        <dataField fieldName="MuniPI" columns="15" />
+        <dataField fieldName="PaisPI" columns="15" />
+        <dataField fieldName="PaisProveedor" columns="15" />
+        <dataField fieldName="PaisClientePJ" columns="15" />
+        <dataField fieldName="MonedaIngresoPI" columns="15" />
+        <dataField fieldName="MontoIngresoPI" columns="15" />
+        <dataField fieldName="MonedaEgresoPI" columns="15" />
+        <dataField fieldName="MontoEgresoPI" columns="15" />
+        <dataField fieldName="MonedaEgresoPJ" columns="15" />
+        <dataField fieldName="MontoEgresoPJ" columns="15" />
+        <dataField fieldName="IndicaParentesco" columns="15" />
+        <dataField fieldName="IndicaMotivo" columns="15" />
+        <dataField fieldName="GeneroPep" columns="15" />
+        <dataField fieldName="PrimerApellido" />
+        <dataField fieldName="SegundoApellido" />
+        <dataField fieldName="ApellidoCasada" />
+        <dataField fieldName="PrimerNombre" />
+        <dataField fieldName="OtrosNombres" />
+        <dataField fieldName="SegundoNombre" />
+        <dataField fieldName="LugarNacimientoMuni" columns="15" />
+        <dataField fieldName="ProfesionOficio" />
+        <dataField fieldName="NumeroIdentificacion" />
+        <dataField fieldName="DepEmision" />
+        <dataField fieldName="MuniEmision" />
+        <dataField fieldName="PaisEmision" />
+        <dataField fieldName="RazonSocialPJ" />
+        <dataField fieldName="FechaNacimientoONegocioPJ" columns="20" />
+        <dataField fieldName="NacionalidadPIPaisConstitucionPJ" columns="15" />
+        <dataField fieldName="OtraNacionalidadPI" columns="15" />
+        <dataField fieldName="NumNit" columns="50" />
+        <dataField fieldName="TelefonoLF" columns="50" />
+        <dataField fieldName="Celular" columns="50" />
+        <dataField fieldName="Email" />
+        <dataField fieldName="DireccionParticularSede" />
+        <dataField fieldName="Zona" />
+        <dataField fieldName="DirecMuni" columns="15" />
+        <dataField fieldName="DirecDep" columns="15" />
+        <dataField fieldName="FuenteIngresoCliente" />
+        <dataField fieldName="DirecPais" columns="15" />
+        <dataField fieldName="ActuacionClienteSolicitante" columns="10" />
+        <dataField fieldName="NOActua" />
+        <dataField fieldName="OtrasFuentesIngreso" />
+        <dataField fieldName="ZonaPI" />
+        <dataField fieldName="DireccionEmpresaPI" />
+        <dataField fieldName="TelefonoPI" columns="50" />
+        <dataField fieldName="NumNitPI" columns="50" />
+        <dataField fieldName="MuniSedeEmpCL" columns="15" />
+        <dataField fieldName="DepSedeEmpCL" columns="15" />
+        <dataField fieldName="ZonaSedeEMCL" />
+        <dataField fieldName="DireccionSedeEMPI" />
+        <dataField fieldName="TelefonoEmpresaCliente" columns="50" />
+        <dataField fieldName="PuestoDesempenaCliente" />
+        <dataField fieldName="NombreEmpresaTrabCliente" />
+        <dataField fieldName="ActividadEconomicaPJ" />
+        <dataField fieldName="NOAgencias" columns="15" />
+        <dataField fieldName="NombreProveedor" />
+        <dataField fieldName="CantEmpleados" columns="15" />
+        <dataField fieldName="NombreClientePJ" />
+        <dataField fieldName="TipoIngresoEgresoPI" columns="15" />
+        <dataField fieldName="TipoEgresoIngresoPI" columns="15" />
+        <dataField fieldName="MonedaIngresoPJ" columns="15" />
+        <dataField fieldName="MontoIngresoPJ" columns="15" />
+        <dataField fieldName="TipoIngresoEgresoPJ" columns="15" />
+        <dataField fieldName="TipoEgresoIngresoPJ" columns="15" />
+        <dataField fieldName="TipoProdServicioSolicitado" />
+        <dataField fieldName="ValorTotalProdServicio" columns="15" />
+        <dataField fieldName="DescripDatGenerales" />
+        <dataField fieldName="MontoInicialManejar" columns="15" />
+        <dataField fieldName="MontoMensualManejar" columns="15" />
+        <dataField fieldName="PropositoDestinoServicio" />
+        <dataField fieldName="ProcedenciaFondos" />
+        <dataField fieldName="TrasladoFondos" columns="10" />
+        <dataField fieldName="TransferenciasANivel" columns="50" />
+        <dataField fieldName="ESPep" columns="10" />
+        <dataField fieldName="ParentescoPep" columns="10" />
+        <dataField fieldName="DondeTrabajaPep" />
+        <dataField fieldName="PaisInstitucionEnte" />
+        <dataField fieldName="ProcedenciaRiquezaPep" />
+        <dataField fieldName="SegundoApellidoPep" />
+        <dataField fieldName="ApellidoCadadaPep" />
+        <dataField fieldName="PrimerNombrePep" />
+        <dataField fieldName="SegundoNombrePep" />
+        <dataField fieldName="OtroNombrePep" />
+        <dataField fieldName="PuestoDesempPep" />
+        <dataField fieldName="PersonaDesempCargoPolitico" columns="10" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review Formulario Ive Nf303">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="Formulario Ive Nf303" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="FechaFomulario" columns="10" />
+            <dataField fieldName="IDIveDepartamento" aliasFieldName="TheidIveDepartamentonombre" />
+            <dataField fieldName="TheidIveDepartamentodeptonombre" columns="50" />
+            <dataField fieldName="IDIveMunicipio" aliasFieldName="TheidIveMunicipionombre" />
+            <dataField fieldName="IDEmpresa" columns="15" />
+            <dataField fieldName="IDPais" aliasFieldName="TheidPaisnombre" />
+            <dataField fieldName="TipoPersona" columns="15" />
+            <dataField fieldName="LugarNacimientoPais" columns="15" />
+            <dataField fieldName="LugarNacimientoDep" columns="15" />
+            <dataField fieldName="Genero" columns="15" />
+            <dataField fieldName="EstadoCivil" columns="15" />
+            <dataField fieldName="TipoIdentificacion" columns="15" />
+            <dataField fieldName="CondicionMigratoria" columns="15" />
+            <dataField fieldName="PaisSedeCL" columns="15" />
+            <dataField fieldName="DepPI" columns="15" />
+            <dataField fieldName="MuniPI" columns="15" />
+            <dataField fieldName="PaisPI" columns="15" />
+            <dataField fieldName="PaisProveedor" columns="15" />
+            <dataField fieldName="PaisClientePJ" columns="15" />
+            <dataField fieldName="MonedaIngresoPI" columns="15" />
+            <dataField fieldName="MontoIngresoPI" columns="15" />
+            <dataField fieldName="MonedaEgresoPI" columns="15" />
+            <dataField fieldName="MontoEgresoPI" columns="15" />
+            <dataField fieldName="MonedaEgresoPJ" columns="15" />
+            <dataField fieldName="MontoEgresoPJ" columns="15" />
+            <dataField fieldName="IndicaParentesco" columns="15" />
+            <dataField fieldName="IndicaMotivo" columns="15" />
+            <dataField fieldName="GeneroPep" columns="15" />
+            <dataField fieldName="PrimerApellido" />
+            <dataField fieldName="SegundoApellido" />
+            <dataField fieldName="ApellidoCasada" />
+            <dataField fieldName="PrimerNombre" />
+            <dataField fieldName="OtrosNombres" />
+            <dataField fieldName="SegundoNombre" />
+            <dataField fieldName="LugarNacimientoMuni" columns="15" />
+            <dataField fieldName="ProfesionOficio" />
+            <dataField fieldName="NumeroIdentificacion" />
+            <dataField fieldName="DepEmision" />
+            <dataField fieldName="MuniEmision" />
+            <dataField fieldName="PaisEmision" />
+            <dataField fieldName="RazonSocialPJ" />
+            <dataField fieldName="FechaNacimientoONegocioPJ" columns="20" />
+            <dataField fieldName="NacionalidadPIPaisConstitucionPJ" columns="15" />
+            <dataField fieldName="OtraNacionalidadPI" columns="15" />
+            <dataField fieldName="NumNit" columns="50" />
+            <dataField fieldName="TelefonoLF" columns="50" />
+            <dataField fieldName="Celular" columns="50" />
+            <dataField fieldName="Email" />
+            <dataField fieldName="DireccionParticularSede" />
+            <dataField fieldName="Zona" />
+            <dataField fieldName="DirecMuni" columns="15" />
+            <dataField fieldName="DirecDep" columns="15" />
+            <dataField fieldName="FuenteIngresoCliente" />
+            <dataField fieldName="DirecPais" columns="15" />
+            <dataField fieldName="ActuacionClienteSolicitante" columns="10" />
+            <dataField fieldName="NOActua" />
+            <dataField fieldName="OtrasFuentesIngreso" />
+            <dataField fieldName="ZonaPI" />
+            <dataField fieldName="DireccionEmpresaPI" />
+            <dataField fieldName="TelefonoPI" columns="50" />
+            <dataField fieldName="NumNitPI" columns="50" />
+            <dataField fieldName="MuniSedeEmpCL" columns="15" />
+            <dataField fieldName="DepSedeEmpCL" columns="15" />
+            <dataField fieldName="ZonaSedeEMCL" />
+            <dataField fieldName="DireccionSedeEMPI" />
+            <dataField fieldName="TelefonoEmpresaCliente" columns="50" />
+            <dataField fieldName="PuestoDesempenaCliente" />
+            <dataField fieldName="NombreEmpresaTrabCliente" />
+            <dataField fieldName="ActividadEconomicaPJ" />
+            <dataField fieldName="NOAgencias" columns="15" />
+            <dataField fieldName="NombreProveedor" />
+            <dataField fieldName="CantEmpleados" columns="15" />
+            <dataField fieldName="NombreClientePJ" />
+            <dataField fieldName="TipoIngresoEgresoPI" columns="15" />
+            <dataField fieldName="TipoEgresoIngresoPI" columns="15" />
+            <dataField fieldName="MonedaIngresoPJ" columns="15" />
+            <dataField fieldName="MontoIngresoPJ" columns="15" />
+            <dataField fieldName="TipoIngresoEgresoPJ" columns="15" />
+            <dataField fieldName="TipoEgresoIngresoPJ" columns="15" />
+            <dataField fieldName="TipoProdServicioSolicitado" />
+            <dataField fieldName="ValorTotalProdServicio" columns="15" />
+            <dataField fieldName="DescripDatGenerales" />
+            <dataField fieldName="MontoInicialManejar" columns="15" />
+            <dataField fieldName="MontoMensualManejar" columns="15" />
+            <dataField fieldName="PropositoDestinoServicio" />
+            <dataField fieldName="ProcedenciaFondos" />
+            <dataField fieldName="TrasladoFondos" columns="10" />
+            <dataField fieldName="TransferenciasANivel" columns="50" />
+            <dataField fieldName="ESPep" columns="10" />
+            <dataField fieldName="ParentescoPep" columns="10" />
+            <dataField fieldName="DondeTrabajaPep" />
+            <dataField fieldName="PaisInstitucionEnte" />
+            <dataField fieldName="ProcedenciaRiquezaPep" />
+            <dataField fieldName="SegundoApellidoPep" />
+            <dataField fieldName="ApellidoCadadaPep" />
+            <dataField fieldName="PrimerNombrePep" />
+            <dataField fieldName="SegundoNombrePep" />
+            <dataField fieldName="OtroNombrePep" />
+            <dataField fieldName="PuestoDesempPep" />
+            <dataField fieldName="PersonaDesempCargoPolitico" columns="10" />
+            <dataField fieldName="SolicitanteAsociadoPep" columns="10" />
+            <dataField fieldName="PrimerRefSolicitante" />
+            <dataField fieldName="PrimerApellidoPep" />
+            <dataField fieldName="SegRefSolicitante" />
+            <dataField fieldName="FechaModifica" columns="20" />
+            <dataField fieldName="UsuarioModifica" />
+            <dataField fieldName="FechaCrea" columns="20" />
+            <dataField fieldName="UsuarioCrea" />
+            <dataField fieldName="CelMovreflabDos" columns="50" />
+            <dataField fieldName="CelMovRefLabUno" columns="50" />
+            <dataField fieldName="TelefLineaDos" columns="50" />
+            <dataField fieldName="TelefLineaUno" columns="50" />
+            <dataField fieldName="SegRefLabSolicitante" />
+            <dataField fieldName="PrimRefLabSolicitante" />
+            <dataField fieldName="CelSegRef" columns="50" />
+            <dataField fieldName="CelPrimRef" columns="50" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New Formulario Ive Nf303">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="FechaFomulario" columns="10" />
+            <dataField fieldName="IDIveDepartamento" aliasFieldName="TheidIveDepartamentonombre" />
+            <dataField fieldName="TheidIveDepartamentodeptonombre" columns="50" />
+            <dataField fieldName="IDIveMunicipio" aliasFieldName="TheidIveMunicipionombre" />
+            <dataField fieldName="IDEmpresa" columns="15" />
+            <dataField fieldName="IDPais" aliasFieldName="TheidPaisnombre" />
+            <dataField fieldName="TipoPersona" columns="15" />
+            <dataField fieldName="LugarNacimientoPais" columns="15" />
+            <dataField fieldName="LugarNacimientoDep" columns="15" />
+            <dataField fieldName="Genero" columns="15" />
+            <dataField fieldName="EstadoCivil" columns="15" />
+            <dataField fieldName="TipoIdentificacion" columns="15" />
+            <dataField fieldName="CondicionMigratoria" columns="15" />
+            <dataField fieldName="PaisSedeCL" columns="15" />
+            <dataField fieldName="DepPI" columns="15" />
+            <dataField fieldName="MuniPI" columns="15" />
+            <dataField fieldName="PaisPI" columns="15" />
+            <dataField fieldName="PaisProveedor" columns="15" />
+            <dataField fieldName="PaisClientePJ" columns="15" />
+            <dataField fieldName="MonedaIngresoPI" columns="15" />
+            <dataField fieldName="MontoIngresoPI" columns="15" />
+            <dataField fieldName="MonedaEgresoPI" columns="15" />
+            <dataField fieldName="MontoEgresoPI" columns="15" />
+            <dataField fieldName="MonedaEgresoPJ" columns="15" />
+            <dataField fieldName="MontoEgresoPJ" columns="15" />
+            <dataField fieldName="IndicaParentesco" columns="15" />
+            <dataField fieldName="IndicaMotivo" columns="15" />
+            <dataField fieldName="GeneroPep" columns="15" />
+            <dataField fieldName="PrimerApellido" />
+            <dataField fieldName="SegundoApellido" />
+            <dataField fieldName="ApellidoCasada" />
+            <dataField fieldName="PrimerNombre" />
+            <dataField fieldName="OtrosNombres" />
+            <dataField fieldName="SegundoNombre" />
+            <dataField fieldName="LugarNacimientoMuni" columns="15" />
+            <dataField fieldName="ProfesionOficio" />
+            <dataField fieldName="NumeroIdentificacion" />
+            <dataField fieldName="DepEmision" />
+            <dataField fieldName="MuniEmision" />
+            <dataField fieldName="PaisEmision" />
+            <dataField fieldName="RazonSocialPJ" />
+            <dataField fieldName="FechaNacimientoONegocioPJ" columns="20" />
+            <dataField fieldName="NacionalidadPIPaisConstitucionPJ" columns="15" />
+            <dataField fieldName="OtraNacionalidadPI" columns="15" />
+            <dataField fieldName="NumNit" columns="50" />
+            <dataField fieldName="TelefonoLF" columns="50" />
+            <dataField fieldName="Celular" columns="50" />
+            <dataField fieldName="Email" />
+            <dataField fieldName="DireccionParticularSede" />
+            <dataField fieldName="Zona" />
+            <dataField fieldName="DirecMuni" columns="15" />
+            <dataField fieldName="DirecDep" columns="15" />
+            <dataField fieldName="FuenteIngresoCliente" />
+            <dataField fieldName="DirecPais" columns="15" />
+            <dataField fieldName="ActuacionClienteSolicitante" columns="10" />
+            <dataField fieldName="NOActua" />
+            <dataField fieldName="OtrasFuentesIngreso" />
+            <dataField fieldName="ZonaPI" />
+            <dataField fieldName="DireccionEmpresaPI" />
+            <dataField fieldName="TelefonoPI" columns="50" />
+            <dataField fieldName="NumNitPI" columns="50" />
+            <dataField fieldName="MuniSedeEmpCL" columns="15" />
+            <dataField fieldName="DepSedeEmpCL" columns="15" />
+            <dataField fieldName="ZonaSedeEMCL" />
+            <dataField fieldName="DireccionSedeEMPI" />
+            <dataField fieldName="TelefonoEmpresaCliente" columns="50" />
+            <dataField fieldName="PuestoDesempenaCliente" />
+            <dataField fieldName="NombreEmpresaTrabCliente" />
+            <dataField fieldName="ActividadEconomicaPJ" />
+            <dataField fieldName="NOAgencias" columns="15" />
+            <dataField fieldName="NombreProveedor" />
+            <dataField fieldName="CantEmpleados" columns="15" />
+            <dataField fieldName="NombreClientePJ" />
+            <dataField fieldName="TipoIngresoEgresoPI" columns="15" />
+            <dataField fieldName="TipoEgresoIngresoPI" columns="15" />
+            <dataField fieldName="MonedaIngresoPJ" columns="15" />
+            <dataField fieldName="MontoIngresoPJ" columns="15" />
+            <dataField fieldName="TipoIngresoEgresoPJ" columns="15" />
+            <dataField fieldName="TipoEgresoIngresoPJ" columns="15" />
+            <dataField fieldName="TipoProdServicioSolicitado" />
+            <dataField fieldName="ValorTotalProdServicio" columns="15" />
+            <dataField fieldName="DescripDatGenerales" />
+            <dataField fieldName="MontoInicialManejar" columns="15" />
+            <dataField fieldName="MontoMensualManejar" columns="15" />
+            <dataField fieldName="PropositoDestinoServicio" />
+            <dataField fieldName="ProcedenciaFondos" />
+            <dataField fieldName="TrasladoFondos" columns="10" />
+            <dataField fieldName="TransferenciasANivel" columns="50" />
+            <dataField fieldName="ESPep" columns="10" />
+            <dataField fieldName="ParentescoPep" columns="10" />
+            <dataField fieldName="DondeTrabajaPep" />
+            <dataField fieldName="PaisInstitucionEnte" />
+            <dataField fieldName="ProcedenciaRiquezaPep" />
+            <dataField fieldName="SegundoApellidoPep" />
+            <dataField fieldName="ApellidoCadadaPep" />
+            <dataField fieldName="PrimerNombrePep" />
+            <dataField fieldName="SegundoNombrePep" />
+            <dataField fieldName="OtroNombrePep" />
+            <dataField fieldName="PuestoDesempPep" />
+            <dataField fieldName="PersonaDesempCargoPolitico" columns="10" />
+            <dataField fieldName="SolicitanteAsociadoPep" columns="10" />
+            <dataField fieldName="PrimerRefSolicitante" />
+            <dataField fieldName="PrimerApellidoPep" />
+            <dataField fieldName="SegRefSolicitante" />
+            <dataField fieldName="FechaModifica" columns="20" />
+            <dataField fieldName="UsuarioModifica" />
+            <dataField fieldName="FechaCrea" columns="20" />
+            <dataField fieldName="UsuarioCrea" />
+            <dataField fieldName="CelMovreflabDos" columns="50" />
+            <dataField fieldName="CelMovRefLabUno" columns="50" />
+            <dataField fieldName="TelefLineaDos" columns="50" />
+            <dataField fieldName="TelefLineaUno" columns="50" />
+            <dataField fieldName="SegRefLabSolicitante" />
+            <dataField fieldName="PrimRefLabSolicitante" />
+            <dataField fieldName="CelSegRef" columns="50" />
+            <dataField fieldName="CelPrimRef" columns="50" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" commandArgument="Save" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" commandArgument="Save" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" commandArgument="SaveAndNew" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenLastCommandArgument="Save" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenClientScript="this.hasDetails()" />
+      <action id="a14" whenLastCommandName="Insert" whenLastCommandArgument="SaveAndNew" commandName="New" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a5" />
+      <action id="a6" commandName="Import" commandArgument="createForm1" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag7" scope="ActionBar" headerText="Report">
+      <action id="a1" commandName="ReportAsPdf" />
+      <action id="a2" commandName="ReportAsImage" />
+      <action id="a3" commandName="ReportAsExcel" />
+      <action id="a4" commandName="ReportAsWord" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>

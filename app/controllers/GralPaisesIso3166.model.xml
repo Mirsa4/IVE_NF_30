@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="gral_paises_iso3166" alias="gral_paises_iso3166" created="2021-12-16T10:31:51" modified="2021-12-16T10:31:54" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column name="INT_GRAL_PAIS" fieldName="IntGralPais" label="Int Gral Pais" />
+    <column name="ALFA2" fieldName="Alfa2" label="Alfa2" />
+    <column name="PAIS" fieldName="Pais" label="Pais" />
+    <column name="CODIGO" fieldName="Codigo" label="Codigo" />
+    <column name="ALFA3" fieldName="Alfa3" label="Alfa3" />
+  </columns>
+</dataModel>

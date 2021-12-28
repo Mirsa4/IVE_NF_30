@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="FORMULARIO_IVE_NF_30" alias="FORMULARIO_IVE_NF_30" created="2021-12-20T21:59:30" modified="2021-12-21T16:22:11" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys>
+    <foreignKey id="TheID_IVE_DEPARTAMENTO" parentTableSchema="dbo" parentTableName="IVE_DEPARTAMENTO" x="451" y="36">
+      <foreignKeyColumn columnName="ID_IVE_DEPARTAMENTO" parentColumnName="ID_IVE_DEPARTAMENTO" />
+    </foreignKey>
+    <foreignKey id="TheID_IVE_DEPARTAMENTODEPTO" parentTableSchema="dbo" parentTableName="IVE_MUNICIPIO" baseForeignKey="TheID_IVE_DEPARTAMENTO" x="793" y="40">
+      <foreignKeyColumn columnName="DEPTO" parentColumnName="ID_IVE_MUNICIPIO" />
+    </foreignKey>
+    <foreignKey id="TheID_IVE_MUNICIPIO" parentTableSchema="dbo" parentTableName="IVE_MUNICIPIO" x="493" y="225">
+      <foreignKeyColumn columnName="ID_IVE_MUNICIPIO" parentColumnName="ID_IVE_MUNICIPIO" />
+    </foreignKey>
+    <foreignKey id="TheID_PAIS" parentTableSchema="dbo" parentTableName="IVE_PAIS" x="503" y="384">
+      <foreignKeyColumn columnName="ID_PAIS" parentColumnName="ID_PAIS" />
+    </foreignKey>
+  </foreignKeys>
+  <columns>
+    <column name="IVE_ARCHIVO_COD" fieldName="IveArchivoCod" label="Ive Archivo Cod" />
+    <column name="FECHA_FOMULARIO" fieldName="FechaFomulario" label="Fecha Fomulario" />
+    <column name="ID_IVE_DEPARTAMENTO" fieldName="IDIveDepartamento" label="Id Ive Departamento" aliasColumnName="NOMBRE" aliasForeignKey="TheID_IVE_DEPARTAMENTO" />
+    <column name="NOMBRE" fieldName="TheidIveDepartamentonombre" label="IDIVEDEPARTAMENTO Nombre" foreignKey="TheID_IVE_DEPARTAMENTO" />
+    <column name="NOMBRE" fieldName="TheidIveDepartamentodeptonombre" label="IDIVEDEPARTAMENTODEPTO Nombre" foreignKey="TheID_IVE_DEPARTAMENTODEPTO" />
+    <column name="ID_IVE_MUNICIPIO" fieldName="IDIveMunicipio" label="Id Ive Municipio" aliasColumnName="NOMBRE" aliasForeignKey="TheID_IVE_MUNICIPIO" />
+    <column name="NOMBRE" fieldName="TheidIveMunicipionombre" label="IDIVEMUNICIPIO Nombre" foreignKey="TheID_IVE_MUNICIPIO" />
+    <column name="ID_EMPRESA" fieldName="IDEmpresa" label="Id Empresa" />
+    <column name="ID_PAIS" fieldName="IDPais" label="Id Pais" aliasColumnName="NOMBRE" aliasForeignKey="TheID_PAIS" />
+    <column name="NOMBRE" fieldName="TheidPaisnombre" label="IDPAIS Nombre" foreignKey="TheID_PAIS" />
+    <column name="TIPO_PERSONA" fieldName="TipoPersona" label="Tipo Persona" />
+    <column name="LUGAR_NACIMIENTO_PAIS" fieldName="LugarNacimientoPais" label="Lugar Nacimiento Pais" />
+    <column name="LUGAR_NACIMIENTO_DEP" fieldName="LugarNacimientoDep" label="Lugar Nacimiento Dep" />
+    <column name="GENERO" fieldName="Genero" label="Genero" />
+    <column name="ESTADO_CIVIL" fieldName="EstadoCivil" label="Estado Civil" />
+    <column name="TIPO_IDENTIFICACION" fieldName="TipoIdentificacion" label="Tipo Identificacion" />
+    <column name="CONDICION_MIGRATORIA" fieldName="CondicionMigratoria" label="Condicion Migratoria" />
+    <column name="PAIS_SEDE_CL" fieldName="PaisSedeCL" label="Pais Sede CL" />
+    <column name="DEP_PI" fieldName="DepPI" label="Dep PI" />
+    <column name="MUNI_PI" fieldName="MuniPI" label="Muni PI" />
+    <column name="PAIS_PI" fieldName="PaisPI" label="Pais PI" />
+    <column name="PAIS_PROVEEDOR" fieldName="PaisProveedor" label="Pais Proveedor" />
+    <column name="PAIS_CLIENTE_PJ" fieldName="PaisClientePJ" label="Pais Cliente PJ" />
+    <column name="MONEDA_INGRESO_PI" fieldName="MonedaIngresoPI" label="Moneda Ingreso PI" />
+    <column name="MONTO_INGRESO_PI" fieldName="MontoIngresoPI" label="Monto Ingreso PI" />
+    <column name="MONEDA_EGRESO_PI" fieldName="MonedaEgresoPI" label="Moneda Egreso PI" />
+    <column name="MONTO_EGRESO_PI" fieldName="MontoEgresoPI" label="Monto Egreso PI" />
+    <column name="MONEDA_EGRESO_PJ" fieldName="MonedaEgresoPJ" label="Moneda Egreso PJ" />
+    <column name="MONTO_EGRESO_PJ" fieldName="MontoEgresoPJ" label="Monto Egreso PJ" />
+    <column name="INDICA_PARENTESCO" fieldName="IndicaParentesco" label="Indica Parentesco" />
+    <column name="INDICA_MOTIVO" fieldName="IndicaMotivo" label="Indica Motivo" />
+    <column name="GENERO_PEP" fieldName="GeneroPep" label="Genero Pep" />
+    <column name="PRIMER_APELLIDO" fieldName="PrimerApellido" label="Primer Apellido" />
+    <column name="SEGUNDO_APELLIDO" fieldName="SegundoApellido" label="Segundo Apellido" />
+    <column name="APELLIDO_CASADA" fieldName="ApellidoCasada" label="Apellido Casada" />
+    <column name="PRIMER_NOMBRE" fieldName="PrimerNombre" label="Primer Nombre" />
+    <column name="OTROS_NOMBRES" fieldName="OtrosNombres" label="Otros Nombres" />
+    <column name="SEGUNDO_NOMBRE" fieldName="SegundoNombre" label="Segundo Nombre" />
+    <column name="LUGAR_NACIMIENTO_MUNI" fieldName="LugarNacimientoMuni" label="Lugar Nacimiento Muni" />
+    <column name="PROFESION_OFICIO" fieldName="ProfesionOficio" label="Profesion Oficio" />
+    <column name="NUMERO_IDENTIFICACION" fieldName="NumeroIdentificacion" label="Numero Identificacion" />
+    <column name="DEP_EMISION" fieldName="DepEmision" label="Dep Emision" />
+    <column name="MUNI_EMISION" fieldName="MuniEmision" label="Muni Emision" />
+    <column name="PAIS_EMISION" fieldName="PaisEmision" label="Pais Emision" />
+    <column name="RAZON_SOCIAL_PJ" fieldName="RazonSocialPJ" label="Razon Social PJ" />
+    <column name="FECHA_NACIMIENTO_O_NEGOCIO_PJ" fieldName="FechaNacimientoONegocioPJ" label="Fecha Nacimiento O Negocio PJ" format="g" />
+    <column name="NACIONALIDAD_PI_PAIS_CONSTITUCION_PJ" fieldName="NacionalidadPIPaisConstitucionPJ" label="Nacionalidad PI Pais Constitucion PJ" />
+    <column name="OTRA_NACIONALIDAD_PI" fieldName="OtraNacionalidadPI" label="Otra Nacionalidad PI" />
+    <column name="NUM_NIT" fieldName="NumNit" label="Num Nit" />
+    <column name="TELEFONO_LF" fieldName="TelefonoLF" label="Telefono LF" />
+    <column name="CELULAR" fieldName="Celular" label="Celular" />
+    <column name="EMAIL" fieldName="Email" label="Email" />
+    <column name="DIRECCION_PARTICULAR_SEDE" fieldName="DireccionParticularSede" label="Direccion Particular Sede" />
+    <column name="ZONA" fieldName="Zona" label="Zona" />
+    <column name="DIREC_MUNI" fieldName="DirecMuni" label="Direc Muni" />
+    <column name="DIREC_DEP" fieldName="DirecDep" label="Direc Dep" />
+    <column name="FUENTE_INGRESO_CLIENTE" fieldName="FuenteIngresoCliente" label="Fuente Ingreso Cliente" />
+    <column name="DIREC_PAIS" fieldName="DirecPais" label="Direc Pais" />
+    <column name="ACTUACION_CLIENTE_SOLICITANTE" fieldName="ActuacionClienteSolicitante" label="Actuacion Cliente Solicitante" />
+    <column name="NO_ACTUA" fieldName="NOActua" label="NO Actua" />
+    <column name="OTRAS_FUENTES_INGRESO" fieldName="OtrasFuentesIngreso" label="Otras Fuentes Ingreso" />
+    <column name="ZONA_PI" fieldName="ZonaPI" label="Zona PI" />
+    <column name="DIRECCION_EMPRESA_PI" fieldName="DireccionEmpresaPI" label="Direccion Empresa PI" />
+    <column name="TELEFONO_PI" fieldName="TelefonoPI" label="Telefono PI" />
+    <column name="NUM_NIT_PI" fieldName="NumNitPI" label="Num Nit PI" />
+    <column name="MUNI_SEDE_EMP_CL" fieldName="MuniSedeEmpCL" label="Muni Sede Emp CL" />
+    <column name="DEP_SEDE_EMP_CL" fieldName="DepSedeEmpCL" label="Dep Sede Emp CL" />
+    <column name="ZONA_SEDE_EM_CL" fieldName="ZonaSedeEMCL" label="Zona Sede EM CL" />
+    <column name="DIRECCION_SEDE_EM_PI" fieldName="DireccionSedeEMPI" label="Direccion Sede EM PI" />
+    <column name="TELEFONO_EMPRESA_CLIENTE" fieldName="TelefonoEmpresaCliente" label="Telefono Empresa Cliente" />
+    <column name="PUESTO_DESEMPENA_CLIENTE" fieldName="PuestoDesempenaCliente" label="Puesto Desempena Cliente" />
+    <column name="NOMBRE_EMPRESA_TRAB_CLIENTE" fieldName="NombreEmpresaTrabCliente" label="Nombre Empresa Trab Cliente" />
+    <column name="ACTIVIDAD_ECONOMICA_PJ" fieldName="ActividadEconomicaPJ" label="Actividad Economica PJ" />
+    <column name="NO_AGENCIAS" fieldName="NOAgencias" label="NO Agencias" />
+    <column name="NOMBRE_PROVEEDOR" fieldName="NombreProveedor" label="Nombre Proveedor" />
+    <column name="CANT_EMPLEADOS" fieldName="CantEmpleados" label="Cant Empleados" />
+    <column name="NOMBRE_CLIENTE_PJ" fieldName="NombreClientePJ" label="Nombre Cliente PJ" />
+    <column name="TIPO_INGRESO_EGRESO_PI" fieldName="TipoIngresoEgresoPI" label="Tipo Ingreso Egreso PI" />
+    <column name="TIPO_EGRESO_INGRESO_PI" fieldName="TipoEgresoIngresoPI" label="Tipo Egreso Ingreso PI" />
+    <column name="MONEDA_INGRESO_PJ" fieldName="MonedaIngresoPJ" label="Moneda Ingreso PJ" />
+    <column name="MONTO_INGRESO_PJ" fieldName="MontoIngresoPJ" label="Monto Ingreso PJ" />
+    <column name="TIPO_INGRESO_EGRESO_PJ" fieldName="TipoIngresoEgresoPJ" label="Tipo Ingreso Egreso PJ" />
+    <column name="TIPO_EGRESO_INGRESO_PJ" fieldName="TipoEgresoIngresoPJ" label="Tipo Egreso Ingreso PJ" />
+    <column name="TIPO_PROD_SERVICIO_SOLICITADO" fieldName="TipoProdServicioSolicitado" label="Tipo Prod Servicio Solicitado" />
+    <column name="VALOR_TOTAL_PROD_SERVICIO" fieldName="ValorTotalProdServicio" label="Valor Total Prod Servicio" />
+    <column name="DESCRIP_DAT_GENERALES" fieldName="DescripDatGenerales" label="Descrip Dat Generales" />
+    <column name="MONTO_INICIAL_MANEJAR" fieldName="MontoInicialManejar" label="Monto Inicial Manejar" />
+    <column name="MONTO_MENSUAL_MANEJAR" fieldName="MontoMensualManejar" label="Monto Mensual Manejar" />
+    <column name="PROPOSITO_DESTINO_SERVICIO" fieldName="PropositoDestinoServicio" label="Proposito Destino Servicio" />
+    <column name="PROCEDENCIA_FONDOS" fieldName="ProcedenciaFondos" label="Procedencia Fondos" />
+    <column name="TRASLADO__FONDOS" fieldName="TrasladoFondos" label="Traslado Fondos" />
+    <column name="TRANSFERENCIAS_A_NIVEL" fieldName="TransferenciasANivel" label="Transferencias A Nivel" />
+    <column name="ES_PEP" fieldName="ESPep" label="ES Pep" />
+    <column name="PARENTESCO_PEP" fieldName="ParentescoPep" label="Parentesco Pep" />
+    <column name="DONDE_TRABAJA_PEP" fieldName="DondeTrabajaPep" label="Donde Trabaja Pep" />
+    <column name="PAIS_INSTITUCION_ENTE" fieldName="PaisInstitucionEnte" label="Pais Institucion Ente" />
+    <column name="PROCEDENCIA_RIQUEZA_PEP" fieldName="ProcedenciaRiquezaPep" label="Procedencia Riqueza Pep" />
+    <column name="SEGUNDO_APELLIDO_PEP" fieldName="SegundoApellidoPep" label="Segundo Apellido Pep" />
+    <column name="APELLIDO_CADADA_PEP" fieldName="ApellidoCadadaPep" label="Apellido Cadada Pep" />
+    <column name="PRIMER_NOMBRE_PEP" fieldName="PrimerNombrePep" label="Primer Nombre Pep" />
+    <column name="SEGUNDO_NOMBRE_PEP" fieldName="SegundoNombrePep" label="Segundo Nombre Pep" />
+    <column name="OTRO_NOMBRE_PEP" fieldName="OtroNombrePep" label="Otro Nombre Pep" />
+    <column name="PUESTO_DESEMP_PEP" fieldName="PuestoDesempPep" label="Puesto Desemp Pep" />
+    <column name="PERSONA_DESEMP_CARGO_POLITICO" fieldName="PersonaDesempCargoPolitico" label="Persona Desemp Cargo Politico" />
+    <column name="SOLICITANTE_ASOCIADO_PEP" fieldName="SolicitanteAsociadoPep" label="Solicitante Asociado Pep" />
+    <column name="PRIMER_REF_SOLICITANTE" fieldName="PrimerRefSolicitante" label="Primer Ref Solicitante" />
+    <column name="PRIMER_APELLIDO_PEP" fieldName="PrimerApellidoPep" label="Primer Apellido Pep" />
+    <column name="SEG_REF_SOLICITANTE" fieldName="SegRefSolicitante" label="Seg Ref Solicitante" />
+    <column name="FECHA_MODIFICA" fieldName="FechaModifica" label="Fecha Modifica" format="g" />
+    <column name="USUARIO_MODIFICA" fieldName="UsuarioModifica" label="Usuario Modifica" />
+    <column name="FECHA_CREA" fieldName="FechaCrea" label="Fecha Crea" format="g" />
+    <column name="USUARIO_CREA" fieldName="UsuarioCrea" label="Usuario Crea" />
+    <column name="CEL_MOV.REF:LAB_DOS" fieldName="CelMovreflabDos" label="Cel Mov.ref:lab Dos" />
+    <column name="CEL_MOV_REF_LAB_UNO" fieldName="CelMovRefLabUno" label="Cel Mov Ref Lab Uno" />
+    <column name="TELEF_LINEA_DOS" fieldName="TelefLineaDos" label="Telef Linea Dos" />
+    <column name="TELEF_LINEA_UNO" fieldName="TelefLineaUno" label="Telef Linea Uno" />
+    <column name="SEG_REF_LAB_SOLICITANTE" fieldName="SegRefLabSolicitante" label="Seg Ref Lab Solicitante" />
+    <column name="PRIM_REF_LAB_SOLICITANTE" fieldName="PrimRefLabSolicitante" label="Prim Ref Lab Solicitante" />
+    <column name="CEL_SEG_REF" fieldName="CelSegRef" label="Cel Seg Ref" />
+    <column name="CEL_PRIM_REF" fieldName="CelPrimRef" label="Cel Prim Ref" />
+  </columns>
+</dataModel>

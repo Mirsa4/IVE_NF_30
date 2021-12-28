@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="IveDatosPersonales" conflictDetection="overwriteChanges" label="Ive Datos Personales" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"IVE_DATOS_PERSONALES"."ID_IVE_DP" "IDIveDp"
+	,"IVE_DATOS_PERSONALES"."LLAVE" "Llave"
+	,"IVE_DATOS_PERSONALES"."DICCIONARIO" "Diccionario"
+	,"IVE_DATOS_PERSONALES"."PRIMERAPELLIDO" "Primerapellido"
+	,"IVE_DATOS_PERSONALES"."SEGUNDOAPELLIDO" "Segundoapellido"
+	,"IVE_DATOS_PERSONALES"."APELLIDOCASADA" "Apellidocasada"
+	,"IVE_DATOS_PERSONALES"."PRIMERNOMBRE" "Primernombre"
+	,"IVE_DATOS_PERSONALES"."SEGUNDONOMBRE" "Segundonombre"
+	,"IVE_DATOS_PERSONALES"."OTROSNOMBRES" "Otrosnombres"
+	,"IVE_DATOS_PERSONALES"."FECHANACIMIENTO" "Fechanacimiento"
+	,"IVE_DATOS_PERSONALES"."NACIONALIDAD1" "Nacionalidad1"
+	,"IVE_DATOS_PERSONALES"."NACIONALIDAD2" "Nacionalidad2"
+	,"IVE_DATOS_PERSONALES"."CONDICIONMIGRATORIA" "Condicionmigratoria"
+	,"IVE_DATOS_PERSONALES"."OTRACONDICIONMIGRATORIA" "Otracondicionmigratoria"
+	,"IVE_DATOS_PERSONALES"."ESTADOCIVIL" "Estadocivil"
+	,"IVE_DATOS_PERSONALES"."PROFESIONOFICIO" "Profesionoficio"
+	,"IVE_DATOS_PERSONALES"."TIPODOCUMENTOIDENTIFICACION" "Tipodocumentoidentificacion"
+	,"IVE_DATOS_PERSONALES"."NUMERODOCUMENTOIDENTIFICACIÓN" "Numerodocumentoidentificacin"
+	,"IVE_DATOS_PERSONALES"."EMISIONPASAPORTE" "Emisionpasaporte"
+	,"IVE_DATOS_PERSONALES"."NIT" "Nit"
+	,"IVE_DATOS_PERSONALES"."TELEFONO1" "Telefono1"
+	,"IVE_DATOS_PERSONALES"."TELEFONO2" "Telefono2"
+	,"IVE_DATOS_PERSONALES"."EMAIL" "Email"
+	,"IVE_DATOS_PERSONALES"."DIRECCIONRESIDENCIA" "Direccionresidencia"
+	,"IVE_DATOS_PERSONALES"."PEP" "Pep"
+	,"IVE_DATOS_PERSONALES"."CPE" "Cpe"
+	,"IVE_DATOS_PERSONALES"."EMISIONDEPTO" "Emisiondepto"
+	,"IVE_DATOS_PERSONALES"."EMISIONMUNICIPIO" "Emisionmunicipio"
+	,"IVE_DATOS_PERSONALES"."RAZON_SOCIAL_PI" "RazonSocialPi"
+from "dbo"."IVE_DATOS_PERSONALES" "IVE_DATOS_PERSONALES"
+]]></text>
+    </command>
+    <command id="ID_IVE_DPIdentityCommand" type="Text" event="Inserted">
+      <text><![CDATA[select @@identity]]></text>
+      <output>
+        <fieldOutput fieldName="IDIveDp" />
+      </output>
+    </command>
+  </commands>
+  <fields>
+    <field name="IDIveDp" type="Int32" allowNulls="false" isPrimaryKey="true" label="Id Ive Dp" readOnly="true" />
+    <field name="Llave" type="String" allowNulls="false" label="Llave" length="50" showInSummary="true" />
+    <field name="Diccionario" type="String" allowNulls="false" label="Diccionario" length="50" showInSummary="true" />
+    <field name="Primerapellido" type="String" label="Primerapellido" length="50" showInSummary="true" />
+    <field name="Segundoapellido" type="String" label="Segundoapellido" length="50" showInSummary="true" />
+    <field name="Apellidocasada" type="String" label="Apellidocasada" length="50" showInSummary="true" />
+    <field name="Primernombre" type="String" label="Primernombre" length="50" />
+    <field name="Segundonombre" type="String" label="Segundonombre" length="50" />
+    <field name="Otrosnombres" type="String" label="Otrosnombres" length="50" />
+    <field name="Fechanacimiento" type="String" label="Fechanacimiento" length="50" />
+    <field name="Nacionalidad1" type="String" label="Nacionalidad1" length="50" />
+    <field name="Nacionalidad2" type="String" label="Nacionalidad2" length="50" />
+    <field name="Condicionmigratoria" type="String" label="Condicionmigratoria" length="50" />
+    <field name="Otracondicionmigratoria" type="String" label="Otracondicionmigratoria" length="50" />
+    <field name="Estadocivil" type="Int32" allowNulls="false" label="Estadocivil" />
+    <field name="Profesionoficio" type="String" label="Profesionoficio" length="100" />
+    <field name="Tipodocumentoidentificacion" type="Int32" label="Tipodocumentoidentificacion" />
+    <field name="Numerodocumentoidentificacin" type="String" label="Numerodocumentoidentificación" length="50" />
+    <field name="Emisionpasaporte" type="String" label="Emisionpasaporte" length="50" />
+    <field name="Nit" type="String" label="Nit" length="50" />
+    <field name="Telefono1" type="String" label="Telefono1" length="50" />
+    <field name="Telefono2" type="String" label="Telefono2" length="50" />
+    <field name="Email" type="String" label="Email" length="50" />
+    <field name="Direccionresidencia" type="String" label="Direccionresidencia" length="150" />
+    <field name="Pep" type="Int32" allowNulls="false" label="Pep" />
+    <field name="Cpe" type="Int32" allowNulls="false" label="Cpe" />
+    <field name="Emisiondepto" type="Int32" label="Emisiondepto" />
+    <field name="Emisionmunicipio" type="Int32" label="Emisionmunicipio" />
+    <field name="RazonSocialPi" type="String" label="Razon Social Pi" length="1" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="Ive Datos Personales">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="Llave" columns="50" />
+        <dataField fieldName="Diccionario" columns="50" />
+        <dataField fieldName="Primerapellido" columns="50" />
+        <dataField fieldName="Segundoapellido" columns="50" />
+        <dataField fieldName="Apellidocasada" columns="50" />
+        <dataField fieldName="Primernombre" columns="50" />
+        <dataField fieldName="Segundonombre" columns="50" />
+        <dataField fieldName="Otrosnombres" columns="50" />
+        <dataField fieldName="Fechanacimiento" columns="50" />
+        <dataField fieldName="Nacionalidad1" columns="50" />
+        <dataField fieldName="Nacionalidad2" columns="50" />
+        <dataField fieldName="Condicionmigratoria" columns="50" />
+        <dataField fieldName="Otracondicionmigratoria" columns="50" />
+        <dataField fieldName="Estadocivil" columns="15" />
+        <dataField fieldName="Profesionoficio" />
+        <dataField fieldName="Tipodocumentoidentificacion" columns="15" />
+        <dataField fieldName="Numerodocumentoidentificacin" columns="50" />
+        <dataField fieldName="Emisionpasaporte" columns="50" />
+        <dataField fieldName="Nit" columns="50" />
+        <dataField fieldName="Telefono1" columns="50" />
+        <dataField fieldName="Telefono2" columns="50" />
+        <dataField fieldName="Email" columns="50" />
+        <dataField fieldName="Direccionresidencia" />
+        <dataField fieldName="Pep" columns="15" />
+        <dataField fieldName="Cpe" columns="15" />
+        <dataField fieldName="Emisiondepto" columns="15" />
+        <dataField fieldName="Emisionmunicipio" columns="15" />
+        <dataField fieldName="RazonSocialPi" columns="1" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review Ive Datos Personales">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="Ive Datos Personales" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Llave" columns="50" />
+            <dataField fieldName="Diccionario" columns="50" />
+            <dataField fieldName="Primerapellido" columns="50" />
+            <dataField fieldName="Segundoapellido" columns="50" />
+            <dataField fieldName="Apellidocasada" columns="50" />
+            <dataField fieldName="Primernombre" columns="50" />
+            <dataField fieldName="Segundonombre" columns="50" />
+            <dataField fieldName="Otrosnombres" columns="50" />
+            <dataField fieldName="Fechanacimiento" columns="50" />
+            <dataField fieldName="Nacionalidad1" columns="50" />
+            <dataField fieldName="Nacionalidad2" columns="50" />
+            <dataField fieldName="Condicionmigratoria" columns="50" />
+            <dataField fieldName="Otracondicionmigratoria" columns="50" />
+            <dataField fieldName="Estadocivil" columns="15" />
+            <dataField fieldName="Profesionoficio" />
+            <dataField fieldName="Tipodocumentoidentificacion" columns="15" />
+            <dataField fieldName="Numerodocumentoidentificacin" columns="50" />
+            <dataField fieldName="Emisionpasaporte" columns="50" />
+            <dataField fieldName="Nit" columns="50" />
+            <dataField fieldName="Telefono1" columns="50" />
+            <dataField fieldName="Telefono2" columns="50" />
+            <dataField fieldName="Email" columns="50" />
+            <dataField fieldName="Direccionresidencia" />
+            <dataField fieldName="Pep" columns="15" />
+            <dataField fieldName="Cpe" columns="15" />
+            <dataField fieldName="Emisiondepto" columns="15" />
+            <dataField fieldName="Emisionmunicipio" columns="15" />
+            <dataField fieldName="RazonSocialPi" columns="1" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New Ive Datos Personales">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Llave" columns="50" />
+            <dataField fieldName="Diccionario" columns="50" />
+            <dataField fieldName="Primerapellido" columns="50" />
+            <dataField fieldName="Segundoapellido" columns="50" />
+            <dataField fieldName="Apellidocasada" columns="50" />
+            <dataField fieldName="Primernombre" columns="50" />
+            <dataField fieldName="Segundonombre" columns="50" />
+            <dataField fieldName="Otrosnombres" columns="50" />
+            <dataField fieldName="Fechanacimiento" columns="50" />
+            <dataField fieldName="Nacionalidad1" columns="50" />
+            <dataField fieldName="Nacionalidad2" columns="50" />
+            <dataField fieldName="Condicionmigratoria" columns="50" />
+            <dataField fieldName="Otracondicionmigratoria" columns="50" />
+            <dataField fieldName="Estadocivil" columns="15" />
+            <dataField fieldName="Profesionoficio" />
+            <dataField fieldName="Tipodocumentoidentificacion" columns="15" />
+            <dataField fieldName="Numerodocumentoidentificacin" columns="50" />
+            <dataField fieldName="Emisionpasaporte" columns="50" />
+            <dataField fieldName="Nit" columns="50" />
+            <dataField fieldName="Telefono1" columns="50" />
+            <dataField fieldName="Telefono2" columns="50" />
+            <dataField fieldName="Email" columns="50" />
+            <dataField fieldName="Direccionresidencia" />
+            <dataField fieldName="Pep" columns="15" />
+            <dataField fieldName="Cpe" columns="15" />
+            <dataField fieldName="Emisiondepto" columns="15" />
+            <dataField fieldName="Emisionmunicipio" columns="15" />
+            <dataField fieldName="RazonSocialPi" columns="1" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" commandArgument="Save" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" commandArgument="Save" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" commandArgument="SaveAndNew" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenLastCommandArgument="Save" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenClientScript="this.hasDetails()" />
+      <action id="a14" whenLastCommandName="Insert" whenLastCommandArgument="SaveAndNew" commandName="New" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a5" />
+      <action id="a6" commandName="Import" commandArgument="createForm1" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag7" scope="ActionBar" headerText="Report">
+      <action id="a1" commandName="ReportAsPdf" />
+      <action id="a2" commandName="ReportAsImage" />
+      <action id="a3" commandName="ReportAsExcel" />
+      <action id="a4" commandName="ReportAsWord" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>

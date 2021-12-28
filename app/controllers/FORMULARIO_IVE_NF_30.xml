@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="FORMULARIO_IVE_NF_30" conflictDetection="overwriteChanges" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <fields>
+    <field name="Nit" type="String" label="Nit" length="50" showInSummary="true" />
+    <field name="NombreEmpresa" type="String" allowNulls="false" label="Nombre Empresa" length="50" showInSummary="true" />
+    <field name="Direccion" type="String" label="Direccion" length="150" showInSummary="true" />
+    <field name="Telefono" type="String" label="Telefono" length="50" showInSummary="true" />
+    <field name="Estado" type="String" allowNulls="false" label="Estado" length="50" showInSummary="true" />
+    <field name="IveArchivosCodIve" type="String" allowNulls="false" label="Ive Archivos Cod Ive" length="50" showInSummary="true" />
+    <field name="Llave" type="String" allowNulls="false" label="Llave" length="50" showInSummary="true" />
+    <field name="Diccionario" type="String" allowNulls="false" label="Diccionario" length="50" showInSummary="true" />
+    <field name="Montoaproximado" type="Double" label="Montoaproximado" showInSummary="true" />
+    <field name="MonTipopersona" type="Int32" allowNulls="false" label="Mon Tipopersona" showInSummary="true" />
+    <field name="IDIveMunicipio" type="Int32" allowNulls="false" isPrimaryKey="true" label="Id Ive Municipio" readOnly="true">
+      <items style="DropDownList" />
+    </field>
+    <field name="Municipio" type="Int32" allowNulls="false" label="Municipio" showInSummary="true" />
+    <field name="Nombre" type="String" allowNulls="false" label="Nombre" length="50" showInSummary="true" />
+    <field name="Muni" type="Int32" allowNulls="false" label="Municipio" showInSummary="true">
+      <items style="DropDownList" dataController="IveMunicipio1" dataTextField="Nombre" dataValueField="IDIveMunicipio" />
+    </field>
+    <field name="IDIveDepartamento" type="Int32" allowNulls="false" isPrimaryKey="true" label="ID Ive Departamento" readOnly="true" />
+    <field name="Departamento" type="Int32" allowNulls="false" label="Departamento" showInSummary="true" />
+    <field name="Nombre_1" type="String" allowNulls="false" label="Nombre" length="50" showInSummary="true" />
+    <field name="Depto" type="Int32" allowNulls="false" label="Departamento: " showInSummary="true">
+      <items style="DropDownList" dataController="IveDepartamento" dataTextField="Nombre" dataValueField="IDIveDepartamento" />
+    </field>
+    <field name="IDPais" type="Int32" label="País: " allowNulls="false" showInSummary="true">
+      <items style="DropDownList" dataController="IvePais" dataTextField="Abrev" dataValueField="IDPais" />
+    </field>
+    <field name="Nombre_2" type="String" label="Nombre" length="50" showInSummary="true" />
+    <field name="Abrev" type="String" label="Abrev" length="10" showInSummary="true" />
+    <field name="IDIveDp" type="Int32" allowNulls="false" isPrimaryKey="true" label="Id Ive Dp" readOnly="true" />
+    <field name="Llave_1" type="String" allowNulls="false" label="Llave" length="50" showInSummary="true" />
+    <field name="Diccionario_1" type="String" allowNulls="false" label="Diccionario" length="50" showInSummary="true" />
+    <field name="Primerapellido" type="String" label="Primerapellido" length="50" showInSummary="true" />
+    <field name="Segundoapellido" type="String" label="Segundoapellido" length="50" showInSummary="true" />
+    <field name="Apellidocasada" type="String" label="Apellidocasada" length="50" showInSummary="true" />
+    <field name="Primernombre" type="String" label="Primer nombre:" length="50" />
+    <field name="Segundonombre" type="String" label="Segundonombre" length="50" />
+    <field name="Otrosnombres" type="String" label="Otrosnombres" length="50" />
+    <field name="Fechanacimiento" type="String" label="Fechanacimiento" length="50" />
+    <field name="Nacionalidad1" type="String" label="Nacionalidad1" length="50" />
+    <field name="Nacionalidad2" type="String" label="Nacionalidad2" length="50" />
+    <field name="Condicionmigratoria" type="String" label="Condicionmigratoria" length="50" />
+    <field name="Otracondicionmigratoria" type="String" label="Otracondicionmigratoria" length="50" />
+    <field name="Estadocivil" type="Int32" allowNulls="false" label="Estadocivil" />
+    <field name="Profesionoficio" type="String" label="Profesionoficio" length="100" />
+    <field name="Tipodocumentoidentificacion" type="Int32" label="Tipodocumentoidentificacion" />
+    <field name="Numerodocumentoidentificacin" type="String" label="Numerodocumentoidentificación" length="50" />
+    <field name="Emisionpasaporte" type="String" label="Emisionpasaporte" length="50" />
+    <field name="Nit_1" type="String" label="Nit" length="50" />
+    <field name="Telefono1" type="String" label="Telefono1" length="50" />
+    <field name="Telefono2" type="String" label="Telefono2" length="50" />
+    <field name="Email" type="String" label="Email" length="50" />
+    <field name="Direccionresidencia" type="String" label="Direccionresidencia" length="150" />
+    <field name="Pep" type="Int32" allowNulls="false" label="Pep" />
+    <field name="Cpe" type="Int32" allowNulls="false" label="Cpe" />
+    <field name="Emisiondepto" type="Int32" label="Emisiondepto" />
+    <field name="Emisionmunicipio" type="Int32" label="Emisionmunicipio" />
+    <field name="RazonSocialPi" type="String" label="Razon Social Pi" length="1" />
+    <field name="IDEmpresa" type="Int32" label="Id Empresa" showInSummary="true">
+      <items style="DropDownList" dataController="IveEmpresa" dataView="grid1" dataTextField="NombreEmpresa" dataValueField="IDEmpresa" />
+    </field>
+    <field name="Nit_2" type="String" label="Nit" length="50" showInSummary="true" />
+    <field name="NombreEmpresa_1" type="String" allowNulls="false" label="Nombre Empresa" length="50" showInSummary="true" />
+    <field name="Direccion_1" type="String" label="Direccion" length="150" showInSummary="true" />
+    <field name="Telefono_1" type="String" label="Telefono" length="50" showInSummary="true" />
+    <field name="Estado_1" type="String" allowNulls="false" label="Estado" length="50" showInSummary="true" />
+  </fields>
+  <actions>
+    <actionGroup id="ag101" scope="Grid" flat="false">
+      <action commandName="Select" id="a100" />
+      <action commandName="Edit" id="a101" />
+      <action commandName="Delete" id="a102" />
+      <action id="a103" />
+      <action commandName="New" id="a104" />
+      <action commandName="Duplicate" id="a105" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag1006" scope="Form" flat="false">
+      <action commandName="Edit" id="a100" />
+      <action commandName="Delete" id="a101" />
+      <action commandName="Update" id="a102" commandArgument="Save" whenLastCommandName="Edit" />
+      <action commandName="Cancel" whenLastCommandName="Edit" id="a103" />
+      <action commandName="Insert" commandArgument="Save" whenLastCommandName="New" id="a104" />
+      <action commandName="Insert" commandArgument="SaveAndNew" whenLastCommandName="New" id="a105" />
+    </actionGroup>
+    <actionGroup id="ag102" scope="ActionBar" flat="false" headerText="New">
+      <action commandName="New" commandArgument="createForm1" id="a100" />
+    </actionGroup>
+    <actionGroup id="ag103" scope="ActionBar" headerText="Edit/Delete" flat="false">
+      <action commandName="Edit" id="a100" />
+      <action commandName="Delete" id="a101" />
+    </actionGroup>
+    <actionGroup id="ag104" scope="ActionBar" headerText="Record" flat="false">
+      <action commandName="Update" whenLastCommandName="Edit" id="a101" />
+      <action commandName="Cancel" whenLastCommandName="Edit" id="a100" />
+      <action commandName="Insert" whenLastCommandName="New" id="a102" />
+      <action commandName="Cancel" whenLastCommandName="New" id="a103" />
+    </actionGroup>
+    <actionGroup id="ag105" scope="Row" flat="false">
+      <action commandName="Update" whenLastCommandName="Edit" id="a100" />
+      <action commandName="Cancel" whenLastCommandName="Edit" id="a101" />
+      <action commandName="Insert" whenLastCommandName="New" id="a102" />
+      <action commandName="Cancel" whenLastCommandName="New" id="a103" />
+    </actionGroup>
+  </actions>
+  <views>
+    <view id="createForm1" type="Form" label="FORMULARIO PARA  INICIO DE RELACIONES" tags="modal-task">
+      <headerText>Por favor llenar el fomulario con la información requerida</headerText>
+      <categories>
+        <category id="c1" flow="NewColumn">
+          <dataFields />
+          <description><![CDATA[1. Lugar:]]></description>
+        </category>
+        <category id="c9" flow="NewColumn">
+          <dataFields>
+            <dataField fieldName="Depto" columns="15" />
+          </dataFields>
+        </category>
+        <category id="c10" flow="NewColumn">
+          <dataFields>
+            <dataField fieldName="Muni" columns="15" />
+          </dataFields>
+        </category>
+        <category id="c11" flow="NewColumn">
+          <dataFields>
+            <dataField fieldName="IDPais" columns="15" />
+          </dataFields>
+        </category>
+        <category id="c3" flow="NewRow">
+          <dataFields />
+          <description><![CDATA[2. FECHA (dd/mm/aaa):]]></description>
+        </category>
+        <category id="c15" flow="NewColumn" />
+        <category id="c2" wrap="true" collapsed="true" headerText="3. DATOS DE LA PERSONA OBLIGADA (PO)" floating="true" flow="NewRow">
+          <dataFields />
+          <description />
+        </category>
+        <category id="c16" flow="NewRow">
+          <description><![CDATA[3.1 Nombre completo de la persona individual o Representante Legal de la persona jurídica:]]></description>
+        </category>
+        <category id="c29" flow="NewColumn">
+          <dataFields>
+            <dataField fieldName="IDEmpresa" columns="15" />
+          </dataFields>
+        </category>
+        <category id="c12" flow="NewColumn" />
+        <category id="c13" flow="NewRow">
+          <description><![CDATA[4.1 Tipo de Persona]]></description>
+        </category>
+        <category headerText="4. DATOS PERSONALES DEL SOLICITANTE/CLIENTE" id="c4" flow="NewRow" />
+        <category id="c17">
+          <description><![CDATA[4.1 Tipo Persona:]]></description>
+        </category>
+        <category id="c14">
+          <description><![CDATA[3.1 Nombre Completo o Razón Social y Nombre Comercial]]></description>
+        </category>
+        <category id="c21">
+          <description><![CDATA[4.2 Nombre completo de la persona individual o Representante Legal de la persona jurídica:]]></description>
+        </category>
+        <category id="c22">
+          <description><![CDATA[4.2.1 Primer apellido]]></description>
+          <dataFields>
+            <dataField fieldName="Primerapellido" textMode="Text" />
+          </dataFields>
+        </category>
+        <category id="c28">
+          <dataFields />
+        </category>
+        <category id="c19">
+          <description><![CDATA[4.2.2 Segundo apellido]]></description>
+          <dataFields>
+            <dataField fieldName="Segundoapellido" textMode="Text" />
+          </dataFields>
+        </category>
+        <category id="c20">
+          <description><![CDATA[4.2.3 Apellido Casada:]]></description>
+          <dataFields>
+            <dataField fieldName="Apellidocasada" textMode="Text" />
+          </dataFields>
+        </category>
+        <category id="c18">
+          <description><![CDATA[4.2.4 Primer Nombre]]></description>
+          <dataFields>
+            <dataField fieldName="Primernombre" columns="50" />
+          </dataFields>
+        </category>
+        <category id="c23">
+          <description><![CDATA[4.2.5 Segundo nombre]]></description>
+          <dataFields>
+            <dataField fieldName="Segundonombre" textMode="Text" />
+          </dataFields>
+        </category>
+        <category id="c24">
+          <description><![CDATA[4.2.6 Otros nombres]]></description>
+          <dataFields>
+            <dataField fieldName="Otrosnombres" textMode="Text" />
+          </dataFields>
+        </category>
+        <category id="c25">
+          <description><![CDATA[4.3 Datos específicos de la persona individual o Representante Legal de la persona jurídica:]]></description>
+        </category>
+        <category id="c26">
+          <description><![CDATA[4.3.1 Lugar de nacimiento]]></description>
+        </category>
+        <category id="c27">
+          <description><![CDATA[4.3.2 Género:]]></description>
+          <dataFields>
+            <dataField fieldName="Sexo" textMode="Text" />
+          </dataFields>
+        </category>
+        <category headerText="5. INFORMACIÓN ECONÓMICO-FINANCIERA DEL SOLICITANTE/CLIENTE" id="c5" />
+        <category id="c30" />
+        <category headerText="6. DATOS DEL PRODUCTO O SERVICIO SOLICITADO POR EL SOLICITANTE/CLIENTE" id="c6" />
+        <category headerText="7. PERSONA EXPUESTA POLÍTICAMENTE (PEP) -Persona individual o Representante Legal de la persona jurídica-" id="c7" />
+        <category headerText="8. REFERENCIAS DEL SOLICITANTE/CLIENTE" id="c8" />
+      </categories>
+    </view>
+    <view id="grid1" type="Grid" label="Formulario IVE-NF-30" tags="modal-never">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="IDIveMunicipio" columns="15" />
+      </dataFields>
+    </view>
+  </views>
+</dataController>

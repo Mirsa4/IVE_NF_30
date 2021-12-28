@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="FORMULARIO_IVE_NF_30" alias="FORMULARIO_IVE_NF_30" created="2021-12-16T10:49:05" modified="2021-12-16T11:18:19" x="114" y="24" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys>
+    <foreignKey id="TheID_IVE_DEPARTAMENTO" parentTableSchema="dbo" parentTableName="IVE_DEPARTAMENTO" x="450" y="24">
+      <foreignKeyColumn columnName="ID_IVE_DEPARTAMENTO" parentColumnName="ID_IVE_DEPARTAMENTO" />
+    </foreignKey>
+    <foreignKey id="TheID_IVE_DEPARTAMENTODEPTO" parentTableSchema="dbo" parentTableName="IVE_MUNICIPIO" baseForeignKey="TheID_IVE_DEPARTAMENTO" x="1138" y="20">
+      <foreignKeyColumn columnName="DEPTO" parentColumnName="ID_IVE_MUNICIPIO" />
+    </foreignKey>
+    <foreignKey id="TheID_IVE_MUNICIPIO" parentTableSchema="dbo" parentTableName="IVE_MUNICIPIO" x="450" y="226">
+      <foreignKeyColumn columnName="ID_IVE_MUNICIPIO" parentColumnName="ID_IVE_MUNICIPIO" />
+    </foreignKey>
+    <foreignKey id="TheID_EMPRESA" parentTableSchema="dbo" parentTableName="ive_empresa" x="455" y="450">
+      <foreignKeyColumn columnName="ID_EMPRESA" parentColumnName="ID_EMPRESA" />
+    </foreignKey>
+    <foreignKey id="TheID_PAIS" parentTableSchema="dbo" parentTableName="IVE_PAIS" x="861" y="20">
+      <foreignKeyColumn columnName="ID_PAIS" parentColumnName="ID_PAIS" />
+    </foreignKey>
+  </foreignKeys>
+  <columns>
+    <column name="IVE_ARCHIVO_COD" fieldName="IveArchivoCod" label="Ive Archivo Cod" />
+    <column name="ID_IVE_DEPARTAMENTO" fieldName="IDIveDepartamento" label="Id Ive Departamento" aliasColumnName="NOMBRE" aliasForeignKey="TheID_IVE_DEPARTAMENTO" />
+    <column name="NOMBRE" fieldName="TheidIveDepartamentonombre" label="IDIVEDEPARTAMENTO Nombre" foreignKey="TheID_IVE_DEPARTAMENTO" />
+    <column name="NOMBRE" fieldName="TheidIveDepartamentodeptonombre" label="IDIVEDEPARTAMENTODEPTO Nombre" foreignKey="TheID_IVE_DEPARTAMENTODEPTO" />
+    <column name="ID_IVE_MUNICIPIO" fieldName="IDIveMunicipio" label="Id Ive Municipio" aliasColumnName="NOMBRE" aliasForeignKey="TheID_IVE_MUNICIPIO" />
+    <column name="NOMBRE" fieldName="TheidIveMunicipionombre" label="IDIVEMUNICIPIO Nombre" foreignKey="TheID_IVE_MUNICIPIO" />
+    <column name="ID_EMPRESA" fieldName="IDEmpresa" label="Id Empresa" aliasColumnName="NOMBRE_EMPRESA" aliasForeignKey="TheID_EMPRESA" />
+    <column name="NOMBRE_EMPRESA" fieldName="TheidEmpresanombreEmpresa" label="IDEMPRESA Nombre Empresa" foreignKey="TheID_EMPRESA" />
+    <column name="DIRECCION" fieldName="TheidEmpresaDireccion" label="Theid Empresa Direccion" foreignKey="TheID_EMPRESA" />
+    <column name="TELEFONO" fieldName="TheidEmpresaTelefono" label="Theid Empresa Telefono" foreignKey="TheID_EMPRESA" />
+    <column name="CODIGO_CENTRAL_O_AGENCIA" fieldName="TheidEmpresaCodigoCentralOAgencia" label="Theid Empresa Codigo Central O Agencia" foreignKey="TheID_EMPRESA" />
+    <column name="NOMBRE_CENTRAL_O_AGENCIA" fieldName="TheidEmpresaNombreCentralOAgencia" label="Theid Empresa Nombre Central O Agencia" foreignKey="TheID_EMPRESA" />
+    <column name="ESTADO" fieldName="TheidEmpresaEstado" label="Theid Empresa Estado" foreignKey="TheID_EMPRESA" />
+    <column name="ID_PAIS" fieldName="IDPais" label="Id Pais" aliasColumnName="NOMBRE" aliasForeignKey="TheID_PAIS" />
+    <column name="NOMBRE" fieldName="TheidPaisnombre" label="IDPAIS Nombre" foreignKey="TheID_PAIS" />
+  </columns>
+</dataModel>

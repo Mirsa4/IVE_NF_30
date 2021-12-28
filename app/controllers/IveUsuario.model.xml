@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="IVE_USUARIO" alias="IVE_USUARIO" created="2021-12-10T12:40:33" modified="2021-12-10T12:40:33" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column name="ID_IVE_USUARIO" fieldName="IDIveUsuario" label="Id Ive Usuario" />
+    <column name="CORREO" fieldName="Correo" label="Correo" />
+    <column name="NOMBRE" fieldName="Nombre" label="Nombre" />
+    <column name="PASSWORD" fieldName="Password" label="Password" />
+    <column name="ESTADO" fieldName="Estado" label="Estado" />
+    <column name="ES_ADMINISTRADOR" fieldName="EsAdministrador" label="Es Administrador" />
+  </columns>
+</dataModel>

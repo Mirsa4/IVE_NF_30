@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="IveMunicipio" conflictDetection="overwriteChanges" label="Ive Municipio" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"IVE_MUNICIPIO"."ID_IVE_MUNICIPIO" "IDIveMunicipio"
+	,"IVE_MUNICIPIO"."MUNICIPIO" "Municipio"
+	,"IVE_MUNICIPIO"."NOMBRE" "Nombre"
+	,"IVE_MUNICIPIO"."MUNI" "Muni"
+from "dbo"."IVE_MUNICIPIO" "IVE_MUNICIPIO"
+]]></text>
+    </command>
+    <command id="ID_IVE_MUNICIPIOIdentityCommand" type="Text" event="Inserted">
+      <text><![CDATA[select @@identity]]></text>
+      <output>
+        <fieldOutput fieldName="IDIveMunicipio" />
+      </output>
+    </command>
+  </commands>
+  <fields>
+    <field name="IDIveMunicipio" type="Int32" allowNulls="false" isPrimaryKey="true" label="Id Ive Municipio" readOnly="true" />
+    <field name="Municipio" type="Int32" allowNulls="false" label="Municipio" showInSummary="true">
+      <items style="DropDownList" dataController="IveMunicipio" dataTextField="Nombre" dataValueField="Muni" />
+    </field>
+    <field name="Nombre" type="String" allowNulls="false" label="Nombre" length="50" showInSummary="true" />
+    <field name="Muni" type="Int32" allowNulls="false" label="Muni" showInSummary="true" />
+  </fields>
+  <views>
+    <view id="createForm1" type="Form" commandId="command1" label="New Ive Municipio">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category headerText="                                        FORMULARIO PARA INICIO DE RELACIONES" id="c3" flow="NewColumn" />
+        <category headerText="FORMULARIO IVE-NF-30" id="c2" />
+        <category headerText="Número o Código de Cliente" id="c4" />
+        <category headerText="Lugar: " id="c5">
+          <dataFields>
+            <dataField fieldName="Municipio" columns="15" />
+          </dataFields>
+        </category>
+        <category id="c6" />
+        <category id="c1">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Nombre" columns="50" />
+            <dataField fieldName="Muni" columns="15" />
+          </dataFields>
+        </category>
+        <category headerText="DATOS DE LA PERSONA OBLIGADA (PO)" id="c7" />
+        <category headerText="DATOS PERSONALES DEL SOLICITANTE / CLIENTE" id="c8" />
+        <category headerText="INFORMACIÓN ECONÓMICO-FINANCIERA DEL SOLICITANTE/CLIENTE" id="c9" />
+        <category headerText="DATOS DEL PRODUCTO O SERVICIO SOLICITADO POR EL SOLICITANTE/CLIENTE" id="c10" />
+        <category headerText="PERSONA EXPUESTA POLÍTICAMENTE  (PEP) -Persona individual o Representante Legal de la persona jurídica-" id="c11" />
+        <category headerText="REFERENCIAS DEL SOLICITANTE/CLIENTE" id="c12" />
+        <category headerText="DOCUMENTOS QUE SE DEBEN ANEXAR AL FORMULARIO PARA INICIO DE RELACIONES" id="c13" />
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" commandArgument="Save" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" commandArgument="Save" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" commandArgument="SaveAndNew" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenLastCommandArgument="Save" whenView="createForm1" commandName="Select" whenClientScript="this.hasDetails()" />
+      <action id="a14" whenLastCommandName="Insert" whenLastCommandArgument="SaveAndNew" commandName="New" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" cssClass="EditIcon" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a5" />
+      <action id="a6" commandName="Import" commandArgument="createForm1" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag7" scope="ActionBar" headerText="Report">
+      <action id="a1" commandName="ReportAsPdf" />
+      <action id="a2" commandName="ReportAsImage" />
+      <action id="a3" commandName="ReportAsExcel" />
+      <action id="a4" commandName="ReportAsWord" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>

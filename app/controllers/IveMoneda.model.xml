@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="IVE_MONEDA" alias="IVE_MONEDA" created="2021-12-10T12:40:32" modified="2021-12-10T12:40:32" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column name="ID_IVE_MONEDA" fieldName="IDIveMoneda" label="Id Ive Moneda" />
+    <column name="CODIGO_MONEDA" fieldName="CodigoMoneda" label="Codigo Moneda" />
+    <column name="DESCRIPCION" fieldName="Descripcion" label="Descripcion" />
+    <column name="ORDEN" fieldName="Orden" label="Orden" />
+  </columns>
+</dataModel>

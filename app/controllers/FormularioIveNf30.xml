@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="FormularioIveNf30" conflictDetection="overwriteChanges" label="Formulario Ive Nf30" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"FORMULARIO_IVE_NF_30"."IVE_ARCHIVO_COD" "IveArchivoCod"
+	,"FORMULARIO_IVE_NF_30"."ID_EMPRESA" "IDEmpresa"
+	,"TheID_EMPRESA"."NOMBRE_EMPRESA" "TheidEmpresanombreEmpresa"
+	,"FORMULARIO_IVE_NF_30"."ID_IVE_ARCHIVO" "IDIveArchivo"
+	,"TheID_IVE_ARCHIVO"."IVE_ARCHIVO_COD_IVE" "TheidIveArchivoiveArchivoCodIve"
+	,"FORMULARIO_IVE_NF_30"."[ID_IVE:USUARIO" "IDIveusuario"
+	,"FORMULARIO_IVE_NF_30"."ID_IVE_INGRESOS" "IDIveIngresos"
+	,"TheID_IVE_INGRESOS"."IVE_ARCHIVOS_COD_IVE" "TheidIveIngresosiveArchivosCodIve"
+	,"TheID_IVE_INGRESOSID_IVE_MONEDA"."CODIGO_MONEDA" "TheidIveIngresosidIveMonedacodigoMoneda"
+from "dbo"."FORMULARIO_IVE_NF_30" "FORMULARIO_IVE_NF_30"
+	left join "dbo"."ive_empresa" "TheID_EMPRESA" on "FORMULARIO_IVE_NF_30"."ID_EMPRESA" = "TheID_EMPRESA"."ID_EMPRESA"
+	left join "dbo"."IVE_ARCHIVO" "TheID_IVE_ARCHIVO" on "FORMULARIO_IVE_NF_30"."ID_IVE_ARCHIVO" = "TheID_IVE_ARCHIVO"."ID_IVE_ARCHIVO"
+	left join "dbo"."IVE_INGRESO" "TheID_IVE_INGRESOS" on "FORMULARIO_IVE_NF_30"."ID_IVE_INGRESOS" = "TheID_IVE_INGRESOS"."ID_IVE_INGRESOS"
+	left join "dbo"."IVE_MONEDA" "TheID_IVE_INGRESOSID_IVE_MONEDA" on "TheID_IVE_INGRESOS"."ID_IVE_MONEDA" = "TheID_IVE_INGRESOSID_IVE_MONEDA"."ID_IVE_MONEDA"
+]]></text>
+    </command>
+    <command id="IVE_ARCHIVO_CODIdentityCommand" type="Text" event="Inserted">
+      <text><![CDATA[select @@identity]]></text>
+      <output>
+        <fieldOutput fieldName="IveArchivoCod" />
+      </output>
+    </command>
+  </commands>
+  <fields>
+    <field name="IveArchivoCod" type="Int32" allowNulls="false" isPrimaryKey="true" label="Ive Archivo Cod" readOnly="true" />
+    <field name="IDEmpresa" type="Int32" label="Id Empresa" showInSummary="true">
+      <items style="Lookup" dataController="IveEmpresa" newDataView="createForm1" dataValueField="IDEmpresa" dataTextField="NombreEmpresa" />
+    </field>
+    <field name="TheidEmpresanombreEmpresa" type="String" readOnly="true" label="IDEMPRESA Nombre Empresa" length="50" />
+    <field name="IDIveArchivo" type="Int32" label="Id Ive Archivo" showInSummary="true">
+      <items style="Lookup" dataController="IveArchivo" newDataView="createForm1" dataValueField="IDIveArchivo" />
+    </field>
+    <field name="TheidIveArchivoiveArchivoCodIve" type="String" readOnly="true" label="IDIVEARCHIVO Ive Archivo Cod Ive" length="50" />
+    <field name="IDIveusuario" type="Int32" label="[ID_IVE:USUARIO" showInSummary="true" />
+    <field name="IDIveIngresos" type="Int32" label="Id Ive Ingresos" showInSummary="true">
+      <items style="Lookup" dataController="IveIngreso" newDataView="createForm1" dataValueField="IDIveIngresos" dataTextField="IveArchivosCodIve" copy="" />
+    </field>
+    <field name="TheidIveIngresosiveArchivosCodIve" type="String" readOnly="true" label="IDIVEINGRESOS Ive Archivos Cod Ive" length="50" />
+    <field name="TheidIveIngresosidIveMonedacodigoMoneda" type="String" readOnly="true" label="IDIVEINGRESOSIDIVEMONEDA Codigo Moneda" length="50" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="Formulario Ive Nf30">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="IDEmpresa" aliasFieldName="TheidEmpresanombreEmpresa" />
+        <dataField fieldName="IDIveArchivo" aliasFieldName="TheidIveArchivoiveArchivoCodIve" />
+        <dataField fieldName="IDIveusuario" columns="15" />
+        <dataField fieldName="IDIveIngresos" aliasFieldName="TheidIveIngresosiveArchivosCodIve" />
+        <dataField fieldName="TheidIveIngresosidIveMonedacodigoMoneda" columns="50" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review Formulario Ive Nf30">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="Formulario Ive Nf30" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="IDEmpresa" aliasFieldName="TheidEmpresanombreEmpresa" />
+            <dataField fieldName="IDIveArchivo" aliasFieldName="TheidIveArchivoiveArchivoCodIve" />
+            <dataField fieldName="IDIveusuario" columns="15" />
+            <dataField fieldName="IDIveIngresos" aliasFieldName="TheidIveIngresosiveArchivosCodIve" />
+            <dataField fieldName="TheidIveIngresosidIveMonedacodigoMoneda" columns="50" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New Formulario Ive Nf30">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category headerText="Individual (Persona Individual)" id="c34" flow="NewColumn">
+          <description><![CDATA[Individual (Persona Individual)]]></description>
+        </category>
+        <category id="c32">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields />
+        </category>
+        <category headerText="8. REFERENCIAS DEL SOLICITANTE/CLIENTE" id="c31" />
+        <category headerText="7. PERSONA EXPUESTA POLÍTICAMENTE (PEP) -Persona individual o Representante Legal de la persona jurídica-" id="c8" />
+        <category headerText="6. DATOS DEL PRODUCTO O SERVICIO SOLICITADO POR EL SOLICITANTE/CLIENTE" id="c7" />
+        <category id="c30" />
+        <category headerText="5. INFORMACIÓN ECONÓMICO-FINANCIERA DEL SOLICITANTE/CLIENTE" id="c6" />
+        <category id="c28" />
+        <category id="c14" />
+        <category id="c13" />
+        <category id="c27">
+          <description><![CDATA[4.3.2 Género:]]></description>
+          <dataFields />
+        </category>
+        <category id="c26">
+          <description><![CDATA[4.3.1 Lugar de nacimiento]]></description>
+        </category>
+        <category id="c25">
+          <description><![CDATA[4.3 Datos específicos de la persona individual o Representante Legal de la persona jurídica:]]></description>
+        </category>
+        <category id="c24">
+          <description><![CDATA[4.2.6 Otros nombres]]></description>
+          <dataFields />
+        </category>
+        <category id="c23">
+          <description><![CDATA[4.2.5 Segundo nombre]]></description>
+          <dataFields />
+        </category>
+        <category id="c18">
+          <description><![CDATA[4.2.4 Primer Nombre]]></description>
+          <dataFields />
+        </category>
+        <category id="c20">
+          <description><![CDATA[4.2.3 Apellido Casada:]]></description>
+          <dataFields />
+        </category>
+        <category id="c19">
+          <description><![CDATA[4.2.2 Segundo apellido]]></description>
+          <dataFields />
+        </category>
+        <category id="c22">
+          <description><![CDATA[4.2.1 Primer apellido]]></description>
+          <dataFields />
+        </category>
+        <category id="c21">
+          <description><![CDATA[4.2 Nombre completo de la persona individual o Representante Legal de la persona jurídica:]]></description>
+          <dataFields />
+        </category>
+        <category id="c17">
+          <description><![CDATA[4.1 Tipo Persona:]]></description>
+        </category>
+        <category headerText="4. DATOS PERSONALES DEL SOLICITANTE/CLIENTE" id="c5" flow="NewRow" />
+        <category id="c33" flow="NewColumn">
+          <dataFields />
+        </category>
+        <category id="c12" flow="NewColumn">
+          <dataFields />
+          <description><![CDATA[3.2 Nombre de central, sucursal o agencia donde se solicita el producto o servicio:]]></description>
+        </category>
+        <category id="c29" flow="NewColumn">
+          <dataFields />
+        </category>
+        <category id="c16" flow="NewRow">
+          <description><![CDATA[3.1 Nombre Completo o Razón Social y Nombre Comercial]]></description>
+        </category>
+        <category id="c4" wrap="true" collapsed="true" headerText="3. DATOS DE LA PERSONA OBLIGADA (PO)" floating="true" flow="NewRow">
+          <dataFields />
+          <description />
+        </category>
+        <category id="c15" flow="NewColumn">
+          <dataFields />
+        </category>
+        <category id="c3" flow="NewRow">
+          <dataFields />
+          <description><![CDATA[2. FECHA (dd/mm/aaa):]]></description>
+        </category>
+        <category id="c11" flow="NewColumn">
+          <dataFields />
+        </category>
+        <category id="c10" flow="NewColumn">
+          <dataFields />
+        </category>
+        <category id="c9" flow="NewColumn">
+          <dataFields />
+        </category>
+        <category id="c2" flow="NewColumn">
+          <dataFields />
+          <description><![CDATA[1. Lugar:]]></description>
+        </category>
+        <category id="c1">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="IDEmpresa" aliasFieldName="TheidEmpresanombreEmpresa" />
+            <dataField fieldName="IDIveArchivo" aliasFieldName="TheidIveArchivoiveArchivoCodIve" />
+            <dataField fieldName="IDIveusuario" columns="15" />
+            <dataField fieldName="IDIveIngresos" aliasFieldName="TheidIveIngresosiveArchivosCodIve" />
+            <dataField fieldName="TheidIveIngresosidIveMonedacodigoMoneda" columns="50" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" commandArgument="Save" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" commandArgument="Save" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" commandArgument="SaveAndNew" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenLastCommandArgument="Save" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenClientScript="this.hasDetails()" />
+      <action id="a14" whenLastCommandName="Insert" whenLastCommandArgument="SaveAndNew" commandName="New" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a5" />
+      <action id="a6" commandName="Import" commandArgument="createForm1" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag7" scope="ActionBar" headerText="Report">
+      <action id="a1" commandName="ReportAsPdf" />
+      <action id="a2" commandName="ReportAsImage" />
+      <action id="a3" commandName="ReportAsExcel" />
+      <action id="a4" commandName="ReportAsWord" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>

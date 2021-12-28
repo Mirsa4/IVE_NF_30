@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="IVE_DEPARTAMENTO" alias="IVE_DEPARTAMENTO" created="2021-12-10T12:40:30" modified="2021-12-21T16:14:01" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column name="NOMBRE" fieldName="Nombre" label="Nombre" />
+    <column name="DEPARTAMENTO" fieldName="Departamento" label="Departamento" />
+    <column name="ID_IVE_DEPARTAMENTO" fieldName="IDIveDepartamento" label="ID Ive Departamento" />
+    <column name="DEPTO" fieldName="Depto" label="Depto" />
+  </columns>
+</dataModel>

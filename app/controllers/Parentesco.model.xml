@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="PARENTESCO" alias="PARENTESCO" created="2021-12-21T10:49:51" modified="2021-12-21T10:49:53" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column name="ID_PARENTESCO" fieldName="IDParentesco" label="Id Parentesco" />
+    <column name="ESTADO" fieldName="Estado" label="Estado" />
+    <column name="DESCRIPCIÓN" fieldName="Descripcin" label="Descripción" />
+  </columns>
+</dataModel>

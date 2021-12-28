@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="IveArchivo" conflictDetection="overwriteChanges" label="Ive Archivo" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"IVE_ARCHIVO"."ID_IVE_ARCHIVO" "IDIveArchivo"
+	,"IVE_ARCHIVO"."CM_TIPOACTUACION" "CmTipoactuacion"
+	,"IVE_ARCHIVO"."CM_CALIDADACTUA" "CmCalidadactua"
+	,"IVE_ARCHIVO"."CM_FECHA" "CmFecha"
+	,"IVE_ARCHIVO"."CMF_TIPOACTUACION" "CmfTipoactuacion"
+	,"IVE_ARCHIVO"."CMF_CALIDADACTUA" "CmfCalidadactua"
+	,"IVE_ARCHIVO"."CMF_FECHA" "CmfFecha"
+	,"IVE_ARCHIVO"."NP_NOMBRECOMERCIAL" "NpNombrecomercial"
+	,"IVE_ARCHIVO"."NP_PRINCIPALACTIVIDADECONOMICA" "NpPrincipalactividadeconomica"
+	,"IVE_ARCHIVO"."NP_FECHAINSCRIPCIONNEGOCIO" "NpFechainscripcionnegocio"
+	,"IVE_ARCHIVO"."NP_NUMEROREGISTRO" "NpNumeroregistro"
+	,"IVE_ARCHIVO"."NP_FOLIO" "NpFolio"
+	,"IVE_ARCHIVO"."NP_LIBRO" "NpLibro"
+	,"IVE_ARCHIVO"."NP_DIRECCIONNEGOCIO" "NpDireccionnegocio"
+	,"IVE_ARCHIVO"."RD_SECTOR" "RdSector"
+	,"IVE_ARCHIVO"."RD_NOMBREEMPLEADOR" "RdNombreempleador"
+	,"IVE_ARCHIVO"."RD_PRINCIPALACTIVIDADECOEMPL" "RdPrincipalactividadecoempl"
+	,"IVE_ARCHIVO"."RD_PUESTODESEMPEÑA" "RdPuestodesempea"
+	,"IVE_ARCHIVO"."RD_DIRECCIONEMPLEADOR" "RdDireccionempleador"
+	,"IVE_ARCHIVO"."OI_TIPOOTROSINGRESOS" "OiTipootrosingresos"
+	,"IVE_ARCHIVO"."OI_DETALLEOTROSINGRESOS" "OiDetalleotrosingresos"
+	,"IVE_ARCHIVO"."PT_FECHA" "PtFecha"
+	,"IVE_ARCHIVO"."PT_PRODUCTOSERVICIO" "PtProductoservicio"
+	,"IVE_ARCHIVO"."PT_TIPOMONEDA" "PtTipomoneda"
+	,"IVE_ARCHIVO"."PT_MONTOPROMEDIOMENSUAL" "PtMontopromediomensual"
+	,"IVE_ARCHIVO"."IEI_MONTOINGRESOS" "IeiMontoingresos"
+	,"IVE_ARCHIVO"."IEI_FUENTE" "IeiFuente"
+	,"IVE_ARCHIVO"."IEI_NOMBRECOMERCIAL" "IeiNombrecomercial"
+	,"IVE_ARCHIVO"."IEI_NOMBREEMPLEADOR" "IeiNombreempleador"
+	,"IVE_ARCHIVO"."IEI_OTRASFUENTESINGRESO" "IeiOtrasfuentesingreso"
+from "dbo"."IVE_ARCHIVO" "IVE_ARCHIVO"
+]]></text>
+    </command>
+    <command id="ID_IVE_ARCHIVOIdentityCommand" type="Text" event="Inserted">
+      <text><![CDATA[select @@identity]]></text>
+      <output>
+        <fieldOutput fieldName="IDIveArchivo" />
+      </output>
+    </command>
+  </commands>
+  <fields>
+    <field name="IDIveArchivo" type="Int32" allowNulls="false" isPrimaryKey="true" label="Id Ive Archivo" readOnly="true" />
+    <field name="CmTipoactuacion" type="Int32" allowNulls="false" label="Cm Tipoactuacion" showInSummary="true" />
+    <field name="CmCalidadactua" type="String" label="Cm Calidadactua" length="1" showInSummary="true" />
+    <field name="CmFecha" type="String" allowNulls="false" label="Cm Fecha" length="50" showInSummary="true" />
+    <field name="CmfTipoactuacion" type="String" label="Cmf Tipoactuacion" length="1" showInSummary="true" />
+    <field name="CmfCalidadactua" type="String" label="Cmf Calidadactua" length="1" showInSummary="true" />
+    <field name="CmfFecha" type="String" label="Cmf Fecha" length="1" />
+    <field name="NpNombrecomercial" type="String" label="Np Nombrecomercial" length="100" />
+    <field name="NpPrincipalactividadeconomica" type="String" label="Np Principalactividadeconomica" length="150" />
+    <field name="NpFechainscripcionnegocio" type="String" label="Np Fechainscripcionnegocio" length="1" />
+    <field name="NpNumeroregistro" type="String" label="Np Numeroregistro" length="1" />
+    <field name="NpFolio" type="String" label="Np Folio" length="1" />
+    <field name="NpLibro" type="String" label="Np Libro" length="1" />
+    <field name="NpDireccionnegocio" type="String" label="Np Direccionnegocio" length="100" />
+    <field name="RdSector" type="String" label="Rd Sector" length="1" />
+    <field name="RdNombreempleador" type="String" label="Rd Nombreempleador" length="100" />
+    <field name="RdPrincipalactividadecoempl" type="String" label="Rd Principalactividadecoempl" length="150" />
+    <field name="RdPuestodesempea" type="String" label="Rd Puestodesempeña" length="50" />
+    <field name="RdDireccionempleador" type="String" label="Rd Direccionempleador" length="100" />
+    <field name="OiTipootrosingresos" type="String" label="Oi Tipootrosingresos" length="1" />
+    <field name="OiDetalleotrosingresos" type="String" label="Oi Detalleotrosingresos" length="100" />
+    <field name="PtFecha" type="String" label="Pt Fecha" length="1" />
+    <field name="PtProductoservicio" type="String" label="Pt Productoservicio" length="1" />
+    <field name="PtTipomoneda" type="String" label="Pt Tipomoneda" length="1" />
+    <field name="PtMontopromediomensual" type="String" label="Pt Montopromediomensual" length="1" />
+    <field name="IeiMontoingresos" type="Double" label="Iei Montoingresos" />
+    <field name="IeiFuente" type="Int32" allowNulls="false" label="Iei Fuente" />
+    <field name="IeiNombrecomercial" type="String" label="Iei Nombrecomercial" length="1" />
+    <field name="IeiNombreempleador" type="String" label="Iei Nombreempleador" length="100" />
+    <field name="IeiOtrasfuentesingreso" type="String" label="Iei Otrasfuentesingreso" length="1" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="Ive Archivo">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="CmTipoactuacion" columns="15" />
+        <dataField fieldName="CmCalidadactua" columns="1" />
+        <dataField fieldName="CmFecha" columns="50" />
+        <dataField fieldName="CmfTipoactuacion" columns="1" />
+        <dataField fieldName="CmfCalidadactua" columns="1" />
+        <dataField fieldName="CmfFecha" columns="1" />
+        <dataField fieldName="NpNombrecomercial" />
+        <dataField fieldName="NpPrincipalactividadeconomica" />
+        <dataField fieldName="NpFechainscripcionnegocio" columns="1" />
+        <dataField fieldName="NpNumeroregistro" columns="1" />
+        <dataField fieldName="NpFolio" columns="1" />
+        <dataField fieldName="NpLibro" columns="1" />
+        <dataField fieldName="NpDireccionnegocio" />
+        <dataField fieldName="RdSector" columns="1" />
+        <dataField fieldName="RdNombreempleador" />
+        <dataField fieldName="RdPrincipalactividadecoempl" />
+        <dataField fieldName="RdPuestodesempea" columns="50" />
+        <dataField fieldName="RdDireccionempleador" />
+        <dataField fieldName="OiTipootrosingresos" columns="1" />
+        <dataField fieldName="OiDetalleotrosingresos" />
+        <dataField fieldName="PtFecha" columns="1" />
+        <dataField fieldName="PtProductoservicio" columns="1" />
+        <dataField fieldName="PtTipomoneda" columns="1" />
+        <dataField fieldName="PtMontopromediomensual" columns="1" />
+        <dataField fieldName="IeiMontoingresos" columns="15" />
+        <dataField fieldName="IeiFuente" columns="15" />
+        <dataField fieldName="IeiNombrecomercial" columns="1" />
+        <dataField fieldName="IeiNombreempleador" />
+        <dataField fieldName="IeiOtrasfuentesingreso" columns="1" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review Ive Archivo">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="Ive Archivo" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="CmTipoactuacion" columns="15" />
+            <dataField fieldName="CmCalidadactua" columns="1" />
+            <dataField fieldName="CmFecha" columns="50" />
+            <dataField fieldName="CmfTipoactuacion" columns="1" />
+            <dataField fieldName="CmfCalidadactua" columns="1" />
+            <dataField fieldName="CmfFecha" columns="1" />
+            <dataField fieldName="NpNombrecomercial" />
+            <dataField fieldName="NpPrincipalactividadeconomica" />
+            <dataField fieldName="NpFechainscripcionnegocio" columns="1" />
+            <dataField fieldName="NpNumeroregistro" columns="1" />
+            <dataField fieldName="NpFolio" columns="1" />
+            <dataField fieldName="NpLibro" columns="1" />
+            <dataField fieldName="NpDireccionnegocio" />
+            <dataField fieldName="RdSector" columns="1" />
+            <dataField fieldName="RdNombreempleador" />
+            <dataField fieldName="RdPrincipalactividadecoempl" />
+            <dataField fieldName="RdPuestodesempea" columns="50" />
+            <dataField fieldName="RdDireccionempleador" />
+            <dataField fieldName="OiTipootrosingresos" columns="1" />
+            <dataField fieldName="OiDetalleotrosingresos" />
+            <dataField fieldName="PtFecha" columns="1" />
+            <dataField fieldName="PtProductoservicio" columns="1" />
+            <dataField fieldName="PtTipomoneda" columns="1" />
+            <dataField fieldName="PtMontopromediomensual" columns="1" />
+            <dataField fieldName="IeiMontoingresos" columns="15" />
+            <dataField fieldName="IeiFuente" columns="15" />
+            <dataField fieldName="IeiNombrecomercial" columns="1" />
+            <dataField fieldName="IeiNombreempleador" />
+            <dataField fieldName="IeiOtrasfuentesingreso" columns="1" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New Ive Archivo">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="CmTipoactuacion" columns="15" />
+            <dataField fieldName="CmCalidadactua" columns="1" />
+            <dataField fieldName="CmFecha" columns="50" />
+            <dataField fieldName="CmfTipoactuacion" columns="1" />
+            <dataField fieldName="CmfCalidadactua" columns="1" />
+            <dataField fieldName="CmfFecha" columns="1" />
+            <dataField fieldName="NpNombrecomercial" />
+            <dataField fieldName="NpPrincipalactividadeconomica" />
+            <dataField fieldName="NpFechainscripcionnegocio" columns="1" />
+            <dataField fieldName="NpNumeroregistro" columns="1" />
+            <dataField fieldName="NpFolio" columns="1" />
+            <dataField fieldName="NpLibro" columns="1" />
+            <dataField fieldName="NpDireccionnegocio" />
+            <dataField fieldName="RdSector" columns="1" />
+            <dataField fieldName="RdNombreempleador" />
+            <dataField fieldName="RdPrincipalactividadecoempl" />
+            <dataField fieldName="RdPuestodesempea" columns="50" />
+            <dataField fieldName="RdDireccionempleador" />
+            <dataField fieldName="OiTipootrosingresos" columns="1" />
+            <dataField fieldName="OiDetalleotrosingresos" />
+            <dataField fieldName="PtFecha" columns="1" />
+            <dataField fieldName="PtProductoservicio" columns="1" />
+            <dataField fieldName="PtTipomoneda" columns="1" />
+            <dataField fieldName="PtMontopromediomensual" columns="1" />
+            <dataField fieldName="IeiMontoingresos" columns="15" />
+            <dataField fieldName="IeiFuente" columns="15" />
+            <dataField fieldName="IeiNombrecomercial" columns="1" />
+            <dataField fieldName="IeiNombreempleador" />
+            <dataField fieldName="IeiOtrasfuentesingreso" columns="1" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" commandArgument="Save" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" commandArgument="Save" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" commandArgument="SaveAndNew" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenLastCommandArgument="Save" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenClientScript="this.hasDetails()" />
+      <action id="a14" whenLastCommandName="Insert" whenLastCommandArgument="SaveAndNew" commandName="New" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a5" />
+      <action id="a6" commandName="Import" commandArgument="createForm1" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag7" scope="ActionBar" headerText="Report">
+      <action id="a1" commandName="ReportAsPdf" />
+      <action id="a2" commandName="ReportAsImage" />
+      <action id="a3" commandName="ReportAsExcel" />
+      <action id="a4" commandName="ReportAsWord" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>

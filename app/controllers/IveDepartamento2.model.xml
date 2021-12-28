@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="IVE_DEPARTAMENTO" alias="IVE_DEPARTAMENTO" created="2021-12-21T13:10:40" modified="2021-12-21T13:10:43" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys>
+    <foreignKey id="DEPTO" parentTableSchema="dbo" parentTableName="IVE_MUNICIPIO" x="368" y="20">
+      <foreignKeyColumn columnName="DEPTO" parentColumnName="ID_IVE_MUNICIPIO" />
+    </foreignKey>
+  </foreignKeys>
+  <columns>
+    <column name="ID_IVE_DEPARTAMENTO" fieldName="IDIveDepartamento" label="Id Ive Departamento" />
+    <column name="DEPARTAMENTO" fieldName="Departamento" label="Departamento" />
+    <column name="NOMBRE" fieldName="Nombre" label="Nombre" />
+    <column name="DEPTO" fieldName="Depto" label="Depto" aliasColumnName="NOMBRE" aliasForeignKey="DEPTO" />
+    <column name="NOMBRE" fieldName="Deptonombre" label="Depto Nombre" foreignKey="DEPTO" />
+  </columns>
+</dataModel>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="IVE_MUNICIPIO" alias="IVE_MUNICIPIO" created="2021-12-07T15:35:39" modified="2021-12-07T15:35:43" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column name="ID_IVE_MUNICIPIO" fieldName="IDIveMunicipio" label="Id Ive Municipio" />
+    <column name="MUNICIPIO" fieldName="Municipio" label="Municipio" />
+    <column name="NOMBRE" fieldName="Nombre" label="Nombre" />
+    <column name="MUNI" fieldName="Muni" label="Muni" />
+  </columns>
+</dataModel>

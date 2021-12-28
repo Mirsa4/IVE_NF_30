@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="FormularioIveNf304" conflictDetection="overwriteChanges" label="Formulario Ive Nf304" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"FORMULARIO_IVE_NF_30"."IVE_ARCHIVO_COD" "IveArchivoCod"
+	,"FORMULARIO_IVE_NF_30"."FECHA_FOMULARIO" "FechaFomulario"
+	,"FORMULARIO_IVE_NF_30"."ID_IVE_DEPARTAMENTO" "IDIveDepartamento"
+	,"TheID_IVE_DEPARTAMENTO"."NOMBRE" "TheidIveDepartamentonombre"
+	,"TheID_IVE_DEPARTAMENTODEPTO"."NOMBRE" "TheidIveDepartamentodeptonombre"
+	,"FORMULARIO_IVE_NF_30"."ID_IVE_MUNICIPIO" "IDIveMunicipio"
+	,"TheID_IVE_MUNICIPIO"."NOMBRE" "TheidIveMunicipionombre"
+	,"FORMULARIO_IVE_NF_30"."ID_EMPRESA" "IDEmpresa"
+	,"TheID_EMPRESA"."NOMBRE_EMPRESA" "TheidEmpresanombreEmpresa"
+	,"FORMULARIO_IVE_NF_30"."ID_IVE_ARCHIVO" "IDIveArchivo"
+	,"FORMULARIO_IVE_NF_30"."ID_IVE_INGRESOS" "IDIveIngresos"
+	,"FORMULARIO_IVE_NF_30"."ID_PAIS" "IDPais"
+	,"TheID_PAIS"."NOMBRE" "TheidPaisnombre"
+	,"FORMULARIO_IVE_NF_30"."USUARIO_CREA" "UsuarioCrea"
+	,"FORMULARIO_IVE_NF_30"."FECHA_CREA" "FechaCrea"
+	,"FORMULARIO_IVE_NF_30"."USUARIO_ACTUALIZA" "UsuarioActualiza"
+	,"FORMULARIO_IVE_NF_30"."FECHA_ACTUALIZA" "FechaActualiza"
+	,"FORMULARIO_IVE_NF_30"."ID_IVE_DP" "IDIveDp"
+	,"TheID_IVE_DP"."IVE_ARCHIVO_COD_IVE" "TheidIveDpiveArchivoCodIve"
+	,"TheID_IVE_DP"."LLAVE" "TheidIveDPLlave"
+	,"TheID_IVE_DP"."DICCIONARIO" "TheidIveDPDiccionario"
+	,"TheID_IVE_DP"."PRIMERAPELLIDO" "TheidIveDPPrimerapellido"
+	,"TheID_IVE_DP"."SEGUNDOAPELLIDO" "TheidIveDPSegundoapellido"
+	,"TheID_IVE_DP"."APELLIDOCASADA" "TheidIveDPApellidocasada"
+	,"TheID_IVE_DP"."PRIMERNOMBRE" "TheidIveDPPrimernombre"
+	,"TheID_IVE_DP"."SEGUNDONOMBRE" "TheidIveDPSegundonombre"
+	,"TheID_IVE_DP"."OTROSNOMBRES" "TheidIveDPOtrosnombres"
+	,"TheID_IVE_DP"."LUGAR_NACIMIENTO" "TheidIveDPLugarNacimiento"
+	,"TheID_IVE_DP"."FECHANACIMIENTO" "TheidIveDPFechanacimiento"
+	,"TheID_IVE_DP"."NACIONALIDAD1" "TheidIveDPNacionalidad1"
+	,"TheID_IVE_DP"."NACIONALIDAD2" "TheidIveDPNacionalidad2"
+	,"TheID_IVE_DP"."CONDICIONMIGRATORIA" "TheidIveDPCondicionmigratoria"
+	,"TheID_IVE_DP"."SEXO" "TheidIveDPSexo"
+	,"TheID_IVE_DP"."ESTADOCIVIL" "TheidIveDPEstadocivil"
+	,"TheID_IVE_DP"."OTRACONDICIONMIGRATORIA" "TheidIveDPOtracondicionmigratoria"
+	,"TheID_IVE_DP"."PROFESIONOFICIO" "TheidIveDPProfesionoficio"
+	,"TheID_IVE_DP"."TIPODOCUMENTOIDENTIFICACION" "TheidIveDPTipodocumentoidentificacion"
+	,"TheID_IVE_DP"."NUMERODOCUMENTOIDENTIFICACIÓN" "TheidIveDPNumerodocumentoidentificacin"
+	,"TheID_IVE_DP"."EMISIONPASAPORTE" "TheidIveDPEmisionpasaporte"
+	,"TheID_IVE_DP"."NIT" "TheidIveDPNit"
+	,"TheID_IVE_DP"."TELEFONO1" "TheidIveDPTelefono1"
+	,"TheID_IVE_DP"."TELEFONO2" "TheidIveDPTelefono2"
+	,"TheID_IVE_DP"."EMAIL" "TheidIveDPEmail"
+	,"TheID_IVE_DP"."DIRECCIONRESIDENCIA" "TheidIveDPDireccionresidencia"
+	,"TheID_IVE_DP"."CPE" "TheidIveDPCpe"
+	,"TheID_IVE_DP"."PEP" "TheidIveDPPep"
+	,"TheID_IVE_DP"."EMISIONMUNICIPIO" "TheidIveDPEmisionmunicipio"
+	,"TheID_IVE_DP"."EMISIONDEPTO" "TheidIveDPEmisiondepto"
+	,"TheID_IVE_DP"."RAZON_SOCIAL_PI" "TheidIveDPRazonSocialPI"
+	,"TheID_IVE_DP"."ID_TIPO_PERSONA" "TheidIveDPIDTipoPersona"
+	,"TheID_IVE_DP"."ID_IVE_DP" "TheidIveDPIDIveDP"
+	,"TheID_IVE_DPID_TIPO_PERSONA"."DESCRIPCION" "TheidIveDpidTipoPersonadescripcion"
+	,"FORMULARIO_IVE_NF_30"."[ID_IVE:USUARIO" "idIveusuario"
+from "dbo"."FORMULARIO_IVE_NF_30" "FORMULARIO_IVE_NF_30"
+	left join "dbo"."IVE_DEPARTAMENTO" "TheID_IVE_DEPARTAMENTO" on "FORMULARIO_IVE_NF_30"."ID_IVE_DEPARTAMENTO" = "TheID_IVE_DEPARTAMENTO"."ID_IVE_DEPARTAMENTO"
+	left join "dbo"."IVE_MUNICIPIO" "TheID_IVE_DEPARTAMENTODEPTO" on "TheID_IVE_DEPARTAMENTO"."DEPTO" = "TheID_IVE_DEPARTAMENTODEPTO"."ID_IVE_MUNICIPIO"
+	left join "dbo"."IVE_MUNICIPIO" "TheID_IVE_MUNICIPIO" on "FORMULARIO_IVE_NF_30"."ID_IVE_MUNICIPIO" = "TheID_IVE_MUNICIPIO"."ID_IVE_MUNICIPIO"
+	left join "dbo"."ive_empresa" "TheID_EMPRESA" on "FORMULARIO_IVE_NF_30"."ID_EMPRESA" = "TheID_EMPRESA"."ID_EMPRESA"
+	left join "dbo"."IVE_PAIS" "TheID_PAIS" on "FORMULARIO_IVE_NF_30"."ID_PAIS" = "TheID_PAIS"."ID_PAIS"
+	left join "dbo"."IVE_DATOS_PERSONALES" "TheID_IVE_DP" on "FORMULARIO_IVE_NF_30"."ID_IVE_DP" = "TheID_IVE_DP"."ID_IVE_DP"
+	left join "dbo"."TIPO_PERSONA" "TheID_IVE_DPID_TIPO_PERSONA" on "TheID_IVE_DP"."ID_TIPO_PERSONA" = "TheID_IVE_DPID_TIPO_PERSONA"."ID_TIPO_PERSONA"
+]]></text>
+    </command>
+    <command id="IVE_ARCHIVO_CODIdentityCommand" type="Text" event="Inserted">
+      <text><![CDATA[select @@identity]]></text>
+      <output>
+        <fieldOutput fieldName="IveArchivoCod" />
+      </output>
+    </command>
+  </commands>
+  <fields>
+    <field name="IveArchivoCod" type="Int32" allowNulls="false" isPrimaryKey="true" label="Códifgo IVE" readOnly="true" />
+    <field name="FechaFomulario" type="DateTime" allowNulls="false" label="Fecha Fomulario" showInSummary="true" />
+    <field name="IDIveDepartamento" type="Int32" label="Departamento" showInSummary="true">
+      <items style="Lookup" dataController="IveDepartamento" newDataView="createForm1" dataValueField="IDIveDepartamento" dataTextField="Nombre" copy="TheidIveDepartamentodeptonombre=Nombre" />
+    </field>
+    <field name="TheidIveDepartamentonombre" type="String" readOnly="true" label="IDIVEDEPARTAMENTO Nombre" length="50" />
+    <field name="TheidIveDepartamentodeptonombre" type="String" readOnly="true" label="IDIVEDEPARTAMENTODEPTO Nombre" length="50" />
+    <field name="IDIveMunicipio" type="Int32" label="Id Ive Municipio" showInSummary="true">
+      <items />
+    </field>
+    <field name="TheidIveMunicipionombre" type="String" readOnly="true" label="IDIVEMUNICIPIO Nombre" length="50" />
+    <field name="IDEmpresa" type="Int32" label="Id Empresa" showInSummary="true">
+      <items style="Lookup" dataController="IveEmpresa" newDataView="createForm1" dataValueField="IDEmpresa" dataTextField="NombreEmpresa" />
+    </field>
+    <field name="TheidEmpresanombreEmpresa" type="String" readOnly="true" label="IDEMPRESA Nombre Empresa" length="50" />
+    <field name="IDIveArchivo" type="Int32" label="Id Ive Archivo" showInSummary="true" />
+    <field name="IDIveIngresos" type="Int32" label="Id Ive Ingresos" />
+    <field name="IDPais" type="Int32" label="Id Pais">
+      <items style="Lookup" dataController="IvePais" newDataView="createForm1" dataValueField="IDPais" dataTextField="Nombre" />
+    </field>
+    <field name="TheidPaisnombre" type="String" readOnly="true" label="IDPAIS Nombre" length="50" />
+    <field name="UsuarioCrea" type="String" label="Usuario Crea" length="50" />
+    <field name="FechaCrea" type="DateTime" dataFormatString="g" label="Fecha Crea" />
+    <field name="UsuarioActualiza" type="String" label="Usuario Actualiza" length="50" />
+    <field name="FechaActualiza" type="DateTime" dataFormatString="g" label="Fecha Actualiza" />
+    <field name="IDIveDp" type="Int32" label="Id Ive Dp">
+      <items style="Lookup" dataController="IveDatosPersonales" newDataView="createForm1" dataValueField="IDIveDp" copy="TheidIveDPLlave=Llave, TheidIveDPDiccionario=Diccionario, TheidIveDPPrimerapellido=Primerapellido, TheidIveDPSegundoapellido=Segundoapellido, TheidIveDPApellidocasada=Apellidocasada, TheidIveDPPrimernombre=Primernombre, TheidIveDPSegundonombre=Segundonombre, TheidIveDPOtrosnombres=Otrosnombres, TheidIveDPFechanacimiento=Fechanacimiento, TheidIveDPNacionalidad1=Nacionalidad1, TheidIveDPNacionalidad2=Nacionalidad2, TheidIveDPCondicionmigratoria=Condicionmigratoria, TheidIveDPEstadocivil=Estadocivil, TheidIveDPOtracondicionmigratoria=Otracondicionmigratoria, TheidIveDPProfesionoficio=Profesionoficio, TheidIveDPTipodocumentoidentificacion=Tipodocumentoidentificacion, TheidIveDPNumerodocumentoidentificacin=Numerodocumentoidentificacin, TheidIveDPEmisionpasaporte=Emisionpasaporte, TheidIveDPNit=Nit, TheidIveDPTelefono1=Telefono1, TheidIveDPTelefono2=Telefono2, TheidIveDPEmail=Email, TheidIveDPDireccionresidencia=Direccionresidencia, TheidIveDPCpe=Cpe, TheidIveDPPep=Pep, TheidIveDPEmisionmunicipio=Emisionmunicipio, TheidIveDPEmisiondepto=Emisiondepto, TheidIveDPRazonSocialPI=RazonSocialPi, TheidIveDPIDIveDP=IDIveDp, " />
+    </field>
+    <field name="TheidIveDpiveArchivoCodIve" type="String" readOnly="true" dataFormatString="g" label="IDIVEDP Ive Archivo Cod Ive" length="50" />
+    <field name="TheidIveDPLlave" type="String" readOnly="true" dataFormatString="g" label="Theid Ive DP Llave" length="50" />
+    <field name="TheidIveDPDiccionario" type="String" readOnly="true" label="Theid Ive DP Diccionario" length="50" />
+    <field name="TheidIveDPPrimerapellido" type="String" readOnly="true" label="Theid Ive DP Primerapellido" length="50" />
+    <field name="TheidIveDPSegundoapellido" type="String" readOnly="true" label="Theid Ive DP Segundoapellido" length="50" />
+    <field name="TheidIveDPApellidocasada" type="String" readOnly="true" label="Theid Ive DP Apellidocasada" length="50" />
+    <field name="TheidIveDPPrimernombre" type="String" readOnly="true" label="Theid Ive DP Primernombre" length="50" />
+    <field name="TheidIveDPSegundonombre" type="String" readOnly="true" label="Theid Ive DP Segundonombre" length="50" />
+    <field name="TheidIveDPOtrosnombres" type="String" readOnly="true" label="Theid Ive DP Otrosnombres" length="50" />
+    <field name="TheidIveDPLugarNacimiento" type="String" readOnly="true" label="Theid Ive DP Lugar Nacimiento" length="100" />
+    <field name="TheidIveDPFechanacimiento" type="String" readOnly="true" label="Theid Ive DP Fechanacimiento" length="50" />
+    <field name="TheidIveDPNacionalidad1" type="String" readOnly="true" label="Theid Ive DP Nacionalidad 1" length="50" />
+    <field name="TheidIveDPNacionalidad2" type="String" readOnly="true" label="Theid Ive DP Nacionalidad 2" length="50" />
+    <field name="TheidIveDPCondicionmigratoria" type="String" readOnly="true" label="Theid Ive DP Condicionmigratoria" length="50" />
+    <field name="TheidIveDPSexo" type="String" readOnly="true" label="Theid Ive DP Sexo" length="50" />
+    <field name="TheidIveDPEstadocivil" type="Int32" readOnly="true" label="Theid Ive DP Estadocivil" />
+    <field name="TheidIveDPOtracondicionmigratoria" type="String" readOnly="true" label="Theid Ive DP Otracondicionmigratoria" length="50" />
+    <field name="TheidIveDPProfesionoficio" type="String" readOnly="true" label="Theid Ive DP Profesionoficio" length="100" />
+    <field name="TheidIveDPTipodocumentoidentificacion" type="Int32" readOnly="true" label="Theid Ive DP Tipodocumentoidentificacion" />
+    <field name="TheidIveDPNumerodocumentoidentificacin" type="String" readOnly="true" label="Documento de Identificación:" length="50" />
+    <field name="TheidIveDPEmisionpasaporte" type="String" readOnly="true" label="Emisión Pasaporte:" length="50" />
+    <field name="TheidIveDPNit" type="String" readOnly="true" label="Theid Ive DP Nit" length="50" />
+    <field name="TheidIveDPTelefono1" type="String" readOnly="true" label="Theid Ive DP Telefono 1" length="50" />
+    <field name="TheidIveDPTelefono2" type="String" readOnly="true" label="Theid Ive DP Telefono 2" length="50" />
+    <field name="TheidIveDPEmail" type="String" readOnly="true" label="Theid Ive DP Email" length="50" />
+    <field name="TheidIveDPDireccionresidencia" type="String" readOnly="true" label="Theid Ive DP Direccionresidencia" length="150" />
+    <field name="TheidIveDPCpe" type="Int32" readOnly="true" label="Theid Ive DP Cpe" />
+    <field name="TheidIveDPPep" type="Int32" readOnly="true" label="Theid Ive DP Pep" />
+    <field name="TheidIveDPEmisionmunicipio" type="Int32" readOnly="true" label="Theid Ive DP Emisionmunicipio" />
+    <field name="TheidIveDPEmisiondepto" type="Int32" readOnly="true" label="Theid Ive DP Emisiondepto" />
+    <field name="TheidIveDPRazonSocialPI" type="String" readOnly="true" label="Theid Ive DP Razon Social PI" length="1" />
+    <field name="TheidIveDPIDTipoPersona" type="Int32" readOnly="true" label="Theid Ive DP ID Tipo Persona" />
+    <field name="TheidIveDPIDIveDP" type="Int32" label="Theid Ive DP ID Ive DP" readOnly="true" />
+    <field name="TheidIveDpidTipoPersonadescripcion" type="String" readOnly="true" label="IDIVEDPIDTIPOPERSONA Descripcion" length="50" />
+    <field name="idIveusuario" type="Int32" label="[id Ive:usuario" />
+    <field name="TheID_IVE_MUNICIPIO_ID_IVE_MUNICIPIO1" type="Int32" readOnly="true" label="Theid Ive Municipio ID Ive Municipio 1" computed="true">
+      <formula>TheID_IVE_MUNICIPIO.ID_IVE_MUNICIPIO</formula>
+    </field>
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="Formulario Ive Nf304">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="FechaFomulario" columns="10" />
+        <dataField fieldName="IDIveDepartamento" aliasFieldName="TheidIveDepartamentonombre" />
+        <dataField fieldName="TheidIveDepartamentodeptonombre" columns="50" />
+        <dataField fieldName="IDIveMunicipio" aliasFieldName="TheidIveMunicipionombre" />
+        <dataField fieldName="IDEmpresa" aliasFieldName="TheidEmpresanombreEmpresa" />
+        <dataField fieldName="IDIveArchivo" columns="15" />
+        <dataField fieldName="IDIveIngresos" columns="15" />
+        <dataField fieldName="IDPais" aliasFieldName="TheidPaisnombre" />
+        <dataField fieldName="UsuarioCrea" columns="50" />
+        <dataField fieldName="FechaCrea" columns="20" />
+        <dataField fieldName="UsuarioActualiza" columns="50" />
+        <dataField fieldName="FechaActualiza" columns="20" />
+        <dataField fieldName="IDIveDp" aliasFieldName="TheidIveDpiveArchivoCodIve" />
+        <dataField fieldName="TheidIveDPLlave" columns="50" />
+        <dataField fieldName="TheidIveDPDiccionario" columns="50" />
+        <dataField fieldName="TheidIveDPPrimerapellido" columns="50" />
+        <dataField fieldName="TheidIveDPSegundoapellido" columns="50" />
+        <dataField fieldName="TheidIveDPApellidocasada" columns="50" />
+        <dataField fieldName="TheidIveDPPrimernombre" columns="50" />
+        <dataField fieldName="TheidIveDPSegundonombre" columns="50" />
+        <dataField fieldName="TheidIveDPOtrosnombres" columns="50" />
+        <dataField fieldName="TheidIveDPLugarNacimiento" />
+        <dataField fieldName="TheidIveDPFechanacimiento" columns="50" />
+        <dataField fieldName="TheidIveDPNacionalidad1" columns="50" />
+        <dataField fieldName="TheidIveDPNacionalidad2" columns="50" />
+        <dataField fieldName="TheidIveDPCondicionmigratoria" columns="50" />
+        <dataField fieldName="TheidIveDPSexo" columns="50" />
+        <dataField fieldName="TheidIveDPEstadocivil" columns="15" />
+        <dataField fieldName="TheidIveDPOtracondicionmigratoria" columns="50" />
+        <dataField fieldName="TheidIveDPProfesionoficio" />
+        <dataField fieldName="TheidIveDPTipodocumentoidentificacion" columns="15" />
+        <dataField fieldName="TheidIveDPNumerodocumentoidentificacin" columns="50" />
+        <dataField fieldName="TheidIveDPEmisionpasaporte" columns="50" />
+        <dataField fieldName="TheidIveDPNit" columns="50" />
+        <dataField fieldName="TheidIveDPTelefono1" columns="50" />
+        <dataField fieldName="TheidIveDPTelefono2" columns="50" />
+        <dataField fieldName="TheidIveDPEmail" columns="50" />
+        <dataField fieldName="TheidIveDPDireccionresidencia" />
+        <dataField fieldName="TheidIveDPCpe" columns="15" />
+        <dataField fieldName="TheidIveDPPep" columns="15" />
+        <dataField fieldName="TheidIveDPEmisionmunicipio" columns="15" />
+        <dataField fieldName="TheidIveDPEmisiondepto" columns="15" />
+        <dataField fieldName="TheidIveDPRazonSocialPI" columns="1" />
+        <dataField fieldName="TheidIveDPIDTipoPersona" columns="15" />
+        <dataField fieldName="TheidIveDPIDIveDP" columns="15" />
+        <dataField fieldName="TheidIveDpidTipoPersonadescripcion" columns="50" />
+        <dataField fieldName="idIveusuario" columns="15" />
+        <dataField fieldName="TheID_IVE_MUNICIPIO_ID_IVE_MUNICIPIO1" columns="15" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review Formulario Ive Nf304">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="Formulario Ive Nf304" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="FechaFomulario" columns="10" />
+            <dataField fieldName="IDIveDepartamento" aliasFieldName="TheidIveDepartamentonombre" />
+            <dataField fieldName="TheidIveDepartamentodeptonombre" columns="50" />
+            <dataField fieldName="IDIveMunicipio" aliasFieldName="TheidIveMunicipionombre" />
+            <dataField fieldName="IDEmpresa" aliasFieldName="TheidEmpresanombreEmpresa" />
+            <dataField fieldName="IDIveArchivo" columns="15" />
+            <dataField fieldName="IDIveIngresos" columns="15" />
+            <dataField fieldName="IDPais" aliasFieldName="TheidPaisnombre" />
+            <dataField fieldName="UsuarioCrea" columns="50" />
+            <dataField fieldName="FechaCrea" columns="20" />
+            <dataField fieldName="UsuarioActualiza" columns="50" />
+            <dataField fieldName="FechaActualiza" columns="20" />
+            <dataField fieldName="IDIveDp" aliasFieldName="TheidIveDpiveArchivoCodIve" />
+            <dataField fieldName="TheidIveDPLlave" columns="50" />
+            <dataField fieldName="TheidIveDPDiccionario" columns="50" />
+            <dataField fieldName="TheidIveDPPrimerapellido" columns="50" />
+            <dataField fieldName="TheidIveDPSegundoapellido" columns="50" />
+            <dataField fieldName="TheidIveDPApellidocasada" columns="50" />
+            <dataField fieldName="TheidIveDPPrimernombre" columns="50" />
+            <dataField fieldName="TheidIveDPSegundonombre" columns="50" />
+            <dataField fieldName="TheidIveDPOtrosnombres" columns="50" />
+            <dataField fieldName="TheidIveDPLugarNacimiento" />
+            <dataField fieldName="TheidIveDPFechanacimiento" columns="50" />
+            <dataField fieldName="TheidIveDPNacionalidad1" columns="50" />
+            <dataField fieldName="TheidIveDPNacionalidad2" columns="50" />
+            <dataField fieldName="TheidIveDPCondicionmigratoria" columns="50" />
+            <dataField fieldName="TheidIveDPSexo" columns="50" />
+            <dataField fieldName="TheidIveDPEstadocivil" columns="15" />
+            <dataField fieldName="TheidIveDPOtracondicionmigratoria" columns="50" />
+            <dataField fieldName="TheidIveDPProfesionoficio" />
+            <dataField fieldName="TheidIveDPTipodocumentoidentificacion" columns="15" />
+            <dataField fieldName="TheidIveDPNumerodocumentoidentificacin" columns="50" />
+            <dataField fieldName="TheidIveDPEmisionpasaporte" columns="50" />
+            <dataField fieldName="TheidIveDPNit" columns="50" />
+            <dataField fieldName="TheidIveDPTelefono1" columns="50" />
+            <dataField fieldName="TheidIveDPTelefono2" columns="50" />
+            <dataField fieldName="TheidIveDPEmail" columns="50" />
+            <dataField fieldName="TheidIveDPDireccionresidencia" />
+            <dataField fieldName="TheidIveDPCpe" columns="15" />
+            <dataField fieldName="TheidIveDPPep" columns="15" />
+            <dataField fieldName="TheidIveDPEmisionmunicipio" columns="15" />
+            <dataField fieldName="TheidIveDPEmisiondepto" columns="15" />
+            <dataField fieldName="TheidIveDPRazonSocialPI" columns="1" />
+            <dataField fieldName="TheidIveDPIDTipoPersona" columns="15" />
+            <dataField fieldName="TheidIveDPIDIveDP" columns="15" />
+            <dataField fieldName="TheidIveDpidTipoPersonadescripcion" columns="50" />
+            <dataField fieldName="idIveusuario" columns="15" />
+            <dataField fieldName="TheID_IVE_MUNICIPIO_ID_IVE_MUNICIPIO1" columns="15" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New Formulario Ive Nf304">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="FechaFomulario" columns="10" />
+            <dataField fieldName="IDIveDepartamento" aliasFieldName="TheidIveDepartamentonombre" />
+            <dataField fieldName="TheidIveDepartamentodeptonombre" columns="50" />
+            <dataField fieldName="IDIveMunicipio" aliasFieldName="TheidIveMunicipionombre" />
+            <dataField fieldName="IDEmpresa" aliasFieldName="TheidEmpresanombreEmpresa" />
+            <dataField fieldName="IDIveArchivo" columns="15" />
+            <dataField fieldName="IDIveIngresos" columns="15" />
+            <dataField fieldName="IDPais" aliasFieldName="TheidPaisnombre" />
+            <dataField fieldName="UsuarioCrea" columns="50" />
+            <dataField fieldName="FechaCrea" columns="20" />
+            <dataField fieldName="UsuarioActualiza" columns="50" />
+            <dataField fieldName="FechaActualiza" columns="20" />
+            <dataField fieldName="IDIveDp" aliasFieldName="TheidIveDpiveArchivoCodIve" />
+            <dataField fieldName="TheidIveDPLlave" columns="50" />
+            <dataField fieldName="TheidIveDPDiccionario" columns="50" />
+            <dataField fieldName="TheidIveDPPrimerapellido" columns="50" />
+            <dataField fieldName="TheidIveDPSegundoapellido" columns="50" />
+            <dataField fieldName="TheidIveDPApellidocasada" columns="50" />
+            <dataField fieldName="TheidIveDPPrimernombre" columns="50" />
+            <dataField fieldName="TheidIveDPSegundonombre" columns="50" />
+            <dataField fieldName="TheidIveDPOtrosnombres" columns="50" />
+            <dataField fieldName="TheidIveDPLugarNacimiento" />
+            <dataField fieldName="TheidIveDPFechanacimiento" columns="50" />
+            <dataField fieldName="TheidIveDPNacionalidad1" columns="50" />
+            <dataField fieldName="TheidIveDPNacionalidad2" columns="50" />
+            <dataField fieldName="TheidIveDPCondicionmigratoria" columns="50" />
+            <dataField fieldName="TheidIveDPSexo" columns="50" />
+            <dataField fieldName="TheidIveDPEstadocivil" columns="15" />
+            <dataField fieldName="TheidIveDPOtracondicionmigratoria" columns="50" />
+            <dataField fieldName="TheidIveDPProfesionoficio" />
+            <dataField fieldName="TheidIveDPTipodocumentoidentificacion" columns="15" />
+            <dataField fieldName="TheidIveDPNumerodocumentoidentificacin" columns="50" />
+            <dataField fieldName="TheidIveDPEmisionpasaporte" columns="50" />
+            <dataField fieldName="TheidIveDPNit" columns="50" />
+            <dataField fieldName="TheidIveDPTelefono1" columns="50" />
+            <dataField fieldName="TheidIveDPTelefono2" columns="50" />
+            <dataField fieldName="TheidIveDPEmail" columns="50" />
+            <dataField fieldName="TheidIveDPDireccionresidencia" />
+            <dataField fieldName="TheidIveDPCpe" columns="15" />
+            <dataField fieldName="TheidIveDPPep" columns="15" />
+            <dataField fieldName="TheidIveDPEmisionmunicipio" columns="15" />
+            <dataField fieldName="TheidIveDPEmisiondepto" columns="15" />
+            <dataField fieldName="TheidIveDPRazonSocialPI" columns="1" />
+            <dataField fieldName="TheidIveDPIDTipoPersona" columns="15" />
+            <dataField fieldName="TheidIveDPIDIveDP" columns="15" />
+            <dataField fieldName="TheidIveDpidTipoPersonadescripcion" columns="50" />
+            <dataField fieldName="idIveusuario" columns="15" />
+            <dataField fieldName="TheID_IVE_MUNICIPIO_ID_IVE_MUNICIPIO1" columns="15" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" commandArgument="Save" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" commandArgument="Save" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" commandArgument="SaveAndNew" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenLastCommandArgument="Save" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenClientScript="this.hasDetails()" />
+      <action id="a14" whenLastCommandName="Insert" whenLastCommandArgument="SaveAndNew" commandName="New" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a5" />
+      <action id="a6" commandName="Import" commandArgument="createForm1" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag7" scope="ActionBar" headerText="Report">
+      <action id="a1" commandName="ReportAsPdf" />
+      <action id="a2" commandName="ReportAsImage" />
+      <action id="a3" commandName="ReportAsExcel" />
+      <action id="a4" commandName="ReportAsWord" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>
