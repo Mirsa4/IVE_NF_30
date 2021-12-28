@@ -145,7 +145,7 @@ from "dbo"."FORMULARIO_IVE_NF_30" "FORMULARIO_IVE_NF_30"
     </field>
     <field name="IDPaisNombre" type="String" readOnly="true" label="Pais Nombre" length="50" />
     <field name="TipoPersona" type="Int32" label="Tipo Persona">
-      <items style="RadioButtonList" dataController="TipoPersona" newDataView="createForm1" dataValueField="IDTipoPersona" dataTextField="Descripcion" dataView="grid1" />
+      <items style="RadioButtonList" dataController="TipoPersona" dataValueField="IDTipoPersona" dataTextField="Descripcion" dataView="grid1" />
     </field>
     <field name="TipoPersonaDescripcion" type="String" readOnly="true" label="Tipo Persona Descripcion" length="50" />
     <field name="PrimerApellido" type="String" label="Primer Apellido" length="100" />
@@ -969,71 +969,281 @@ from "dbo"."FORMULARIO_IVE_NF_30" "FORMULARIO_IVE_NF_30"
             <dataField fieldName="PaisClientePj" columns="15" />
           </dataFields>
         </category>
-        <category id="c79">
+        <category id="c79" flow="NewRow">
           <description><![CDATA[Información persona individual o jurídica:]]></description>
           <dataFields />
         </category>
-        <category id="c7">
+        <category id="c7" flow="NewColumn">
           <description />
           <dataFields>
             <dataField fieldName="MonedaIngresoPi" columns="15" />
+          </dataFields>
+        </category>
+        <category id="c27" flow="NewRow">
+          <description />
+          <dataFields>
             <dataField fieldName="MontoIngresoPi" columns="15" />
+          </dataFields>
+        </category>
+        <category id="c81" flow="NewColumn">
+          <description />
+          <dataFields>
             <dataField fieldName="TipoIngresoEgresoPi" columns="15" />
+          </dataFields>
+        </category>
+        <category id="c82" flow="NewRow">
+          <description />
+          <dataFields>
             <dataField fieldName="MonedaEgresoPi" columns="15" />
+          </dataFields>
+        </category>
+        <category id="c83" flow="NewColumn">
+          <description />
+          <dataFields>
             <dataField fieldName="MontoEgresoPi" columns="15" />
+          </dataFields>
+        </category>
+        <category id="c84" flow="NewRow">
+          <description />
+          <dataFields>
             <dataField fieldName="TipoEgresoIngresoPi" columns="15" />
+          </dataFields>
+        </category>
+        <category id="c85" flow="NewColumn">
+          <description />
+          <dataFields>
             <dataField fieldName="MonedaIngresoPj" columns="15" />
+          </dataFields>
+        </category>
+        <category id="c86" flow="NewRow">
+          <description />
+          <dataFields>
             <dataField fieldName="MontoIngresoPj" columns="15" />
+          </dataFields>
+        </category>
+        <category id="c87" flow="NewColumn">
+          <description />
+          <dataFields>
             <dataField fieldName="TipoIngresoEgresoPj" columns="15" />
+          </dataFields>
+        </category>
+        <category id="c88" flow="NewRow">
+          <description />
+          <dataFields>
             <dataField fieldName="MonedaEgresoPj" aliasFieldName="MonedaEgresoPJDescripcion" />
+          </dataFields>
+        </category>
+        <category id="c89" flow="NewColumn">
+          <description />
+          <dataFields>
             <dataField fieldName="MontoEgresoPj" aliasFieldName="MontoEgresoPJRango" />
             <dataField fieldName="MontoEgresoPJTipoRango" columns="50" />
+          </dataFields>
+        </category>
+        <category id="c90" flow="NewRow">
+          <description />
+          <dataFields>
             <dataField fieldName="MontoEgresoPJTipoPersona" columns="50" />
+          </dataFields>
+        </category>
+        <category id="c91" flow="NewColumn">
+          <description />
+          <dataFields>
             <dataField fieldName="TipoEgresoIngresoPj" columns="15" />
           </dataFields>
         </category>
-        <category id="c80">
-          <description />
-          <dataFields />
-        </category>
-        <category headerText="7. PERSONA EXPUESTA POLÍTICAMENTE (PEP) -Persona individual o Representante Legal de la persona jurídica-" id="c8">
+        <category headerText="7. PERSONA EXPUESTA POLÍTICAMENTE (PEP) -Persona individual o Representante Legal de la persona jurídica-" id="c8" flow="NewRow">
           <dataFields>
             <dataField fieldName="EsPep" columns="10" />
+          </dataFields>
+        </category>
+        <category id="c80" flow="NewColumn">
+          <description />
+          <dataFields>
             <dataField fieldName="ParentescoPep" columns="10" />
+          </dataFields>
+        </category>
+        <category id="c92" flow="NewRow">
+          <description />
+          <dataFields>
             <dataField fieldName="IndicaParentesco" aliasFieldName="IndicaParentescoDescripcin" />
             <dataField fieldName="SolicitanteAsociadoPep" columns="10" />
+          </dataFields>
+        </category>
+        <category id="c94" flow="NewColumn">
+          <description />
+          <dataFields>
             <dataField fieldName="IndicaMotivo" aliasFieldName="IndicaMotivoDescripcion" />
+          </dataFields>
+        </category>
+        <category id="c95" flow="NewRow">
+          <description />
+          <dataFields>
             <dataField fieldName="PersonaDesempCargoPolitico" columns="10" />
+          </dataFields>
+        </category>
+        <category id="c110" flow="NewColumn">
+          <description />
+          <dataFields>
             <dataField fieldName="PrimerApellidoPep" />
+          </dataFields>
+        </category>
+        <category id="c111" flow="NewRow">
+          <description />
+          <dataFields>
             <dataField fieldName="SegundoApellidoPep" />
+          </dataFields>
+        </category>
+        <category id="c112" flow="NewColumn">
+          <description />
+          <dataFields>
             <dataField fieldName="ApellidoCadadaPep" />
+          </dataFields>
+        </category>
+        <category id="c113" flow="NewRow">
+          <description />
+          <dataFields>
             <dataField fieldName="PrimerNombrePep" />
+          </dataFields>
+        </category>
+        <category id="c114" flow="NewColumn">
+          <description />
+          <dataFields>
             <dataField fieldName="SegundoNombrePep" />
+          </dataFields>
+        </category>
+        <category id="c115" flow="NewRow">
+          <description />
+          <dataFields>
             <dataField fieldName="OtroNombrePep" />
+          </dataFields>
+        </category>
+        <category id="c116" flow="NewColumn">
+          <description />
+          <dataFields>
             <dataField fieldName="GeneroPep" aliasFieldName="GeneroPepDescripcion" />
+          </dataFields>
+        </category>
+        <category id="c117" flow="NewRow">
+          <description />
+          <dataFields>
             <dataField fieldName="DondeTrabajaPep" />
+          </dataFields>
+        </category>
+        <category id="c118" flow="NewColumn">
+          <description />
+          <dataFields>
             <dataField fieldName="PuestoDesempPep" />
+          </dataFields>
+        </category>
+        <category id="c108" flow="NewRow">
+          <description />
+          <dataFields>
             <dataField fieldName="PaisInstitucionEnte" />
+          </dataFields>
+        </category>
+        <category id="c109" flow="NewColumn">
+          <description />
+          <dataFields>
             <dataField fieldName="ProcedenciaRiquezaPep" />
           </dataFields>
         </category>
         <category headerText="8. REFERENCIAS DEL SOLICITANTE/CLIENTE" id="c31">
+          <dataFields />
+        </category>
+        <category id="c97" flow="NewRow">
+          <description />
           <dataFields>
             <dataField fieldName="TipoProdServicioSolicitado" />
+          </dataFields>
+        </category>
+        <category id="c98" flow="NewColumn">
+          <description />
+          <dataFields>
             <dataField fieldName="ValorTotalProdServicio" columns="15" />
+          </dataFields>
+        </category>
+        <category id="c96" flow="NewRow">
+          <description />
+          <dataFields>
             <dataField fieldName="DescripDatGenerales" />
+          </dataFields>
+        </category>
+        <category id="c99" flow="NewColumn">
+          <description />
+          <dataFields>
             <dataField fieldName="MontoInicialManejar" columns="15" />
+          </dataFields>
+        </category>
+        <category id="c100" flow="NewRow">
+          <description />
+          <dataFields>
             <dataField fieldName="MontoMensualManejar" columns="15" />
+          </dataFields>
+        </category>
+        <category id="c101" flow="NewColumn">
+          <description />
+          <dataFields>
             <dataField fieldName="PropositoDestinoServicio" />
+          </dataFields>
+        </category>
+        <category id="c102" flow="NewRow">
+          <description />
+          <dataFields>
             <dataField fieldName="PrimerRefSolicitante" />
+          </dataFields>
+        </category>
+        <category id="c103" flow="NewColumn">
+          <description />
+          <dataFields>
             <dataField fieldName="SegRefSolicitante" />
+          </dataFields>
+        </category>
+        <category id="c104" flow="NewRow">
+          <description />
+          <dataFields>
             <dataField fieldName="CelPrimRef" columns="50" />
+          </dataFields>
+        </category>
+        <category id="c105" flow="NewColumn">
+          <description />
+          <dataFields>
             <dataField fieldName="CelSegRef" columns="50" />
+          </dataFields>
+        </category>
+        <category id="c106" flow="NewRow">
+          <description />
+          <dataFields>
             <dataField fieldName="PrimRefLabSolicitante" />
+          </dataFields>
+        </category>
+        <category id="c107" flow="NewColumn">
+          <description />
+          <dataFields>
             <dataField fieldName="SegRefLabSolicitante" />
+          </dataFields>
+        </category>
+        <category id="c93" flow="NewRow">
+          <description />
+          <dataFields>
             <dataField fieldName="TelefLineaUno" columns="50" />
+          </dataFields>
+        </category>
+        <category id="c119" flow="NewColumn">
+          <description />
+          <dataFields>
             <dataField fieldName="TelefLineaDos" columns="50" />
+          </dataFields>
+        </category>
+        <category id="c120" flow="NewRow">
+          <description />
+          <dataFields>
             <dataField fieldName="CelMovRefLabUno" columns="50" />
+          </dataFields>
+        </category>
+        <category id="c121" flow="NewColumn">
+          <description />
+          <dataFields>
             <dataField fieldName="CelMovreflabDos" columns="50" />
           </dataFields>
         </category>
