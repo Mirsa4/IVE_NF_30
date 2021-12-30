@@ -1,58 +1,61 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<dataModel baseSchema="dbo" baseTable="FORMULARIO_VERIFICACION" alias="FORMULARIO_VERIFICACION" created="2021-12-30T10:00:36" modified="2021-12-30T11:24:13" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+<dataModel baseSchema="dbo" baseTable="FORMULARIO_VERIFICACION" alias="FORMULARIO_VERIFICACION" created="2021-12-30T10:00:36" modified="2021-12-30T17:00:11" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
   <foreignKeys>
-    <foreignKey id="MODO_COMPRA" parentTableSchema="dbo" parentTableName="MT_MODO_COMPRA" x="477" y="603">
+    <foreignKey id="MODO_COMPRA" parentTableSchema="dbo" parentTableName="MT_MODO_COMPRA" x="479" y="20">
       <foreignKeyColumn columnName="MODO_COMPRA" parentColumnName="ID_MODO_COMPRA" />
     </foreignKey>
-    <foreignKey id="PERIODICIDAD_PAGO_ENGANCHE" parentTableSchema="dbo" parentTableName="MT_PAGO_ENGANCHE" x="477" y="787">
+    <foreignKey id="PERIODICIDAD_PAGO_ENGANCHE" parentTableSchema="dbo" parentTableName="MT_PAGO_ENGANCHE" x="479" y="184">
       <foreignKeyColumn columnName="PERIODICIDAD_PAGO_ENGANCHE" parentColumnName="ID_PERIODICIDAD_PAGO_ENGANCHE" />
+      <foreignKeyColumn columnName="ID_FORMULARIO_IVE_NF_30" parentColumnName="ESTADO" />
     </foreignKey>
-    <foreignKey id="INGRESOS_RAZONABLES" parentTableSchema="dbo" parentTableName="MT_INGRESO_RAZONABLE" x="477" y="972">
-      <foreignKeyColumn columnName="INGRESOS_RAZONABLES" parentColumnName="ID_INSGRESO_RAZONABLE" />
+    <foreignKey id="INGRESOS_RAZONABLES" parentTableSchema="dbo" parentTableName="MT_INGRESO_RAZONABLE" x="479" y="347">
+      <foreignKeyColumn columnName="ID_FORMULARIO_IVE_NF_30" parentColumnName="ID_INSGRESO_RAZONABLE" />
     </foreignKey>
-    <foreignKey id="NIVEL_ENDEUDAMIENTO" parentTableSchema="dbo" parentTableName="MT_NIVEL_ENDEUDAMIENTO" x="953" y="20">
+    <foreignKey id="NIVEL_ENDEUDAMIENTO" parentTableSchema="dbo" parentTableName="MT_NIVEL_ENDEUDAMIENTO" x="479" y="510">
       <foreignKeyColumn columnName="NIVEL_ENDEUDAMIENTO" parentColumnName="ID_NIVEL_ENDEUDAMIENTO" />
     </foreignKey>
-    <foreignKey id="REFERENCIA_BUROS" parentTableSchema="dbo" parentTableName="MT_REFERENCIA_BUROS" x="953" y="222">
+    <foreignKey id="REFERENCIA_BUROS" parentTableSchema="dbo" parentTableName="MT_REFERENCIA_BUROS" x="479" y="689">
       <foreignKeyColumn columnName="REFERENCIA_BUROS" parentColumnName="ID_REFERENCIA_BUROS" />
     </foreignKey>
-    <foreignKey id="REFERENCIA_OTRAS_FUENTES" parentTableSchema="dbo" parentTableName="MT_REFERENCIA_OTRAS_FUENTES" x="953" y="403">
+    <foreignKey id="REFERENCIA_OTRAS_FUENTES" parentTableSchema="dbo" parentTableName="MT_REFERENCIA_OTRAS_FUENTES" x="479" y="851">
       <foreignKeyColumn columnName="REFERENCIA_OTRAS_FUENTES" parentColumnName="ID_REFERENCIA_OTRAS_FUENTES" />
     </foreignKey>
-    <foreignKey id="CIRCIRCUNSTANCIAS_INUSUALES" parentTableSchema="dbo" parentTableName="MT_CIRCUNSTANCIAS_INUSUALES" x="953" y="603">
+    <foreignKey id="CIRCIRCUNSTANCIAS_INUSUALES" parentTableSchema="dbo" parentTableName="MT_CIRCUNSTANCIAS_INUSUALES" x="955" y="20">
       <foreignKeyColumn columnName="CIRCIRCUNSTANCIAS_INUSUALES" parentColumnName="ID_CIRCUNSTANCIAS_INUSUALES" />
     </foreignKey>
-    <foreignKey id="CLIENTE_FRECUENTE" parentTableSchema="dbo" parentTableName="MT_CLIENTE_FRECUENTE" x="953" y="804">
+    <foreignKey id="CLIENTE_FRECUENTE" parentTableSchema="dbo" parentTableName="MT_CLIENTE_FRECUENTE" x="955" y="200">
       <foreignKeyColumn columnName="CLIENTE_FRECUENTE" parentColumnName="ID_CLIENTE_FRECUENTE" />
     </foreignKey>
-    <foreignKey id="TESTAFERRO" parentTableSchema="dbo" parentTableName="MT_USO_TESTAFERRO" x="953" y="987">
+    <foreignKey id="TESTAFERRO" parentTableSchema="dbo" parentTableName="MT_USO_TESTAFERRO" x="955" y="362">
       <foreignKeyColumn columnName="TESTAFERRO" parentColumnName="ID_USO_TESTAFERRO" />
     </foreignKey>
-    <foreignKey id="CONOCIMIENTO_BENEFICIARIO_FINAL" parentTableSchema="dbo" parentTableName="MT_CONOCIMIENTO_BENEFICIARIO_FINAL" x="1409" y="20">
+    <foreignKey id="CONOCIMIENTO_BENEFICIARIO_FINAL" parentTableSchema="dbo" parentTableName="MT_CONOCIMIENTO_BENEFICIARIO_FINAL" x="955" y="527">
       <foreignKeyColumn columnName="CONOCIMIENTO_BENEFICIARIO_FINAL" parentColumnName="ID_CONOCIMIENTO_BENEFICIARIO_FINAL" />
     </foreignKey>
-    <foreignKey id="ZONA_O_DEPARTAMENTO_RESIDENCIAL" parentTableSchema="dbo" parentTableName="MT_ZONA_O_DEPARTAMENTO" x="1409" y="222">
+    <foreignKey id="ZONA_O_DEPARTAMENTO_RESIDENCIAL" parentTableSchema="dbo" parentTableName="MT_ZONA_O_DEPARTAMENTO" x="955" y="704">
       <foreignKeyColumn columnName="ZONA_O_DEPARTAMENTO_RESIDENCIAL" parentColumnName="ID_ZONA_O_DEPARTAMENTO" />
     </foreignKey>
-    <foreignKey id="ZONA_DEPARTAMENTO_LABORAL" parentTableSchema="dbo" parentTableName="MT_ZONA_O_DEPARTAMENTO" x="1409" y="421">
+    <foreignKey id="ZONA_DEPARTAMENTO_LABORAL" parentTableSchema="dbo" parentTableName="MT_ZONA_O_DEPARTAMENTO" x="953" y="940">
       <foreignKeyColumn columnName="ZONA_DEPARTAMENTO_LABORAL" parentColumnName="ID_ZONA_O_DEPARTAMENTO" />
     </foreignKey>
-    <foreignKey id="ZONA_O_DEPARTAMENTO_INMUEBLE" parentTableSchema="dbo" parentTableName="MT_ZONA_O_DEPARTAMENTO" x="1409" y="620">
+    <foreignKey id="ZONA_O_DEPARTAMENTO_INMUEBLE" parentTableSchema="dbo" parentTableName="MT_ZONA_O_DEPARTAMENTO" x="1455" y="20">
       <foreignKeyColumn columnName="ZONA_O_DEPARTAMENTO_INMUEBLE" parentColumnName="ID_ZONA_O_DEPARTAMENTO" />
     </foreignKey>
-    <foreignKey id="CANALES_DISTRIBUCION" parentTableSchema="dbo" parentTableName="MT_CANAL_DISTRIBUCION" x="1409" y="819">
+    <foreignKey id="CANALES_DISTRIBUCION" parentTableSchema="dbo" parentTableName="MT_CANAL_DISTRIBUCION" x="1455" y="200">
       <foreignKeyColumn columnName="CANALES_DISTRIBUCION" parentColumnName="ID_CANAL_DISTRIBUCION" />
     </foreignKey>
-    <foreignKey id="FORMAS_DE_PAGO" parentTableSchema="dbo" parentTableName="MT_FORMA_PAGO" x="1847" y="20">
+    <foreignKey id="FORMAS_DE_PAGO" parentTableSchema="dbo" parentTableName="MT_FORMA_PAGO" x="1455" y="379">
       <foreignKeyColumn columnName="FORMAS_DE_PAGO" parentColumnName="ID_FORMA_PAGO" />
     </foreignKey>
-    <foreignKey id="ID_FORMULARIO_IVE_NF_30_" parentTableSchema="dbo" parentTableName="FORMULARIO_IVE_NF_30" x="2158" y="20">
-      <foreignKeyColumn columnName="ID_FORMULARIO_IVE_NF_30" parentColumnName="IVE_ARCHIVO_COD" />
+    <foreignKey id="ID_FORMULARIO_IVE_NF_30_" parentTableSchema="dbo" parentTableName="FORMULARIO_IVE_NF_30" x="1446" y="513">
+      <foreignKeyColumn columnName="ID_FORMULARIO_IVE_NF_30" parentColumnName="ID_PAIS" />
+    </foreignKey>
+    <foreignKey id="ID_IVE_DEPARTAMENTO" parentTableSchema="dbo" parentTableName="IVE_DEPARTAMENTO" x="1836" y="20" baseForeignKey="ID_FORMULARIO_IVE_NF_30_">
+      <foreignKeyColumn columnName="ID_IVE_DEPARTAMENTO" parentColumnName="ID_IVE_DEPARTAMENTO" />
     </foreignKey>
   </foreignKeys>
   <columns>
     <column name="ID_VERIFICACION_DATOS" fieldName="IDVerificacionDatos" label="Id Verificacion Datos" />
-    <column name="PRIMER_APELLIDO" fieldName="PrimerApellido" label="Primer Apellido" />
     <column name="SEGUNDO_APELLIDO" fieldName="SegundoApellido" label="Segundo Apellido" />
     <column name="PRIMER_NOMBRE" fieldName="PrimerNombre" label="Primer Nombre" />
     <column name="SEGUNDO_NOMBRE" fieldName="SegundoNombre" label="Segundo Nombre" />
@@ -111,47 +114,68 @@
     <column name="PROCEDENCIA_DE_FONDOS" fieldName="ProcedenciaDeFondos" label="Procedencia De Fondos" />
     <column name="FORMAS_DE_PAGO" fieldName="FormasDePago" label="Formas De Pago" aliasColumnName="DESCRIPCION" aliasForeignKey="FORMAS_DE_PAGO" />
     <column name="DESCRIPCION" fieldName="FormasDEPagoDescripcion" label="Formas DE Pago Descripcion" foreignKey="FORMAS_DE_PAGO" />
+    <column name="ESTADO" fieldName="FormasDEPagoEstado" label="Formas DE Pago Estado" foreignKey="FORMAS_DE_PAGO" />
+    <column name="ID_FORMA_PAGO" fieldName="FormasDEPagoIDFormaPago" label="Formas DE Pago ID Forma Pago" foreignKey="FORMAS_DE_PAGO" />
     <column name="MODO_COMPRA" fieldName="ModoCompra" label="Modo Compra" aliasColumnName="DESCRIPCION" aliasForeignKey="MODO_COMPRA" />
     <column name="DESCRIPCION" fieldName="ModoCompraDescripcion" label="Modo Compra Descripcion" foreignKey="MODO_COMPRA" />
+    <column name="ESTADO" fieldName="ModoCompraEstado" label="Modo Compra Estado" foreignKey="MODO_COMPRA" />
+    <column name="ID_MODO_COMPRA" fieldName="ModoCompraIDModoCompra" label="Modo Compra ID Modo Compra" foreignKey="MODO_COMPRA" />
     <column name="PERIODICIDAD_PAGO_ENGANCHE" fieldName="PeriodicidadPagoEnganche" label="Periodicidad Pago Enganche" aliasColumnName="DESCRIPCION" aliasForeignKey="PERIODICIDAD_PAGO_ENGANCHE" />
     <column name="DESCRIPCION" fieldName="PeriodicidadPagoEngancheDescripcion" label="Periodicidad Pago Enganche Descripcion" foreignKey="PERIODICIDAD_PAGO_ENGANCHE" />
+    <column name="ESTADO" fieldName="PeriodicidadPagoEngancheEstado" label="Periodicidad Pago Enganche Estado" foreignKey="PERIODICIDAD_PAGO_ENGANCHE" />
     <column name="INGRESOS_RAZONABLES" fieldName="IngresosRazonables" label="Ingresos Razonables" aliasColumnName="DESCRIPCION" aliasForeignKey="INGRESOS_RAZONABLES" />
     <column name="DESCRIPCION" fieldName="IngresosRazonablesDescripcion" label="Ingresos Razonables Descripcion" foreignKey="INGRESOS_RAZONABLES" />
+    <column name="ESTADO" fieldName="IngresosRazonablesEstado" label="Ingresos Razonables Estado" foreignKey="INGRESOS_RAZONABLES" />
+    <column name="ID_INSGRESO_RAZONABLE" fieldName="IngresosRazonablesIDInsgresoRazonable" label="Ingresos Razonables ID Insgreso Razonable" foreignKey="INGRESOS_RAZONABLES" />
     <column name="INGRESOS_O_FONDOS_ADICIONALES" fieldName="IngresosOFondosAdicionales" label="Ingresos O Fondos Adicionales" />
     <column name="NIVEL_ENDEUDAMIENTO" fieldName="NivelEndeudamiento" label="Nivel Endeudamiento" aliasColumnName="DESCRIPCION" aliasForeignKey="NIVEL_ENDEUDAMIENTO" />
     <column name="DESCRIPCION" fieldName="NivelEndeudamientoDescripcion" label="Nivel Endeudamiento Descripcion" foreignKey="NIVEL_ENDEUDAMIENTO" />
+    <column name="ESTADO" fieldName="NivelEndeudamientoEstado" label="Nivel Endeudamiento Estado" foreignKey="NIVEL_ENDEUDAMIENTO" />
+    <column name="ID_NIVEL_ENDEUDAMIENTO" fieldName="NivelEndeudamientoIDNivelEndeudamiento" label="Nivel Endeudamiento ID Nivel Endeudamiento" foreignKey="NIVEL_ENDEUDAMIENTO" />
     <column name="TIPO_PERSOSNA" fieldName="TipoPersosna" label="Tipo Persosna" />
     <column name="REFERENCIA_BUROS" fieldName="ReferenciaBuros" label="Referencia Buros" aliasColumnName="DESCRIPCION" aliasForeignKey="REFERENCIA_BUROS" />
     <column name="DESCRIPCION" fieldName="ReferenciaBurosDescripcion" label="Referencia Buros Descripcion" foreignKey="REFERENCIA_BUROS" />
+    <column name="ESTADO" fieldName="ReferenciaBurosEstado" label="Referencia Buros Estado" foreignKey="REFERENCIA_BUROS" />
+    <column name="ID_REFERENCIA_BUROS" fieldName="ReferenciaBurosIDReferenciaBuros" label="Referencia Buros ID Referencia Buros" foreignKey="REFERENCIA_BUROS" />
     <column name="REFERENCIA_OTRAS_FUENTES" fieldName="ReferenciaOtrasFuentes" label="Referencia Otras Fuentes" aliasColumnName="DESCRIPCION" aliasForeignKey="REFERENCIA_OTRAS_FUENTES" />
     <column name="DESCRIPCION" fieldName="ReferenciaOtrasFuentesDescripcion" label="Referencia Otras Fuentes Descripcion" foreignKey="REFERENCIA_OTRAS_FUENTES" />
+    <column name="ESTADO" fieldName="ReferenciaOtrasFuentesEstado" label="Referencia Otras Fuentes Estado" foreignKey="REFERENCIA_OTRAS_FUENTES" />
+    <column name="ID_REFERENCIA_OTRAS_FUENTES" fieldName="ReferenciaOtrasFuentesIDReferenciaOtrasFuentes" label="Referencia Otras Fuentes ID Referencia Otras Fuentes" foreignKey="REFERENCIA_OTRAS_FUENTES" />
     <column name="CIRCIRCUNSTANCIAS_INUSUALES" fieldName="CircircunstanciasInusuales" label="Circircunstancias Inusuales" aliasColumnName="DESCRIPCION" aliasForeignKey="CIRCIRCUNSTANCIAS_INUSUALES" />
     <column name="DESCRIPCION" fieldName="CircircunstanciasInusualesDescripcion" label="Circircunstancias Inusuales Descripcion" foreignKey="CIRCIRCUNSTANCIAS_INUSUALES" />
+    <column name="ESTADO" fieldName="CircircunstanciasInusualesEstado" label="Circircunstancias Inusuales Estado" foreignKey="CIRCIRCUNSTANCIAS_INUSUALES" />
+    <column name="ID_CIRCUNSTANCIAS_INUSUALES" fieldName="CircircunstanciasInusualesIDCircunstanciasInusuales" label="Circircunstancias Inusuales ID Circunstancias Inusuales" foreignKey="CIRCIRCUNSTANCIAS_INUSUALES" />
     <column name="CLIENTE_FRECUENTE" fieldName="ClienteFrecuente" label="Cliente Frecuente" aliasColumnName="DESCRIPCION" aliasForeignKey="CLIENTE_FRECUENTE" />
     <column name="DESCRIPCION" fieldName="ClienteFrecuenteDescripcion" label="Cliente Frecuente Descripcion" foreignKey="CLIENTE_FRECUENTE" />
+    <column name="ESTADO" fieldName="ClienteFrecuenteEstado" label="Cliente Frecuente Estado" foreignKey="CLIENTE_FRECUENTE" />
+    <column name="ID_CLIENTE_FRECUENTE" fieldName="ClienteFrecuenteIDClienteFrecuente" label="Cliente Frecuente ID Cliente Frecuente" foreignKey="CLIENTE_FRECUENTE" />
     <column name="CONOCIMIENTO_BENEFICIARIO_FINAL" fieldName="ConocimientoBeneficiarioFinal" label="Conocimiento Beneficiario Final" aliasColumnName="DESCRIPCION" aliasForeignKey="CONOCIMIENTO_BENEFICIARIO_FINAL" />
     <column name="DESCRIPCION" fieldName="ConocimientoBeneficiarioFinalDescripcion" label="Conocimiento Beneficiario Final Descripcion" foreignKey="CONOCIMIENTO_BENEFICIARIO_FINAL" />
+    <column name="ESTADO" fieldName="ConocimientoBeneficiarioFinalEstado" label="Conocimiento Beneficiario Final Estado" foreignKey="CONOCIMIENTO_BENEFICIARIO_FINAL" />
+    <column name="ID_CONOCIMIENTO_BENEFICIARIO_FINAL" fieldName="ConocimientoBeneficiarioFinalIDConocimientoBeneficiarioFinal" label="Conocimiento Beneficiario Final ID Conocimiento Beneficiario Final" foreignKey="CONOCIMIENTO_BENEFICIARIO_FINAL" />
     <column name="TESTAFERRO" fieldName="Testaferro" label="Testaferro" aliasColumnName="DESCRIPCION" aliasForeignKey="TESTAFERRO" />
     <column name="DESCRIPCION" fieldName="TestaferroDescripcion" label="Testaferro Descripcion" foreignKey="TESTAFERRO" />
+    <column name="ESTADO" fieldName="TestaferroEstado" label="Testaferro Estado" foreignKey="TESTAFERRO" />
+    <column name="ID_USO_TESTAFERRO" fieldName="TestaferroIDUsoTestaferro" label="Testaferro ID Uso Testaferro" foreignKey="TESTAFERRO" />
     <column name="UBICACION_GEOGRAFICA" fieldName="UbicacionGeografica" label="Ubicacion Geografica" />
     <column name="ZONA_O_DEPARTAMENTO_RESIDENCIAL" fieldName="ZonaODepartamentoResidencial" label="Zona O Departamento Residencial" aliasColumnName="DESCRIPCION" aliasForeignKey="ZONA_O_DEPARTAMENTO_RESIDENCIAL" />
     <column name="DESCRIPCION" fieldName="ZonaODepartamentoResidencialDescripcion" label="Zona O Departamento Residencial Descripcion" foreignKey="ZONA_O_DEPARTAMENTO_RESIDENCIAL" />
+    <column name="ESTADO" fieldName="ZonaODepartamentoResidencialEstado" label="Zona O Departamento Residencial Estado" foreignKey="ZONA_O_DEPARTAMENTO_RESIDENCIAL" />
+    <column name="ID_ZONA_O_DEPARTAMENTO" fieldName="ZonaODepartamentoResidencialIDZonaODepartamento" label="Zona O Departamento Residencial ID Zona O Departamento" foreignKey="ZONA_O_DEPARTAMENTO_RESIDENCIAL" />
     <column name="ZONA_DEPARTAMENTO_LABORAL" fieldName="ZonaDepartamentoLaboral" label="Zona Departamento Laboral" aliasColumnName="DESCRIPCION" aliasForeignKey="ZONA_DEPARTAMENTO_LABORAL" />
     <column name="DESCRIPCION" fieldName="ZonaDepartamentoLaboralDescripcion" label="Zona Departamento Laboral Descripcion" foreignKey="ZONA_DEPARTAMENTO_LABORAL" />
+    <column name="ESTADO" fieldName="ZonaDepartamentoLaboralEstado" label="Zona Departamento Laboral Estado" foreignKey="ZONA_DEPARTAMENTO_LABORAL" />
+    <column name="ID_ZONA_O_DEPARTAMENTO" fieldName="ZonaDepartamentoLaboralIDZonaODepartamento" label="Zona Departamento Laboral ID Zona O Departamento" foreignKey="ZONA_DEPARTAMENTO_LABORAL" />
     <column name="ZONA_O_DEPARTAMENTO_INMUEBLE" fieldName="ZonaODepartamentoInmueble" label="Zona O Departamento Inmueble" aliasColumnName="DESCRIPCION" aliasForeignKey="ZONA_O_DEPARTAMENTO_INMUEBLE" />
     <column name="DESCRIPCION" fieldName="ZonaODepartamentoInmuebleDescripcion" label="Zona O Departamento Inmueble Descripcion" foreignKey="ZONA_O_DEPARTAMENTO_INMUEBLE" />
+    <column name="ESTADO" fieldName="ZonaODepartamentoInmuebleEstado" label="Zona O Departamento Inmueble Estado" foreignKey="ZONA_O_DEPARTAMENTO_INMUEBLE" />
+    <column name="ID_ZONA_O_DEPARTAMENTO" fieldName="ZonaODepartamentoInmuebleIDZonaODepartamento" label="Zona O Departamento Inmueble ID Zona O Departamento" foreignKey="ZONA_O_DEPARTAMENTO_INMUEBLE" />
     <column name="CANALES_DISTRIBUCION" fieldName="CanalesDistribucion" label="Canales Distribucion" aliasColumnName="DESCRIPCION" aliasForeignKey="CANALES_DISTRIBUCION" />
     <column name="DESCRIPCION" fieldName="CanalesDistribucionDescripcion" label="Canales Distribucion Descripcion" foreignKey="CANALES_DISTRIBUCION" />
-    <column name="PRIMER_APELLIDO" fieldName="IDFormularioIveNF30PrimerApellido" label="ID Formulario Ive NF  30 Primer Apellido" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
-    <column name="SEGUNDO_APELLIDO" fieldName="IDFormularioIveNF30SegundoApellido" label="ID Formulario Ive NF  30 Segundo Apellido" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
-    <column name="APELLIDO_CASADA" fieldName="IDFormularioIveNF30ApellidoCasada" label="ID Formulario Ive NF  30 Apellido Casada" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
-    <column name="OTROS_NOMBRES" fieldName="IDFormularioIveNF30OtrosNombres" label="ID Formulario Ive NF  30 Otros Nombres" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
-    <column name="SEGUNDO_NOMBRE" fieldName="IDFormularioIveNF30SegundoNombre" label="ID Formulario Ive NF  30 Segundo Nombre" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
-    <column name="PRIMER_NOMBRE" fieldName="IDFormularioIveNF30PrimerNombre" label="ID Formulario Ive NF  30 Primer Nombre" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
-    <column name="LUGAR_NACIMIENTO_PAIS" fieldName="IDFormularioIveNF30LugarNacimientoPais" label="ID Formulario Ive NF  30 Lugar Nacimiento Pais" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
+    <column name="ESTADO" fieldName="CanalesDistribucionEstado" label="Canales Distribucion Estado" foreignKey="CANALES_DISTRIBUCION" />
+    <column name="ID_CANAL_DISTRIBUCION" fieldName="CanalesDistribucionIDCanalDistribucion" label="Canales Distribucion ID Canal Distribucion" foreignKey="CANALES_DISTRIBUCION" />
     <column name="LUGAR_NACIMIENTO_DEP" fieldName="IDFormularioIveNF30LugarNacimientoDep" label="ID Formulario Ive NF  30 Lugar Nacimiento Dep" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
     <column name="LUGAR_NACIMIENTO_MUNI" fieldName="IDFormularioIveNF30LugarNacimientoMuni" label="ID Formulario Ive NF  30 Lugar Nacimiento Muni" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
-    <column name="IVE_ARCHIVO_COD" fieldName="IDFormularioIveNF30IveArchivoCod" label="ID Formulario Ive NF  30 Ive Archivo Cod" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
     <column name="TIPO_IDENTIFICACION" fieldName="IDFormularioIveNF30TipoIdentificacion" label="ID Formulario Ive NF  30 Tipo Identificacion" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
     <column name="NUMERO_IDENTIFICACION" fieldName="IDFormularioIveNF30NumeroIdentificacion" label="ID Formulario Ive NF  30 Numero Identificacion" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
     <column name="DEP_EMISION" fieldName="IDFormularioIveNF30DepEmision" label="ID Formulario Ive NF  30 Dep Emision" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
@@ -160,6 +184,22 @@
     <column name="TELEFONO_LF" fieldName="IDFormularioIveNF30TelefonoLF" label="ID Formulario Ive NF  30 Telefono LF" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
     <column name="CELULAR" fieldName="IDFormularioIveNF30Celular" label="ID Formulario Ive NF  30 Celular" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
     <column name="EMAIL" fieldName="IDFormularioIveNF30Email" label="ID Formulario Ive NF  30 Email" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
-    <column name="ID_FORMULARIO_IVE_NF_30" fieldName="IDFormularioIveNF30" label="ID Formulario Ive NF  30" />
+    <column name="IVE_ARCHIVO_COD" fieldName="IDFormularioIveNF30IveArchivoCod" label="ID Formulario Ive NF  30 Ive Archivo Cod" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
+    <column name="SEGUNDO_APELLIDO" fieldName="IDFormularioIveNF30SegundoApellido" label="ID Formulario Ive NF  30 Segundo Apellido" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
+    <column name="PRIMER_APELLIDO" fieldName="IDFormularioIveNF30PrimerApellido" label="ID Formulario Ive NF  30 Primer Apellido" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
+    <column name="PRIMER_NOMBRE" fieldName="IDFormularioIveNF30PrimerNombre" label="ID Formulario Ive NF  30 Primer Nombre" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
+    <column name="APELLIDO_CASADA" fieldName="IDFormularioIveNF30ApellidoCasada" label="ID Formulario Ive NF  30 Apellido Casada" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
+    <column name="SEGUNDO_NOMBRE" fieldName="IDFormularioIveNF30SegundoNombre" label="ID Formulario Ive NF  30 Segundo Nombre" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
+    <column name="LUGAR_NACIMIENTO_PAIS" fieldName="IDFormularioIveNF30LugarNacimientoPais" label="ID Formulario Ive NF  30 Lugar Nacimiento Pais" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
+    <column name="OTROS_NOMBRES" fieldName="IDFormularioIveNF30OtrosNombres" label="ID Formulario Ive NF  30 Otros Nombres" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
+    <column name="ID_IVE_DEPARTAMENTO" fieldName="IDFormularioIveNF30IDIveDepartamento" label="ID Formulario Ive NF  30 ID Ive Departamento" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
+    <column name="ID_FORMULARIO_IVE_NF_30" fieldName="IDFormularioIveNF30" label="ID Formulario Ive NF  30" aliasColumnName="DESCRIPCION" aliasForeignKey="INGRESOS_RAZONABLES" />
+    <column fieldName="ID_FORMULARIO_IVE_NF_30__SEGUNDO_APELLIDO1" type="nvarchar(100)" dataType="String" label="ID Formulario Ive NF  30 Segundo Apellido 1">
+      <formula>ID_FORMULARIO_IVE_NF_30_.SEGUNDO_APELLIDO</formula>
+    </column>
+    <column name="PRIMER_APELLIDO" fieldName="PrimerApellido" label="Primer Apellido" />
+    <column name="NOMBRE" fieldName="IDIveDepartamentoNombre" label="ID Ive Departamento Nombre" foreignKey="ID_IVE_DEPARTAMENTO" />
+    <column name="DEPARTAMENTO" fieldName="IDIveDepartamento" label="ID Ive Departamento" foreignKey="ID_IVE_DEPARTAMENTO" />
+    <column name="ID_IVE_DEPARTAMENTO" fieldName="IDIveDepartamentoIDIveDepartamento" label="ID Ive Departamento ID Ive Departamento" foreignKey="ID_IVE_DEPARTAMENTO" />
   </columns>
 </dataModel>

@@ -1,28 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<dataModel baseSchema="dbo" baseTable="FORMULARIO_IVE_NF_30" alias="FORMULARIO_IVE_NF_30" created="2021-12-21T02:21:05" modified="2021-12-22T09:45:38" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+<dataModel baseSchema="dbo" baseTable="FORMULARIO_IVE_NF_30" alias="FORMULARIO_IVE_NF_30" created="2021-12-21T02:21:05" modified="2021-12-30T14:26:06" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
   <foreignKeys>
-    <foreignKey id="_ID_IVE_DEPARTAMENTO" parentTableSchema="dbo" parentTableName="IVE_DEPARTAMENTO" x="480" y="273">
+    <foreignKey id="_ID_IVE_DEPARTAMENTO" parentTableSchema="dbo" parentTableName="IVE_DEPARTAMENTO" x="481" y="273">
       <foreignKeyColumn columnName="ID_IVE_DEPARTAMENTO" parentColumnName="ID_IVE_DEPARTAMENTO" />
     </foreignKey>
-    <foreignKey id="ID_IVE_MUNICIPIO" parentTableSchema="dbo" parentTableName="IVE_MUNICIPIO" x="480" y="480">
+    <foreignKey id="ID_IVE_MUNICIPIO" parentTableSchema="dbo" parentTableName="IVE_MUNICIPIO" x="481" y="481">
       <foreignKeyColumn columnName="ID_IVE_MUNICIPIO" parentColumnName="ID_IVE_MUNICIPIO" />
     </foreignKey>
-    <foreignKey id="ID_EMPRESA" parentTableSchema="dbo" parentTableName="ive_empresa" x="500" y="793">
+    <foreignKey id="ID_EMPRESA" parentTableSchema="dbo" parentTableName="ive_empresa" x="500" y="794">
       <foreignKeyColumn columnName="ID_EMPRESA" parentColumnName="ID_EMPRESA" />
     </foreignKey>
-    <foreignKey id="TIPO_PERSONA" parentTableSchema="dbo" parentTableName="TIPO_PERSONA" x="934" y="20">
+    <foreignKey id="TIPO_PERSONA" parentTableSchema="dbo" parentTableName="TIPO_PERSONA" x="935" y="20">
       <foreignKeyColumn columnName="TIPO_PERSONA" parentColumnName="ID_TIPO_PERSONA" />
     </foreignKey>
-    <foreignKey id="LUGAR_NACIMIENTO_PAIS" parentTableSchema="dbo" parentTableName="gral_paises_iso3166" x="934" y="204">
+    <foreignKey id="LUGAR_NACIMIENTO_PAIS" parentTableSchema="dbo" parentTableName="gral_paises_iso3166" x="935" y="204">
       <foreignKeyColumn columnName="LUGAR_NACIMIENTO_PAIS" parentColumnName="INT_GRAL_PAIS" />
     </foreignKey>
-    <foreignKey id="LUGAR_NACIMIENTO_DEP" parentTableSchema="dbo" parentTableName="IVE_DEPARTAMENTO" x="934" y="453">
+    <foreignKey id="LUGAR_NACIMIENTO_DEP" parentTableSchema="dbo" parentTableName="IVE_DEPARTAMENTO" x="935" y="453">
       <foreignKeyColumn columnName="LUGAR_NACIMIENTO_DEP" parentColumnName="ID_IVE_DEPARTAMENTO" />
     </foreignKey>
-    <foreignKey id="GENERO" parentTableSchema="dbo" parentTableName="GENERO" x="934" y="659">
+    <foreignKey id="GENERO" parentTableSchema="dbo" parentTableName="GENERO" x="935" y="659">
       <foreignKeyColumn columnName="GENERO" parentColumnName="ID_GENERO" />
     </foreignKey>
-    <foreignKey id="ESTADO_CIVIL" parentTableSchema="dbo" parentTableName="ESTADO_CIVIL" x="934" y="844">
+    <foreignKey id="ESTADO_CIVIL" parentTableSchema="dbo" parentTableName="ESTADO_CIVIL" x="935" y="844">
       <foreignKeyColumn columnName="ESTADO_CIVIL" parentColumnName="ID_ESTADO_CIVIL" />
     </foreignKey>
     <foreignKey id="TIPO_IDENTIFICACION" parentTableSchema="dbo" parentTableName="TIPO_IDENTIFICACION" x="1341" y="20">
@@ -31,13 +31,13 @@
     <foreignKey id="CONDICION_MIGRATORIA" parentTableSchema="dbo" parentTableName="CONDICION_MIGRATORIA" x="1341" y="204">
       <foreignKeyColumn columnName="CONDICION_MIGRATORIA" parentColumnName="ID_CONDICION_MIGRATORIA" />
     </foreignKey>
-    <foreignKey id="DEP_PI" parentTableSchema="dbo" parentTableName="IVE_DEPARTAMENTO" x="1341" y="389">
+    <foreignKey id="DEP_PI" parentTableSchema="dbo" parentTableName="IVE_DEPARTAMENTO" x="1341" y="390">
       <foreignKeyColumn columnName="DEP_PI" parentColumnName="ID_IVE_DEPARTAMENTO" />
     </foreignKey>
-    <foreignKey id="PAIS_SEDE_CL" parentTableSchema="dbo" parentTableName="gral_paises_iso3166" x="1341" y="597">
+    <foreignKey id="PAIS_SEDE_CL" parentTableSchema="dbo" parentTableName="gral_paises_iso3166" x="1341" y="598">
       <foreignKeyColumn columnName="PAIS_SEDE_CL" parentColumnName="INT_GRAL_PAIS" />
     </foreignKey>
-    <foreignKey id="MUNI_PI" parentTableSchema="dbo" parentTableName="IVE_MUNICIPIO" x="1341" y="826">
+    <foreignKey id="MUNI_PI" parentTableSchema="dbo" parentTableName="IVE_MUNICIPIO" x="1341" y="827">
       <foreignKeyColumn columnName="MUNI_PI" parentColumnName="ID_IVE_MUNICIPIO" />
     </foreignKey>
     <foreignKey id="MONTO_EGRESO_PJ" parentTableSchema="dbo" parentTableName="IVE_RANGO_INGEGR" x="1782" y="458">
@@ -46,16 +46,16 @@
     <foreignKey id="INDICA_PARENTESCO" parentTableSchema="dbo" parentTableName="PARENTESCO" x="1782" y="711">
       <foreignKeyColumn columnName="INDICA_PARENTESCO" parentColumnName="ID_PARENTESCO" />
     </foreignKey>
-    <foreignKey id="INDICA_MOTIVO" parentTableSchema="dbo" parentTableName="MOTIVO_PEP" x="1782" y="895">
+    <foreignKey id="INDICA_MOTIVO" parentTableSchema="dbo" parentTableName="MOTIVO_PEP" x="1782" y="896">
       <foreignKeyColumn columnName="INDICA_MOTIVO" parentColumnName="ID_MOTIVO_PEP" />
     </foreignKey>
-    <foreignKey id="MONEDA_EGRESO_PJ" parentTableSchema="dbo" parentTableName="IVE_MONEDA" x="1779" y="249">
+    <foreignKey id="MONEDA_EGRESO_PJ" parentTableSchema="dbo" parentTableName="IVE_MONEDA" x="1779" y="250">
       <foreignKeyColumn columnName="MONEDA_EGRESO_PJ" parentColumnName="ID_IVE_MONEDA" />
     </foreignKey>
-    <foreignKey id="ID_PAIS" parentTableSchema="dbo" parentTableName="IVE_PAIS" x="2137" y="20">
+    <foreignKey id="ID_PAIS" parentTableSchema="dbo" parentTableName="IVE_PAIS" x="2138" y="20">
       <foreignKeyColumn columnName="ID_PAIS" parentColumnName="ID_PAIS" />
     </foreignKey>
-    <foreignKey id="GENERO_PEP" parentTableSchema="dbo" parentTableName="GENERO" x="2399" y="20">
+    <foreignKey id="GENERO_PEP" parentTableSchema="dbo" parentTableName="GENERO" x="2400" y="20">
       <foreignKeyColumn columnName="GENERO_PEP" parentColumnName="ID_GENERO" />
     </foreignKey>
   </foreignKeys>
