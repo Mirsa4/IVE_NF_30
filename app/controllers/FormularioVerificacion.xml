@@ -1,0 +1,661 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="FormularioVerificacion" conflictDetection="overwriteChanges" label="Formulario Verificacion" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"FORMULARIO_VERIFICACION"."ID_VERIFICACION_DATOS" "IDVerificacionDatos"
+	,"FORMULARIO_VERIFICACION"."PRIMER_APELLIDO" "PrimerApellido"
+	,"FORMULARIO_VERIFICACION"."SEGUNDO_APELLIDO" "SegundoApellido"
+	,"FORMULARIO_VERIFICACION"."PRIMER_NOMBRE" "PrimerNombre"
+	,"FORMULARIO_VERIFICACION"."SEGUNDO_NOMBRE" "SegundoNombre"
+	,"FORMULARIO_VERIFICACION"."OTROS_NOMBRES" "OtrosNombres"
+	,"FORMULARIO_VERIFICACION"."LUGAR_NACIMIENTO_PAIS" "LugarNacimientoPais"
+	,"FORMULARIO_VERIFICACION"."LUGAR_NACIMIENTO_DEP" "LugarNacimientoDep"
+	,"FORMULARIO_VERIFICACION"."LUGAR_NACIMIENTO_MUNI" "LugarNacimientoMuni"
+	,"FORMULARIO_VERIFICACION"."NUM_NIT" "NumNit"
+	,"FORMULARIO_VERIFICACION"."TIPO_IDENTIFICACION" "TipoIdentificacion"
+	,"FORMULARIO_VERIFICACION"."NUMERO_IDENTIFICACION" "NumeroIdentificacion"
+	,"FORMULARIO_VERIFICACION"."DEP_EMISION" "DepEmision"
+	,"FORMULARIO_VERIFICACION"."MUNI_EMISION" "MuniEmision"
+	,"FORMULARIO_VERIFICACION"."PAIS_EMISION" "PaisEmision"
+	,"FORMULARIO_VERIFICACION"."TELEFONO" "Telefono"
+	,"FORMULARIO_VERIFICACION"."CELULAR" "Celular"
+	,"FORMULARIO_VERIFICACION"."DIREC_MUNI" "DirecMuni"
+	,"FORMULARIO_VERIFICACION"."DIREC_DEP" "DirecDep"
+	,"FORMULARIO_VERIFICACION"."DIREC_PAIS" "DirecPais"
+	,"FORMULARIO_VERIFICACION"."FUENTE_INGRESO" "FuenteIngreso"
+	,"FORMULARIO_VERIFICACION"."NOMBRE_EMPRESA_TRAB_CLIENTE" "NombreEmpresaTrabCliente"
+	,"FORMULARIO_VERIFICACION"."PUESTO_DESEMPENA_CLIENTE" "PuestoDesempenaCliente"
+	,"FORMULARIO_VERIFICACION"."TELEFONO_EMPRESA_CLIENTE" "TelefonoEmpresaCliente"
+	,"FORMULARIO_VERIFICACION"."MONTO_EGRESO_PI" "MontoEgresoPi"
+	,"FORMULARIO_VERIFICACION"."MONTO_INGRESO_PJ" "MontoIngresoPj"
+	,"FORMULARIO_VERIFICACION"."TIPO_PERSONA" "TipoPersona"
+	,"FORMULARIO_VERIFICACION"."COMPRA_TERRENO" "CompraTerreno"
+	,"FORMULARIO_VERIFICACION"."HOJA_VERIFICACION" "HojaVerificacion"
+	,"FORMULARIO_VERIFICACION"."MATRIZ_RIESGO" "MatrizRiesgo"
+	,"FORMULARIO_VERIFICACION"."CONSULTA_BUROS_Y_BD" "ConsultaBurosYBd"
+	,"FORMULARIO_VERIFICACION"."FIEC" "Fiec"
+	,"FORMULARIO_VERIFICACION"."DPI_O_PASAPORTE" "DpiOPasaporte"
+	,"FORMULARIO_VERIFICACION"."CARTA_AUTORIZACION_INVEST" "CartaAutorizacionInvest"
+	,"FORMULARIO_VERIFICACION"."RTU_PROMESA_COMPRA_VENTA" "RtuPromesaCompraVenta"
+	,"FORMULARIO_VERIFICACION"."CONSTANCIA_INGRESOS" "ConstanciaIngresos"
+	,"FORMULARIO_VERIFICACION"."ESTADOS_DE_CUENTA" "EstadosDeCuenta"
+	,"FORMULARIO_VERIFICACION"."ESTADOS_FINANCIEROS" "EstadosFinancieros"
+	,"FORMULARIO_VERIFICACION"."PATENTE_DE_COMERCIO" "PatenteDeComercio"
+	,"FORMULARIO_VERIFICACION"."CREDENCIAL_ACTIVIDAD" "CredencialActividad"
+	,"FORMULARIO_VERIFICACION"."DECLARACION_IVA_ISR" "DeclaracionIvaIsr"
+	,"FORMULARIO_VERIFICACION"."FOTOCOPIA_FACTURA_COMPRA" "FotocopiaFacturaCompra"
+	,"FORMULARIO_VERIFICACION"."FOTOCOPIA_FACTURA_VENTA" "FotocopiaFacturaVenta"
+	,"FORMULARIO_VERIFICACION"."FOTOGRAFIAS_NEGOCIO" "FotografiasNegocio"
+	,"FORMULARIO_VERIFICACION"."CROQUIS_NEGOCIO" "CroquisNegocio"
+	,"FORMULARIO_VERIFICACION"."MANDATO_GENERAL_PRESENTACION" "MandatoGeneralPresentacion"
+	,"FORMULARIO_VERIFICACION"."PAPELERIA_OTRO_DEUDOR" "PapeleriaOtroDeudor"
+	,"FORMULARIO_VERIFICACION"."DOCUMENTOS_EXTRANJERO_LEGALIZADOS" "DocumentosExtranjeroLegalizados"
+	,"FORMULARIO_VERIFICACION"."CONSTITUCION_EMPRESA_MODIFICACIONES" "ConstitucionEmpresaModificaciones"
+	,"FORMULARIO_VERIFICACION"."OFAC" "Ofac"
+	,"FORMULARIO_VERIFICACION"."INTERPOL" "Interpol"
+	,"FORMULARIO_VERIFICACION"."INFORMACION_PUBLICA" "InformacionPublica"
+	,"FORMULARIO_VERIFICACION"."ORGANIZACION_JUDICIAL" "OrganizacionJudicial"
+	,"FORMULARIO_VERIFICACION"."INFORNET" "Infornet"
+	,"FORMULARIO_VERIFICACION"."INFO_PUBLICA" "InfoPublica"
+	,"FORMULARIO_VERIFICACION"."GUATECOMPRAS" "Guatecompras"
+	,"FORMULARIO_VERIFICACION"."ACTIVIDAD_ECONOMICA" "ActividadEconomica"
+	,"FORMULARIO_VERIFICACION"."PROCEDENCIA_DE_FONDOS" "ProcedenciaDeFondos"
+	,"FORMULARIO_VERIFICACION"."FORMAS_DE_PAGO" "FormasDePago"
+	,"FORMAS_DE_PAGO"."DESCRIPCION" "FormasDEPagoDescripcion"
+	,"FORMULARIO_VERIFICACION"."MODO_COMPRA" "ModoCompra"
+	,"MODO_COMPRA"."DESCRIPCION" "ModoCompraDescripcion"
+	,"FORMULARIO_VERIFICACION"."PERIODICIDAD_PAGO_ENGANCHE" "PeriodicidadPagoEnganche"
+	,"PERIODICIDAD_PAGO_ENGANCHE"."DESCRIPCION" "PeriodicidadPagoEngancheDescripcion"
+	,"FORMULARIO_VERIFICACION"."INGRESOS_RAZONABLES" "IngresosRazonables"
+	,"INGRESOS_RAZONABLES"."DESCRIPCION" "IngresosRazonablesDescripcion"
+	,"FORMULARIO_VERIFICACION"."INGRESOS_O_FONDOS_ADICIONALES" "IngresosOFondosAdicionales"
+	,"FORMULARIO_VERIFICACION"."NIVEL_ENDEUDAMIENTO" "NivelEndeudamiento"
+	,"NIVEL_ENDEUDAMIENTO"."DESCRIPCION" "NivelEndeudamientoDescripcion"
+	,"FORMULARIO_VERIFICACION"."TIPO_PERSOSNA" "TipoPersosna"
+	,"FORMULARIO_VERIFICACION"."REFERENCIA_BUROS" "ReferenciaBuros"
+	,"REFERENCIA_BUROS"."DESCRIPCION" "ReferenciaBurosDescripcion"
+	,"FORMULARIO_VERIFICACION"."REFERENCIA_OTRAS_FUENTES" "ReferenciaOtrasFuentes"
+	,"REFERENCIA_OTRAS_FUENTES"."DESCRIPCION" "ReferenciaOtrasFuentesDescripcion"
+	,"FORMULARIO_VERIFICACION"."CIRCIRCUNSTANCIAS_INUSUALES" "CircircunstanciasInusuales"
+	,"CIRCIRCUNSTANCIAS_INUSUALES"."DESCRIPCION" "CircircunstanciasInusualesDescripcion"
+	,"FORMULARIO_VERIFICACION"."CLIENTE_FRECUENTE" "ClienteFrecuente"
+	,"CLIENTE_FRECUENTE"."DESCRIPCION" "ClienteFrecuenteDescripcion"
+	,"FORMULARIO_VERIFICACION"."CONOCIMIENTO_BENEFICIARIO_FINAL" "ConocimientoBeneficiarioFinal"
+	,"CONOCIMIENTO_BENEFICIARIO_FINAL"."DESCRIPCION" "ConocimientoBeneficiarioFinalDescripcion"
+	,"FORMULARIO_VERIFICACION"."TESTAFERRO" "Testaferro"
+	,"TESTAFERRO"."DESCRIPCION" "TestaferroDescripcion"
+	,"FORMULARIO_VERIFICACION"."UBICACION_GEOGRAFICA" "UbicacionGeografica"
+	,"FORMULARIO_VERIFICACION"."ZONA_O_DEPARTAMENTO_RESIDENCIAL" "ZonaODepartamentoResidencial"
+	,"ZONA_O_DEPARTAMENTO_RESIDENCIAL"."DESCRIPCION" "ZonaODepartamentoResidencialDescripcion"
+	,"FORMULARIO_VERIFICACION"."ZONA_DEPARTAMENTO_LABORAL" "ZonaDepartamentoLaboral"
+	,"ZONA_DEPARTAMENTO_LABORAL"."DESCRIPCION" "ZonaDepartamentoLaboralDescripcion"
+	,"FORMULARIO_VERIFICACION"."ZONA_O_DEPARTAMENTO_INMUEBLE" "ZonaODepartamentoInmueble"
+	,"ZONA_O_DEPARTAMENTO_INMUEBLE"."DESCRIPCION" "ZonaODepartamentoInmuebleDescripcion"
+	,"FORMULARIO_VERIFICACION"."CANALES_DISTRIBUCION" "CanalesDistribucion"
+	,"CANALES_DISTRIBUCION"."DESCRIPCION" "CanalesDistribucionDescripcion"
+	,"ID_FORMULARIO_IVE_NF_30_"."PRIMER_APELLIDO" "IDFormularioIveNF30PrimerApellido"
+	,"ID_FORMULARIO_IVE_NF_30_"."SEGUNDO_APELLIDO" "IDFormularioIveNF30SegundoApellido"
+	,"ID_FORMULARIO_IVE_NF_30_"."APELLIDO_CASADA" "IDFormularioIveNF30ApellidoCasada"
+	,"ID_FORMULARIO_IVE_NF_30_"."OTROS_NOMBRES" "IDFormularioIveNF30OtrosNombres"
+	,"ID_FORMULARIO_IVE_NF_30_"."SEGUNDO_NOMBRE" "IDFormularioIveNF30SegundoNombre"
+	,"ID_FORMULARIO_IVE_NF_30_"."PRIMER_NOMBRE" "IDFormularioIveNF30PrimerNombre"
+	,"ID_FORMULARIO_IVE_NF_30_"."LUGAR_NACIMIENTO_PAIS" "IDFormularioIveNF30LugarNacimientoPais"
+	,"ID_FORMULARIO_IVE_NF_30_"."LUGAR_NACIMIENTO_DEP" "IDFormularioIveNF30LugarNacimientoDep"
+	,"ID_FORMULARIO_IVE_NF_30_"."LUGAR_NACIMIENTO_MUNI" "IDFormularioIveNF30LugarNacimientoMuni"
+	,"ID_FORMULARIO_IVE_NF_30_"."IVE_ARCHIVO_COD" "IDFormularioIveNF30IveArchivoCod"
+	,"ID_FORMULARIO_IVE_NF_30_"."TIPO_IDENTIFICACION" "IDFormularioIveNF30TipoIdentificacion"
+	,"ID_FORMULARIO_IVE_NF_30_"."NUMERO_IDENTIFICACION" "IDFormularioIveNF30NumeroIdentificacion"
+	,"ID_FORMULARIO_IVE_NF_30_"."DEP_EMISION" "IDFormularioIveNF30DepEmision"
+	,"ID_FORMULARIO_IVE_NF_30_"."MUNI_EMISION" "IDFormularioIveNF30MuniEmision"
+	,"ID_FORMULARIO_IVE_NF_30_"."PAIS_EMISION" "IDFormularioIveNF30PaisEmision"
+	,"ID_FORMULARIO_IVE_NF_30_"."TELEFONO_LF" "IDFormularioIveNF30TelefonoLF"
+	,"ID_FORMULARIO_IVE_NF_30_"."CELULAR" "IDFormularioIveNF30Celular"
+	,"ID_FORMULARIO_IVE_NF_30_"."EMAIL" "IDFormularioIveNF30Email"
+	,"FORMULARIO_VERIFICACION"."ID_FORMULARIO_IVE_NF_30" "IDFormularioIveNF30"
+from "dbo"."FORMULARIO_VERIFICACION" "FORMULARIO_VERIFICACION"
+	left join "dbo"."MT_MODO_COMPRA" "MODO_COMPRA" on "FORMULARIO_VERIFICACION"."MODO_COMPRA" = "MODO_COMPRA"."ID_MODO_COMPRA"
+	left join "dbo"."MT_PAGO_ENGANCHE" "PERIODICIDAD_PAGO_ENGANCHE" on "FORMULARIO_VERIFICACION"."PERIODICIDAD_PAGO_ENGANCHE" = "PERIODICIDAD_PAGO_ENGANCHE"."ID_PERIODICIDAD_PAGO_ENGANCHE"
+	left join "dbo"."MT_INGRESO_RAZONABLE" "INGRESOS_RAZONABLES" on "FORMULARIO_VERIFICACION"."INGRESOS_RAZONABLES" = "INGRESOS_RAZONABLES"."ID_INSGRESO_RAZONABLE"
+	left join "dbo"."MT_NIVEL_ENDEUDAMIENTO" "NIVEL_ENDEUDAMIENTO" on "FORMULARIO_VERIFICACION"."NIVEL_ENDEUDAMIENTO" = "NIVEL_ENDEUDAMIENTO"."ID_NIVEL_ENDEUDAMIENTO"
+	left join "dbo"."MT_REFERENCIA_BUROS" "REFERENCIA_BUROS" on "FORMULARIO_VERIFICACION"."REFERENCIA_BUROS" = "REFERENCIA_BUROS"."ID_REFERENCIA_BUROS"
+	left join "dbo"."MT_REFERENCIA_OTRAS_FUENTES" "REFERENCIA_OTRAS_FUENTES" on "FORMULARIO_VERIFICACION"."REFERENCIA_OTRAS_FUENTES" = "REFERENCIA_OTRAS_FUENTES"."ID_REFERENCIA_OTRAS_FUENTES"
+	left join "dbo"."MT_CIRCUNSTANCIAS_INUSUALES" "CIRCIRCUNSTANCIAS_INUSUALES" on "FORMULARIO_VERIFICACION"."CIRCIRCUNSTANCIAS_INUSUALES" = "CIRCIRCUNSTANCIAS_INUSUALES"."ID_CIRCUNSTANCIAS_INUSUALES"
+	left join "dbo"."MT_CLIENTE_FRECUENTE" "CLIENTE_FRECUENTE" on "FORMULARIO_VERIFICACION"."CLIENTE_FRECUENTE" = "CLIENTE_FRECUENTE"."ID_CLIENTE_FRECUENTE"
+	left join "dbo"."MT_USO_TESTAFERRO" "TESTAFERRO" on "FORMULARIO_VERIFICACION"."TESTAFERRO" = "TESTAFERRO"."ID_USO_TESTAFERRO"
+	left join "dbo"."MT_CONOCIMIENTO_BENEFICIARIO_FINAL" "CONOCIMIENTO_BENEFICIARIO_FINAL" on "FORMULARIO_VERIFICACION"."CONOCIMIENTO_BENEFICIARIO_FINAL" = "CONOCIMIENTO_BENEFICIARIO_FINAL"."ID_CONOCIMIENTO_BENEFICIARIO_FINAL"
+	left join "dbo"."MT_ZONA_O_DEPARTAMENTO" "ZONA_O_DEPARTAMENTO_RESIDENCIAL" on "FORMULARIO_VERIFICACION"."ZONA_O_DEPARTAMENTO_RESIDENCIAL" = "ZONA_O_DEPARTAMENTO_RESIDENCIAL"."ID_ZONA_O_DEPARTAMENTO"
+	left join "dbo"."MT_ZONA_O_DEPARTAMENTO" "ZONA_DEPARTAMENTO_LABORAL" on "FORMULARIO_VERIFICACION"."ZONA_DEPARTAMENTO_LABORAL" = "ZONA_DEPARTAMENTO_LABORAL"."ID_ZONA_O_DEPARTAMENTO"
+	left join "dbo"."MT_ZONA_O_DEPARTAMENTO" "ZONA_O_DEPARTAMENTO_INMUEBLE" on "FORMULARIO_VERIFICACION"."ZONA_O_DEPARTAMENTO_INMUEBLE" = "ZONA_O_DEPARTAMENTO_INMUEBLE"."ID_ZONA_O_DEPARTAMENTO"
+	left join "dbo"."MT_CANAL_DISTRIBUCION" "CANALES_DISTRIBUCION" on "FORMULARIO_VERIFICACION"."CANALES_DISTRIBUCION" = "CANALES_DISTRIBUCION"."ID_CANAL_DISTRIBUCION"
+	left join "dbo"."MT_FORMA_PAGO" "FORMAS_DE_PAGO" on "FORMULARIO_VERIFICACION"."FORMAS_DE_PAGO" = "FORMAS_DE_PAGO"."ID_FORMA_PAGO"
+	left join "dbo"."FORMULARIO_IVE_NF_30" "ID_FORMULARIO_IVE_NF_30_" on "FORMULARIO_VERIFICACION"."ID_FORMULARIO_IVE_NF_30" = "ID_FORMULARIO_IVE_NF_30_"."IVE_ARCHIVO_COD"
+]]></text>
+    </command>
+    <command id="ID_VERIFICACION_DATOSIdentityCommand" type="Text" event="Inserted">
+      <text><![CDATA[select @@identity]]></text>
+      <output>
+        <fieldOutput fieldName="IDVerificacionDatos" />
+      </output>
+    </command>
+  </commands>
+  <fields>
+    <field name="IDVerificacionDatos" type="Int32" allowNulls="false" isPrimaryKey="true" label="Id Verificacion Datos" readOnly="true" />
+    <field name="PrimerApellido" type="String" label="Primer Apellido" length="50" showInSummary="true" />
+    <field name="SegundoApellido" type="String" label="Segundo Apellido" length="50" showInSummary="true" />
+    <field name="PrimerNombre" type="String" label="Primer Nombre" length="50" showInSummary="true" />
+    <field name="SegundoNombre" type="String" label="Segundo Nombre" length="50" showInSummary="true" />
+    <field name="OtrosNombres" type="String" label="Otros Nombres" length="50" showInSummary="true" />
+    <field name="LugarNacimientoPais" type="Int32" label="Lugar Nacimiento Pais" />
+    <field name="LugarNacimientoDep" type="Int32" label="Lugar Nacimiento Dep" />
+    <field name="LugarNacimientoMuni" type="Int32" label="Lugar Nacimiento Muni" />
+    <field name="NumNit" type="Int32" label="Num Nit" />
+    <field name="TipoIdentificacion" type="Int32" label="Tipo Identificacion" />
+    <field name="NumeroIdentificacion" type="Int32" label="Numero Identificacion" />
+    <field name="DepEmision" type="Int32" label="Dep Emision" />
+    <field name="MuniEmision" type="Int32" label="Muni Emision" />
+    <field name="PaisEmision" type="Int32" label="Pais Emision" />
+    <field name="Telefono" type="Int32" label="Telefono" />
+    <field name="Celular" type="Int32" label="Celular" />
+    <field name="DirecMuni" type="Int32" label="Direc Muni" />
+    <field name="DirecDep" type="Int32" label="Direc Dep" />
+    <field name="DirecPais" type="Int32" label="Direc Pais" />
+    <field name="FuenteIngreso" type="Int32" label="Fuente Ingreso" />
+    <field name="NombreEmpresaTrabCliente" type="String" label="Nombre Empresa Trab Cliente" length="10" />
+    <field name="PuestoDesempenaCliente" type="String" label="Puesto Desempena Cliente" length="10" />
+    <field name="TelefonoEmpresaCliente" type="String" label="Telefono Empresa Cliente" length="10" />
+    <field name="MontoEgresoPi" type="Double" label="Monto Egreso Pi" />
+    <field name="MontoIngresoPj" type="Double" label="Monto Ingreso Pj" />
+    <field name="TipoPersona" type="Int32" label="Tipo Persona" />
+    <field name="CompraTerreno" type="Int32" label="Compra Terreno" />
+    <field name="HojaVerificacion" type="Int32" label="Hoja Verificacion" />
+    <field name="MatrizRiesgo" type="Int32" label="Matriz Riesgo" />
+    <field name="ConsultaBurosYBd" type="Int32" label="Consulta Buros Y Bd" />
+    <field name="Fiec" type="Int32" label="Fiec" />
+    <field name="DpiOPasaporte" type="Int32" label="Dpi O Pasaporte" />
+    <field name="CartaAutorizacionInvest" type="Int32" label="Carta Autorizacion Invest" />
+    <field name="RtuPromesaCompraVenta" type="Int32" label="Rtu Promesa Compra Venta" />
+    <field name="ConstanciaIngresos" type="Int32" label="Constancia Ingresos" />
+    <field name="EstadosDeCuenta" type="Int32" label="Estados De Cuenta" />
+    <field name="EstadosFinancieros" type="Int32" label="Estados Financieros" />
+    <field name="PatenteDeComercio" type="Int32" label="Patente De Comercio" />
+    <field name="CredencialActividad" type="Int32" label="Credencial Actividad" />
+    <field name="DeclaracionIvaIsr" type="Int32" label="Declaracion Iva Isr" />
+    <field name="FotocopiaFacturaCompra" type="Int32" label="Fotocopia Factura Compra" />
+    <field name="FotocopiaFacturaVenta" type="Int32" label="Fotocopia Factura Venta" />
+    <field name="FotografiasNegocio" type="Int32" label="Fotografias Negocio" />
+    <field name="CroquisNegocio" type="Int32" label="Croquis Negocio" />
+    <field name="MandatoGeneralPresentacion" type="Int32" label="Mandato General Presentacion" />
+    <field name="PapeleriaOtroDeudor" type="Int32" label="Papeleria Otro Deudor" />
+    <field name="DocumentosExtranjeroLegalizados" type="Int32" label="Documentos Extranjero Legalizados" />
+    <field name="ConstitucionEmpresaModificaciones" type="Int32" label="Constitucion Empresa Modificaciones" />
+    <field name="Ofac" type="Int32" label="Ofac">
+      <items style="RadioButtonList">
+        <item value="1" text="Si" />
+        <item value="2" text="No" />
+      </items>
+    </field>
+    <field name="Interpol" type="Int32" label="Interpol" />
+    <field name="InformacionPublica" type="Int32" label="Informacion Publica" />
+    <field name="OrganizacionJudicial" type="Int32" label="Organizacion Judicial" />
+    <field name="Infornet" type="Int32" label="Infornet" />
+    <field name="InfoPublica" type="Int32" label="Info Publica" />
+    <field name="Guatecompras" type="Int32" label="Guatecompras" />
+    <field name="ActividadEconomica" type="Int32" label="Actividad Economica" />
+    <field name="ProcedenciaDeFondos" type="Int32" label="Procedencia De Fondos" />
+    <field name="FormasDePago" type="Int32" label="Formas De Pago">
+      <items style="CheckBoxList" dataController="MtFormaPago" dataValueField="IDFormaPago" dataTextField="Descripcion" />
+    </field>
+    <field name="FormasDEPagoDescripcion" type="String" readOnly="true" label="Formas DE Pago Descripcion" length="50" />
+    <field name="ModoCompra" type="Int32" label="Modo Compra" allowNulls="false">
+      <items style="CheckBoxList" dataController="MtModoCompra" dataValueField="IDModoCompra" dataTextField="Descripcion" />
+    </field>
+    <field name="ModoCompraDescripcion" type="String" readOnly="true" label="Modo Compra Descripcion" length="50" />
+    <field name="PeriodicidadPagoEnganche" type="Int32" label="Periodicidad Pago Enganche">
+      <items style="CheckBoxList" dataController="MtPagoEnganche" dataValueField="IDPeriodicidadPagoEnganche" dataTextField="Descripcion" />
+    </field>
+    <field name="PeriodicidadPagoEngancheDescripcion" type="String" readOnly="true" label="Periodicidad Pago Enganche Descripcion" length="50" />
+    <field name="IngresosRazonables" type="Int32" label="Ingresos Razonables">
+      <items style="CheckBoxList" dataController="MtIngresoRazonable" dataValueField="IDInsgresoRazonable" dataTextField="Descripcion" />
+    </field>
+    <field name="IngresosRazonablesDescripcion" type="String" readOnly="true" label="Ingresos Razonables Descripcion" length="50" />
+    <field name="IngresosOFondosAdicionales" type="Int32" label="Ingresos O Fondos Adicionales" />
+    <field name="NivelEndeudamiento" type="Int32" label="Nivel Endeudamiento">
+      <items style="CheckBoxList" dataController="MtNivelEndeudamiento" dataValueField="IDNivelEndeudamiento" dataTextField="Descripcion" />
+    </field>
+    <field name="NivelEndeudamientoDescripcion" type="String" readOnly="true" label="Nivel Endeudamiento Descripcion" length="50" />
+    <field name="TipoPersosna" type="Int32" label="Tipo Persosna">
+      <items style="CheckBoxList" dataController="TipoPersona" />
+    </field>
+    <field name="ReferenciaBuros" type="Int32" label="Referencia Buros">
+      <items style="CheckBoxList" dataController="MtReferenciaBuros" dataValueField="IDReferenciaBuros" dataTextField="Descripcion" />
+    </field>
+    <field name="ReferenciaBurosDescripcion" type="String" readOnly="true" label="Referencia Buros Descripcion" length="50" />
+    <field name="ReferenciaOtrasFuentes" type="Int32" label="Referencia Otras Fuentes">
+      <items style="CheckBoxList" dataController="MtReferenciaOtrasFuentes" dataValueField="IDReferenciaOtrasFuentes" dataTextField="Descripcion" />
+    </field>
+    <field name="ReferenciaOtrasFuentesDescripcion" type="String" readOnly="true" label="Referencia Otras Fuentes Descripcion" length="50" />
+    <field name="CircircunstanciasInusuales" type="Int32" label="Circircunstancias Inusuales">
+      <items style="CheckBoxList" dataController="MtCircunstanciasInusuales" dataValueField="IDCircunstanciasInusuales" dataTextField="Descripcion" />
+    </field>
+    <field name="CircircunstanciasInusualesDescripcion" type="String" readOnly="true" label="Circircunstancias Inusuales Descripcion" length="50" />
+    <field name="ClienteFrecuente" type="Int32" label="Cliente Frecuente">
+      <items style="CheckBoxList" dataController="MtClienteFrecuente" dataValueField="IDClienteFrecuente" dataTextField="Descripcion" />
+    </field>
+    <field name="ClienteFrecuenteDescripcion" type="String" readOnly="true" label="Cliente Frecuente Descripcion" length="50" />
+    <field name="ConocimientoBeneficiarioFinal" type="Int32" label="Conocimiento Beneficiario Final">
+      <items style="CheckBoxList" dataController="MtConocimientoBeneficiarioFinal" dataValueField="IDConocimientoBeneficiarioFinal" dataTextField="Descripcion" />
+    </field>
+    <field name="ConocimientoBeneficiarioFinalDescripcion" type="String" readOnly="true" label="Conocimiento Beneficiario Final Descripcion" length="50" />
+    <field name="Testaferro" type="Int32" label="Testaferro">
+      <items style="CheckBoxList" dataController="MtUsoTestaferro" dataValueField="IDUsoTestaferro" dataTextField="Descripcion" />
+    </field>
+    <field name="TestaferroDescripcion" type="String" readOnly="true" label="Testaferro Descripcion" length="50" />
+    <field name="UbicacionGeografica" type="Int32" label="Ubicacion Geografica" />
+    <field name="ZonaODepartamentoResidencial" type="Int32" label="Zona O Departamento Residencial">
+      <items style="CheckBoxList" dataController="MtZonaODepartamento" dataValueField="IDZonaODepartamento" dataTextField="Descripcion" />
+    </field>
+    <field name="ZonaODepartamentoResidencialDescripcion" type="String" readOnly="true" label="Zona O Departamento Residencial Descripcion" length="50" />
+    <field name="ZonaDepartamentoLaboral" type="Int32" label="Zona Departamento Laboral">
+      <items style="CheckBoxList" dataController="MtZonaODepartamento" dataValueField="IDZonaODepartamento" dataTextField="Descripcion" />
+    </field>
+    <field name="ZonaDepartamentoLaboralDescripcion" type="String" readOnly="true" label="Zona Departamento Laboral Descripcion" length="50" />
+    <field name="ZonaODepartamentoInmueble" type="Int32" label="Zona O Departamento Inmueble">
+      <items style="CheckBoxList" dataController="MtZonaODepartamento" dataValueField="IDZonaODepartamento" dataTextField="Descripcion" />
+    </field>
+    <field name="ZonaODepartamentoInmuebleDescripcion" type="String" readOnly="true" label="Zona O Departamento Inmueble Descripcion" length="50" />
+    <field name="CanalesDistribucion" type="Int32" label="Canales Distribucion">
+      <items style="CheckBoxList" dataController="MtCanalDistribucion" dataValueField="IDCanalDistribucion" dataTextField="Descripcion" />
+    </field>
+    <field name="CanalesDistribucionDescripcion" type="String" readOnly="true" label="Canales Distribucion Descripcion" length="50" />
+    <field name="IDFormularioIveNF30PrimerApellido" type="String" readOnly="true" label="ID Formulario Ive NF  30 Primer Apellido" length="100" />
+    <field name="IDFormularioIveNF30SegundoApellido" type="String" readOnly="true" label="ID Formulario Ive NF  30 Segundo Apellido" length="100" />
+    <field name="IDFormularioIveNF30ApellidoCasada" type="String" readOnly="true" label="ID Formulario Ive NF  30 Apellido Casada" length="100" />
+    <field name="IDFormularioIveNF30OtrosNombres" type="String" readOnly="true" label="ID Formulario Ive NF  30 Otros Nombres" length="100" />
+    <field name="IDFormularioIveNF30SegundoNombre" type="String" readOnly="true" label="ID Formulario Ive NF  30 Segundo Nombre" length="100" />
+    <field name="IDFormularioIveNF30PrimerNombre" type="String" readOnly="true" label="ID Formulario Ive NF  30 Primer Nombre" length="100" />
+    <field name="IDFormularioIveNF30LugarNacimientoPais" type="Int32" readOnly="true" label="ID Formulario Ive NF  30 Lugar Nacimiento Pais" />
+    <field name="IDFormularioIveNF30LugarNacimientoDep" type="Int32" readOnly="true" label="ID Formulario Ive NF  30 Lugar Nacimiento Dep" />
+    <field name="IDFormularioIveNF30LugarNacimientoMuni" type="Int32" readOnly="true" label="ID Formulario Ive NF  30 Lugar Nacimiento Muni" />
+    <field name="IDFormularioIveNF30IveArchivoCod" type="Int32" label="ID Formulario Ive NF  30 Ive Archivo Cod" readOnly="true" />
+    <field name="IDFormularioIveNF30TipoIdentificacion" type="Int32" readOnly="true" label="ID Formulario Ive NF  30 Tipo Identificacion" />
+    <field name="IDFormularioIveNF30NumeroIdentificacion" type="String" readOnly="true" label="ID Formulario Ive NF  30 Numero Identificacion" length="100" />
+    <field name="IDFormularioIveNF30DepEmision" type="String" readOnly="true" label="ID Formulario Ive NF  30 Dep Emision" length="100" />
+    <field name="IDFormularioIveNF30MuniEmision" type="String" readOnly="true" label="ID Formulario Ive NF  30 Muni Emision" length="100" />
+    <field name="IDFormularioIveNF30PaisEmision" type="String" readOnly="true" label="ID Formulario Ive NF  30 Pais Emision" length="100" />
+    <field name="IDFormularioIveNF30TelefonoLF" type="String" readOnly="true" label="ID Formulario Ive NF  30 Telefono LF" length="50" />
+    <field name="IDFormularioIveNF30Celular" type="String" readOnly="true" label="ID Formulario Ive NF  30 Celular" length="50" />
+    <field name="IDFormularioIveNF30Email" type="String" readOnly="true" label="ID Formulario Ive NF  30 Email" length="100" />
+    <field name="IDFormularioIveNF30" type="Int32" label="ID Formulario Ive NF  30">
+      <items copy="IDFormularioIveNF30IveArchivoCod=IveArchivoCod, " style="DropDownList" />
+    </field>
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="Formulario Verificacion">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="PrimerApellido" columns="50" />
+        <dataField fieldName="SegundoApellido" columns="50" />
+        <dataField fieldName="PrimerNombre" columns="50" />
+        <dataField fieldName="SegundoNombre" columns="50" />
+        <dataField fieldName="OtrosNombres" columns="50" />
+        <dataField fieldName="LugarNacimientoPais" columns="15" />
+        <dataField fieldName="LugarNacimientoDep" columns="15" />
+        <dataField fieldName="LugarNacimientoMuni" columns="15" />
+        <dataField fieldName="NumNit" columns="15" />
+        <dataField fieldName="TipoIdentificacion" columns="15" />
+        <dataField fieldName="NumeroIdentificacion" columns="15" />
+        <dataField fieldName="DepEmision" columns="15" />
+        <dataField fieldName="MuniEmision" columns="15" />
+        <dataField fieldName="PaisEmision" columns="15" />
+        <dataField fieldName="Telefono" columns="15" />
+        <dataField fieldName="Celular" columns="15" />
+        <dataField fieldName="DirecMuni" columns="15" />
+        <dataField fieldName="DirecDep" columns="15" />
+        <dataField fieldName="DirecPais" columns="15" />
+        <dataField fieldName="FuenteIngreso" columns="15" />
+        <dataField fieldName="NombreEmpresaTrabCliente" columns="10" />
+        <dataField fieldName="PuestoDesempenaCliente" columns="10" />
+        <dataField fieldName="TelefonoEmpresaCliente" columns="10" />
+        <dataField fieldName="MontoEgresoPi" columns="15" />
+        <dataField fieldName="MontoIngresoPj" columns="15" />
+        <dataField fieldName="TipoPersona" columns="15" />
+        <dataField fieldName="CompraTerreno" columns="15" />
+        <dataField fieldName="HojaVerificacion" columns="15" />
+        <dataField fieldName="MatrizRiesgo" columns="15" />
+        <dataField fieldName="ConsultaBurosYBd" columns="15" />
+        <dataField fieldName="Fiec" columns="15" />
+        <dataField fieldName="DpiOPasaporte" columns="15" />
+        <dataField fieldName="CartaAutorizacionInvest" columns="15" />
+        <dataField fieldName="RtuPromesaCompraVenta" columns="15" />
+        <dataField fieldName="ConstanciaIngresos" columns="15" />
+        <dataField fieldName="EstadosDeCuenta" columns="15" />
+        <dataField fieldName="EstadosFinancieros" columns="15" />
+        <dataField fieldName="PatenteDeComercio" columns="15" />
+        <dataField fieldName="CredencialActividad" columns="15" />
+        <dataField fieldName="DeclaracionIvaIsr" columns="15" />
+        <dataField fieldName="FotocopiaFacturaCompra" columns="15" />
+        <dataField fieldName="FotocopiaFacturaVenta" columns="15" />
+        <dataField fieldName="FotografiasNegocio" columns="15" />
+        <dataField fieldName="CroquisNegocio" columns="15" />
+        <dataField fieldName="MandatoGeneralPresentacion" columns="15" />
+        <dataField fieldName="PapeleriaOtroDeudor" columns="15" />
+        <dataField fieldName="DocumentosExtranjeroLegalizados" columns="15" />
+        <dataField fieldName="ConstitucionEmpresaModificaciones" columns="15" />
+        <dataField fieldName="Ofac" columns="15" />
+        <dataField fieldName="Interpol" columns="15" />
+        <dataField fieldName="InformacionPublica" columns="15" />
+        <dataField fieldName="OrganizacionJudicial" columns="15" />
+        <dataField fieldName="Infornet" columns="15" />
+        <dataField fieldName="InfoPublica" columns="15" />
+        <dataField fieldName="Guatecompras" columns="15" />
+        <dataField fieldName="ActividadEconomica" columns="15" />
+        <dataField fieldName="ProcedenciaDeFondos" columns="15" />
+        <dataField fieldName="FormasDePago" aliasFieldName="FormasDEPagoDescripcion" />
+        <dataField fieldName="ModoCompra" aliasFieldName="ModoCompraDescripcion" />
+        <dataField fieldName="PeriodicidadPagoEnganche" aliasFieldName="PeriodicidadPagoEngancheDescripcion" />
+        <dataField fieldName="IngresosRazonables" aliasFieldName="IngresosRazonablesDescripcion" />
+        <dataField fieldName="IngresosOFondosAdicionales" columns="15" />
+        <dataField fieldName="NivelEndeudamiento" aliasFieldName="NivelEndeudamientoDescripcion" />
+        <dataField fieldName="TipoPersosna" columns="15" />
+        <dataField fieldName="ReferenciaBuros" aliasFieldName="ReferenciaBurosDescripcion" />
+        <dataField fieldName="ReferenciaOtrasFuentes" aliasFieldName="ReferenciaOtrasFuentesDescripcion" />
+        <dataField fieldName="CircircunstanciasInusuales" aliasFieldName="CircircunstanciasInusualesDescripcion" />
+        <dataField fieldName="ClienteFrecuente" aliasFieldName="ClienteFrecuenteDescripcion" />
+        <dataField fieldName="ConocimientoBeneficiarioFinal" aliasFieldName="ConocimientoBeneficiarioFinalDescripcion" />
+        <dataField fieldName="Testaferro" aliasFieldName="TestaferroDescripcion" />
+        <dataField fieldName="UbicacionGeografica" columns="15" />
+        <dataField fieldName="ZonaODepartamentoResidencial" aliasFieldName="ZonaODepartamentoResidencialDescripcion" />
+        <dataField fieldName="ZonaDepartamentoLaboral" aliasFieldName="ZonaDepartamentoLaboralDescripcion" />
+        <dataField fieldName="ZonaODepartamentoInmueble" aliasFieldName="ZonaODepartamentoInmuebleDescripcion" />
+        <dataField fieldName="CanalesDistribucion" aliasFieldName="CanalesDistribucionDescripcion" />
+        <dataField fieldName="IDFormularioIveNF30PrimerApellido" />
+        <dataField fieldName="IDFormularioIveNF30SegundoApellido" />
+        <dataField fieldName="IDFormularioIveNF30ApellidoCasada" />
+        <dataField fieldName="IDFormularioIveNF30OtrosNombres" />
+        <dataField fieldName="IDFormularioIveNF30SegundoNombre" />
+        <dataField fieldName="IDFormularioIveNF30PrimerNombre" />
+        <dataField fieldName="IDFormularioIveNF30LugarNacimientoPais" columns="15" />
+        <dataField fieldName="IDFormularioIveNF30LugarNacimientoDep" columns="15" />
+        <dataField fieldName="IDFormularioIveNF30LugarNacimientoMuni" columns="15" />
+        <dataField fieldName="IDFormularioIveNF30IveArchivoCod" columns="15" />
+        <dataField fieldName="IDFormularioIveNF30TipoIdentificacion" columns="15" />
+        <dataField fieldName="IDFormularioIveNF30NumeroIdentificacion" />
+        <dataField fieldName="IDFormularioIveNF30DepEmision" />
+        <dataField fieldName="IDFormularioIveNF30MuniEmision" />
+        <dataField fieldName="IDFormularioIveNF30PaisEmision" />
+        <dataField fieldName="IDFormularioIveNF30TelefonoLF" columns="50" />
+        <dataField fieldName="IDFormularioIveNF30Celular" columns="50" />
+        <dataField fieldName="IDFormularioIveNF30Email" />
+        <dataField fieldName="IDFormularioIveNF30" columns="15" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review Formulario Verificacion">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="Formulario Verificacion" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="PrimerApellido" columns="50" />
+            <dataField fieldName="SegundoApellido" columns="50" />
+            <dataField fieldName="PrimerNombre" columns="50" />
+            <dataField fieldName="SegundoNombre" columns="50" />
+            <dataField fieldName="OtrosNombres" columns="50" />
+            <dataField fieldName="LugarNacimientoPais" columns="15" />
+            <dataField fieldName="LugarNacimientoDep" columns="15" />
+            <dataField fieldName="LugarNacimientoMuni" columns="15" />
+            <dataField fieldName="NumNit" columns="15" />
+            <dataField fieldName="TipoIdentificacion" columns="15" />
+            <dataField fieldName="NumeroIdentificacion" columns="15" />
+            <dataField fieldName="DepEmision" columns="15" />
+            <dataField fieldName="MuniEmision" columns="15" />
+            <dataField fieldName="PaisEmision" columns="15" />
+            <dataField fieldName="Telefono" columns="15" />
+            <dataField fieldName="Celular" columns="15" />
+            <dataField fieldName="DirecMuni" columns="15" />
+            <dataField fieldName="DirecDep" columns="15" />
+            <dataField fieldName="DirecPais" columns="15" />
+            <dataField fieldName="FuenteIngreso" columns="15" />
+            <dataField fieldName="NombreEmpresaTrabCliente" columns="10" />
+            <dataField fieldName="PuestoDesempenaCliente" columns="10" />
+            <dataField fieldName="TelefonoEmpresaCliente" columns="10" />
+            <dataField fieldName="MontoEgresoPi" columns="15" />
+            <dataField fieldName="MontoIngresoPj" columns="15" />
+            <dataField fieldName="TipoPersona" columns="15" />
+            <dataField fieldName="CompraTerreno" columns="15" />
+            <dataField fieldName="HojaVerificacion" columns="15" />
+            <dataField fieldName="MatrizRiesgo" columns="15" />
+            <dataField fieldName="ConsultaBurosYBd" columns="15" />
+            <dataField fieldName="Fiec" columns="15" />
+            <dataField fieldName="DpiOPasaporte" columns="15" />
+            <dataField fieldName="CartaAutorizacionInvest" columns="15" />
+            <dataField fieldName="RtuPromesaCompraVenta" columns="15" />
+            <dataField fieldName="ConstanciaIngresos" columns="15" />
+            <dataField fieldName="EstadosDeCuenta" columns="15" />
+            <dataField fieldName="EstadosFinancieros" columns="15" />
+            <dataField fieldName="PatenteDeComercio" columns="15" />
+            <dataField fieldName="CredencialActividad" columns="15" />
+            <dataField fieldName="DeclaracionIvaIsr" columns="15" />
+            <dataField fieldName="FotocopiaFacturaCompra" columns="15" />
+            <dataField fieldName="FotocopiaFacturaVenta" columns="15" />
+            <dataField fieldName="FotografiasNegocio" columns="15" />
+            <dataField fieldName="CroquisNegocio" columns="15" />
+            <dataField fieldName="MandatoGeneralPresentacion" columns="15" />
+            <dataField fieldName="PapeleriaOtroDeudor" columns="15" />
+            <dataField fieldName="DocumentosExtranjeroLegalizados" columns="15" />
+            <dataField fieldName="ConstitucionEmpresaModificaciones" columns="15" />
+            <dataField fieldName="Ofac" columns="15" />
+            <dataField fieldName="Interpol" columns="15" />
+            <dataField fieldName="InformacionPublica" columns="15" />
+            <dataField fieldName="OrganizacionJudicial" columns="15" />
+            <dataField fieldName="Infornet" columns="15" />
+            <dataField fieldName="InfoPublica" columns="15" />
+            <dataField fieldName="Guatecompras" columns="15" />
+            <dataField fieldName="ActividadEconomica" columns="15" />
+            <dataField fieldName="ProcedenciaDeFondos" columns="15" />
+            <dataField fieldName="FormasDePago" aliasFieldName="FormasDEPagoDescripcion" />
+            <dataField fieldName="ModoCompra" aliasFieldName="ModoCompraDescripcion" />
+            <dataField fieldName="PeriodicidadPagoEnganche" aliasFieldName="PeriodicidadPagoEngancheDescripcion" />
+            <dataField fieldName="IngresosRazonables" aliasFieldName="IngresosRazonablesDescripcion" />
+            <dataField fieldName="IngresosOFondosAdicionales" columns="15" />
+            <dataField fieldName="NivelEndeudamiento" aliasFieldName="NivelEndeudamientoDescripcion" />
+            <dataField fieldName="TipoPersosna" columns="15" />
+            <dataField fieldName="ReferenciaBuros" aliasFieldName="ReferenciaBurosDescripcion" />
+            <dataField fieldName="ReferenciaOtrasFuentes" aliasFieldName="ReferenciaOtrasFuentesDescripcion" />
+            <dataField fieldName="CircircunstanciasInusuales" aliasFieldName="CircircunstanciasInusualesDescripcion" />
+            <dataField fieldName="ClienteFrecuente" aliasFieldName="ClienteFrecuenteDescripcion" />
+            <dataField fieldName="ConocimientoBeneficiarioFinal" aliasFieldName="ConocimientoBeneficiarioFinalDescripcion" />
+            <dataField fieldName="Testaferro" aliasFieldName="TestaferroDescripcion" />
+            <dataField fieldName="UbicacionGeografica" columns="15" />
+            <dataField fieldName="ZonaODepartamentoResidencial" aliasFieldName="ZonaODepartamentoResidencialDescripcion" />
+            <dataField fieldName="ZonaDepartamentoLaboral" aliasFieldName="ZonaDepartamentoLaboralDescripcion" />
+            <dataField fieldName="ZonaODepartamentoInmueble" aliasFieldName="ZonaODepartamentoInmuebleDescripcion" />
+            <dataField fieldName="CanalesDistribucion" aliasFieldName="CanalesDistribucionDescripcion" />
+            <dataField fieldName="IDFormularioIveNF30PrimerApellido" />
+            <dataField fieldName="IDFormularioIveNF30SegundoApellido" />
+            <dataField fieldName="IDFormularioIveNF30ApellidoCasada" />
+            <dataField fieldName="IDFormularioIveNF30OtrosNombres" />
+            <dataField fieldName="IDFormularioIveNF30SegundoNombre" />
+            <dataField fieldName="IDFormularioIveNF30PrimerNombre" />
+            <dataField fieldName="IDFormularioIveNF30LugarNacimientoPais" columns="15" />
+            <dataField fieldName="IDFormularioIveNF30LugarNacimientoDep" columns="15" />
+            <dataField fieldName="IDFormularioIveNF30LugarNacimientoMuni" columns="15" />
+            <dataField fieldName="IDFormularioIveNF30IveArchivoCod" columns="15" />
+            <dataField fieldName="IDFormularioIveNF30TipoIdentificacion" columns="15" />
+            <dataField fieldName="IDFormularioIveNF30NumeroIdentificacion" />
+            <dataField fieldName="IDFormularioIveNF30DepEmision" />
+            <dataField fieldName="IDFormularioIveNF30MuniEmision" />
+            <dataField fieldName="IDFormularioIveNF30PaisEmision" />
+            <dataField fieldName="IDFormularioIveNF30TelefonoLF" columns="50" />
+            <dataField fieldName="IDFormularioIveNF30Celular" columns="50" />
+            <dataField fieldName="IDFormularioIveNF30Email" />
+            <dataField fieldName="IDFormularioIveNF30" columns="15" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New Formulario Verificacion">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="PrimerApellido" columns="50" />
+            <dataField fieldName="SegundoApellido" columns="50" />
+            <dataField fieldName="PrimerNombre" columns="50" />
+            <dataField fieldName="SegundoNombre" columns="50" />
+            <dataField fieldName="OtrosNombres" columns="50" />
+            <dataField fieldName="LugarNacimientoPais" columns="15" />
+            <dataField fieldName="LugarNacimientoDep" columns="15" />
+            <dataField fieldName="LugarNacimientoMuni" columns="15" />
+            <dataField fieldName="NumNit" columns="15" />
+            <dataField fieldName="TipoIdentificacion" columns="15" />
+            <dataField fieldName="NumeroIdentificacion" columns="15" />
+            <dataField fieldName="DepEmision" columns="15" />
+            <dataField fieldName="MuniEmision" columns="15" />
+            <dataField fieldName="PaisEmision" columns="15" />
+            <dataField fieldName="Telefono" columns="15" />
+            <dataField fieldName="Celular" columns="15" />
+            <dataField fieldName="DirecMuni" columns="15" />
+            <dataField fieldName="DirecDep" columns="15" />
+            <dataField fieldName="DirecPais" columns="15" />
+            <dataField fieldName="FuenteIngreso" columns="15" />
+            <dataField fieldName="NombreEmpresaTrabCliente" columns="10" />
+            <dataField fieldName="PuestoDesempenaCliente" columns="10" />
+            <dataField fieldName="TelefonoEmpresaCliente" columns="10" />
+            <dataField fieldName="MontoEgresoPi" columns="15" />
+            <dataField fieldName="MontoIngresoPj" columns="15" />
+            <dataField fieldName="TipoPersona" columns="15" />
+            <dataField fieldName="CompraTerreno" columns="15" />
+            <dataField fieldName="HojaVerificacion" columns="15" />
+            <dataField fieldName="MatrizRiesgo" columns="15" />
+            <dataField fieldName="ConsultaBurosYBd" columns="15" />
+            <dataField fieldName="Fiec" columns="15" />
+            <dataField fieldName="DpiOPasaporte" columns="15" />
+            <dataField fieldName="CartaAutorizacionInvest" columns="15" />
+            <dataField fieldName="RtuPromesaCompraVenta" columns="15" />
+            <dataField fieldName="ConstanciaIngresos" columns="15" />
+            <dataField fieldName="EstadosDeCuenta" columns="15" />
+            <dataField fieldName="EstadosFinancieros" columns="15" />
+            <dataField fieldName="PatenteDeComercio" columns="15" />
+            <dataField fieldName="CredencialActividad" columns="15" />
+            <dataField fieldName="DeclaracionIvaIsr" columns="15" />
+            <dataField fieldName="FotocopiaFacturaCompra" columns="15" />
+            <dataField fieldName="FotocopiaFacturaVenta" columns="15" />
+            <dataField fieldName="FotografiasNegocio" columns="15" />
+            <dataField fieldName="CroquisNegocio" columns="15" />
+            <dataField fieldName="MandatoGeneralPresentacion" columns="15" />
+            <dataField fieldName="PapeleriaOtroDeudor" columns="15" />
+            <dataField fieldName="DocumentosExtranjeroLegalizados" columns="15" />
+            <dataField fieldName="ConstitucionEmpresaModificaciones" columns="15" />
+            <dataField fieldName="Ofac" columns="15" />
+            <dataField fieldName="Interpol" columns="15" />
+            <dataField fieldName="InformacionPublica" columns="15" />
+            <dataField fieldName="OrganizacionJudicial" columns="15" />
+            <dataField fieldName="Infornet" columns="15" />
+            <dataField fieldName="InfoPublica" columns="15" />
+            <dataField fieldName="Guatecompras" columns="15" />
+            <dataField fieldName="ActividadEconomica" columns="15" />
+            <dataField fieldName="ProcedenciaDeFondos" columns="15" />
+            <dataField fieldName="FormasDePago" aliasFieldName="FormasDEPagoDescripcion" />
+            <dataField fieldName="ModoCompra" aliasFieldName="ModoCompraDescripcion" />
+            <dataField fieldName="PeriodicidadPagoEnganche" aliasFieldName="PeriodicidadPagoEngancheDescripcion" />
+            <dataField fieldName="IngresosRazonables" aliasFieldName="IngresosRazonablesDescripcion" />
+            <dataField fieldName="IngresosOFondosAdicionales" columns="15" />
+            <dataField fieldName="NivelEndeudamiento" aliasFieldName="NivelEndeudamientoDescripcion" />
+            <dataField fieldName="TipoPersosna" columns="15" />
+            <dataField fieldName="ReferenciaBuros" aliasFieldName="ReferenciaBurosDescripcion" />
+            <dataField fieldName="ReferenciaOtrasFuentes" aliasFieldName="ReferenciaOtrasFuentesDescripcion" />
+            <dataField fieldName="CircircunstanciasInusuales" aliasFieldName="CircircunstanciasInusualesDescripcion" />
+            <dataField fieldName="ClienteFrecuente" aliasFieldName="ClienteFrecuenteDescripcion" />
+            <dataField fieldName="ConocimientoBeneficiarioFinal" aliasFieldName="ConocimientoBeneficiarioFinalDescripcion" />
+            <dataField fieldName="Testaferro" aliasFieldName="TestaferroDescripcion" />
+            <dataField fieldName="ZonaODepartamentoResidencial" aliasFieldName="ZonaODepartamentoResidencialDescripcion" />
+            <dataField fieldName="ZonaDepartamentoLaboral" aliasFieldName="ZonaDepartamentoLaboralDescripcion" />
+            <dataField fieldName="ZonaODepartamentoInmueble" aliasFieldName="ZonaODepartamentoInmuebleDescripcion" />
+            <dataField fieldName="CanalesDistribucion" aliasFieldName="CanalesDistribucionDescripcion" />
+            <dataField fieldName="IDFormularioIveNF30PrimerApellido" />
+            <dataField fieldName="IDFormularioIveNF30SegundoApellido" />
+            <dataField fieldName="IDFormularioIveNF30ApellidoCasada" />
+            <dataField fieldName="IDFormularioIveNF30OtrosNombres" />
+            <dataField fieldName="IDFormularioIveNF30SegundoNombre" />
+            <dataField fieldName="IDFormularioIveNF30PrimerNombre" />
+            <dataField fieldName="IDFormularioIveNF30LugarNacimientoPais" columns="15" />
+            <dataField fieldName="IDFormularioIveNF30LugarNacimientoDep" columns="15" />
+            <dataField fieldName="IDFormularioIveNF30LugarNacimientoMuni" columns="15" />
+            <dataField fieldName="IDFormularioIveNF30IveArchivoCod" columns="15" />
+            <dataField fieldName="IDFormularioIveNF30TipoIdentificacion" columns="15" />
+            <dataField fieldName="IDFormularioIveNF30NumeroIdentificacion" />
+            <dataField fieldName="IDFormularioIveNF30DepEmision" />
+            <dataField fieldName="IDFormularioIveNF30MuniEmision" />
+            <dataField fieldName="IDFormularioIveNF30PaisEmision" />
+            <dataField fieldName="IDFormularioIveNF30TelefonoLF" columns="50" />
+            <dataField fieldName="IDFormularioIveNF30Celular" columns="50" />
+            <dataField fieldName="IDFormularioIveNF30Email" />
+            <dataField fieldName="IDFormularioIveNF30" columns="15" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" commandArgument="Save" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" commandArgument="Save" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" commandArgument="SaveAndNew" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenLastCommandArgument="Save" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenClientScript="this.hasDetails()" />
+      <action id="a14" whenLastCommandName="Insert" whenLastCommandArgument="SaveAndNew" commandName="New" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a5" />
+      <action id="a6" commandName="Import" commandArgument="createForm1" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag7" scope="ActionBar" headerText="Report">
+      <action id="a1" commandName="ReportAsPdf" />
+      <action id="a2" commandName="ReportAsImage" />
+      <action id="a3" commandName="ReportAsExcel" />
+      <action id="a4" commandName="ReportAsWord" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>

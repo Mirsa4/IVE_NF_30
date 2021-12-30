@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="MT_CANAL_DISTRIBUCION" alias="MT_CANAL_DISTRIBUCION" created="2021-12-30T10:12:59" modified="2021-12-30T10:13:08" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column name="ID_CANAL_DISTRIBUCION" fieldName="IDCanalDistribucion" label="Id Canal Distribucion" />
+    <column name="ESTADO" fieldName="Estado" label="Estado" />
+    <column name="DESCRIPCION" fieldName="Descripcion" label="Descripcion" />
+  </columns>
+</dataModel>

@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="FORMULARIO_VERIFICACION" alias="FORMULARIO_VERIFICACION" created="2021-12-30T10:00:36" modified="2021-12-30T11:24:13" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys>
+    <foreignKey id="MODO_COMPRA" parentTableSchema="dbo" parentTableName="MT_MODO_COMPRA" x="477" y="603">
+      <foreignKeyColumn columnName="MODO_COMPRA" parentColumnName="ID_MODO_COMPRA" />
+    </foreignKey>
+    <foreignKey id="PERIODICIDAD_PAGO_ENGANCHE" parentTableSchema="dbo" parentTableName="MT_PAGO_ENGANCHE" x="477" y="787">
+      <foreignKeyColumn columnName="PERIODICIDAD_PAGO_ENGANCHE" parentColumnName="ID_PERIODICIDAD_PAGO_ENGANCHE" />
+    </foreignKey>
+    <foreignKey id="INGRESOS_RAZONABLES" parentTableSchema="dbo" parentTableName="MT_INGRESO_RAZONABLE" x="477" y="972">
+      <foreignKeyColumn columnName="INGRESOS_RAZONABLES" parentColumnName="ID_INSGRESO_RAZONABLE" />
+    </foreignKey>
+    <foreignKey id="NIVEL_ENDEUDAMIENTO" parentTableSchema="dbo" parentTableName="MT_NIVEL_ENDEUDAMIENTO" x="953" y="20">
+      <foreignKeyColumn columnName="NIVEL_ENDEUDAMIENTO" parentColumnName="ID_NIVEL_ENDEUDAMIENTO" />
+    </foreignKey>
+    <foreignKey id="REFERENCIA_BUROS" parentTableSchema="dbo" parentTableName="MT_REFERENCIA_BUROS" x="953" y="222">
+      <foreignKeyColumn columnName="REFERENCIA_BUROS" parentColumnName="ID_REFERENCIA_BUROS" />
+    </foreignKey>
+    <foreignKey id="REFERENCIA_OTRAS_FUENTES" parentTableSchema="dbo" parentTableName="MT_REFERENCIA_OTRAS_FUENTES" x="953" y="403">
+      <foreignKeyColumn columnName="REFERENCIA_OTRAS_FUENTES" parentColumnName="ID_REFERENCIA_OTRAS_FUENTES" />
+    </foreignKey>
+    <foreignKey id="CIRCIRCUNSTANCIAS_INUSUALES" parentTableSchema="dbo" parentTableName="MT_CIRCUNSTANCIAS_INUSUALES" x="953" y="603">
+      <foreignKeyColumn columnName="CIRCIRCUNSTANCIAS_INUSUALES" parentColumnName="ID_CIRCUNSTANCIAS_INUSUALES" />
+    </foreignKey>
+    <foreignKey id="CLIENTE_FRECUENTE" parentTableSchema="dbo" parentTableName="MT_CLIENTE_FRECUENTE" x="953" y="804">
+      <foreignKeyColumn columnName="CLIENTE_FRECUENTE" parentColumnName="ID_CLIENTE_FRECUENTE" />
+    </foreignKey>
+    <foreignKey id="TESTAFERRO" parentTableSchema="dbo" parentTableName="MT_USO_TESTAFERRO" x="953" y="987">
+      <foreignKeyColumn columnName="TESTAFERRO" parentColumnName="ID_USO_TESTAFERRO" />
+    </foreignKey>
+    <foreignKey id="CONOCIMIENTO_BENEFICIARIO_FINAL" parentTableSchema="dbo" parentTableName="MT_CONOCIMIENTO_BENEFICIARIO_FINAL" x="1409" y="20">
+      <foreignKeyColumn columnName="CONOCIMIENTO_BENEFICIARIO_FINAL" parentColumnName="ID_CONOCIMIENTO_BENEFICIARIO_FINAL" />
+    </foreignKey>
+    <foreignKey id="ZONA_O_DEPARTAMENTO_RESIDENCIAL" parentTableSchema="dbo" parentTableName="MT_ZONA_O_DEPARTAMENTO" x="1409" y="222">
+      <foreignKeyColumn columnName="ZONA_O_DEPARTAMENTO_RESIDENCIAL" parentColumnName="ID_ZONA_O_DEPARTAMENTO" />
+    </foreignKey>
+    <foreignKey id="ZONA_DEPARTAMENTO_LABORAL" parentTableSchema="dbo" parentTableName="MT_ZONA_O_DEPARTAMENTO" x="1409" y="421">
+      <foreignKeyColumn columnName="ZONA_DEPARTAMENTO_LABORAL" parentColumnName="ID_ZONA_O_DEPARTAMENTO" />
+    </foreignKey>
+    <foreignKey id="ZONA_O_DEPARTAMENTO_INMUEBLE" parentTableSchema="dbo" parentTableName="MT_ZONA_O_DEPARTAMENTO" x="1409" y="620">
+      <foreignKeyColumn columnName="ZONA_O_DEPARTAMENTO_INMUEBLE" parentColumnName="ID_ZONA_O_DEPARTAMENTO" />
+    </foreignKey>
+    <foreignKey id="CANALES_DISTRIBUCION" parentTableSchema="dbo" parentTableName="MT_CANAL_DISTRIBUCION" x="1409" y="819">
+      <foreignKeyColumn columnName="CANALES_DISTRIBUCION" parentColumnName="ID_CANAL_DISTRIBUCION" />
+    </foreignKey>
+    <foreignKey id="FORMAS_DE_PAGO" parentTableSchema="dbo" parentTableName="MT_FORMA_PAGO" x="1847" y="20">
+      <foreignKeyColumn columnName="FORMAS_DE_PAGO" parentColumnName="ID_FORMA_PAGO" />
+    </foreignKey>
+    <foreignKey id="ID_FORMULARIO_IVE_NF_30_" parentTableSchema="dbo" parentTableName="FORMULARIO_IVE_NF_30" x="2158" y="20">
+      <foreignKeyColumn columnName="ID_FORMULARIO_IVE_NF_30" parentColumnName="IVE_ARCHIVO_COD" />
+    </foreignKey>
+  </foreignKeys>
+  <columns>
+    <column name="ID_VERIFICACION_DATOS" fieldName="IDVerificacionDatos" label="Id Verificacion Datos" />
+    <column name="PRIMER_APELLIDO" fieldName="PrimerApellido" label="Primer Apellido" />
+    <column name="SEGUNDO_APELLIDO" fieldName="SegundoApellido" label="Segundo Apellido" />
+    <column name="PRIMER_NOMBRE" fieldName="PrimerNombre" label="Primer Nombre" />
+    <column name="SEGUNDO_NOMBRE" fieldName="SegundoNombre" label="Segundo Nombre" />
+    <column name="OTROS_NOMBRES" fieldName="OtrosNombres" label="Otros Nombres" />
+    <column name="LUGAR_NACIMIENTO_PAIS" fieldName="LugarNacimientoPais" label="Lugar Nacimiento Pais" />
+    <column name="LUGAR_NACIMIENTO_DEP" fieldName="LugarNacimientoDep" label="Lugar Nacimiento Dep" />
+    <column name="LUGAR_NACIMIENTO_MUNI" fieldName="LugarNacimientoMuni" label="Lugar Nacimiento Muni" />
+    <column name="NUM_NIT" fieldName="NumNit" label="Num Nit" />
+    <column name="TIPO_IDENTIFICACION" fieldName="TipoIdentificacion" label="Tipo Identificacion" />
+    <column name="NUMERO_IDENTIFICACION" fieldName="NumeroIdentificacion" label="Numero Identificacion" />
+    <column name="DEP_EMISION" fieldName="DepEmision" label="Dep Emision" />
+    <column name="MUNI_EMISION" fieldName="MuniEmision" label="Muni Emision" />
+    <column name="PAIS_EMISION" fieldName="PaisEmision" label="Pais Emision" />
+    <column name="TELEFONO" fieldName="Telefono" label="Telefono" />
+    <column name="CELULAR" fieldName="Celular" label="Celular" />
+    <column name="DIREC_MUNI" fieldName="DirecMuni" label="Direc Muni" />
+    <column name="DIREC_DEP" fieldName="DirecDep" label="Direc Dep" />
+    <column name="DIREC_PAIS" fieldName="DirecPais" label="Direc Pais" />
+    <column name="FUENTE_INGRESO" fieldName="FuenteIngreso" label="Fuente Ingreso" />
+    <column name="NOMBRE_EMPRESA_TRAB_CLIENTE" fieldName="NombreEmpresaTrabCliente" label="Nombre Empresa Trab Cliente" />
+    <column name="PUESTO_DESEMPENA_CLIENTE" fieldName="PuestoDesempenaCliente" label="Puesto Desempena Cliente" />
+    <column name="TELEFONO_EMPRESA_CLIENTE" fieldName="TelefonoEmpresaCliente" label="Telefono Empresa Cliente" />
+    <column name="MONTO_EGRESO_PI" fieldName="MontoEgresoPi" label="Monto Egreso Pi" />
+    <column name="MONTO_INGRESO_PJ" fieldName="MontoIngresoPj" label="Monto Ingreso Pj" />
+    <column name="TIPO_PERSONA" fieldName="TipoPersona" label="Tipo Persona" />
+    <column name="COMPRA_TERRENO" fieldName="CompraTerreno" label="Compra Terreno" />
+    <column name="HOJA_VERIFICACION" fieldName="HojaVerificacion" label="Hoja Verificacion" />
+    <column name="MATRIZ_RIESGO" fieldName="MatrizRiesgo" label="Matriz Riesgo" />
+    <column name="CONSULTA_BUROS_Y_BD" fieldName="ConsultaBurosYBd" label="Consulta Buros Y Bd" />
+    <column name="FIEC" fieldName="Fiec" label="Fiec" />
+    <column name="DPI_O_PASAPORTE" fieldName="DpiOPasaporte" label="Dpi O Pasaporte" />
+    <column name="CARTA_AUTORIZACION_INVEST" fieldName="CartaAutorizacionInvest" label="Carta Autorizacion Invest" />
+    <column name="RTU_PROMESA_COMPRA_VENTA" fieldName="RtuPromesaCompraVenta" label="Rtu Promesa Compra Venta" />
+    <column name="CONSTANCIA_INGRESOS" fieldName="ConstanciaIngresos" label="Constancia Ingresos" />
+    <column name="ESTADOS_DE_CUENTA" fieldName="EstadosDeCuenta" label="Estados De Cuenta" />
+    <column name="ESTADOS_FINANCIEROS" fieldName="EstadosFinancieros" label="Estados Financieros" />
+    <column name="PATENTE_DE_COMERCIO" fieldName="PatenteDeComercio" label="Patente De Comercio" />
+    <column name="CREDENCIAL_ACTIVIDAD" fieldName="CredencialActividad" label="Credencial Actividad" />
+    <column name="DECLARACION_IVA_ISR" fieldName="DeclaracionIvaIsr" label="Declaracion Iva Isr" />
+    <column name="FOTOCOPIA_FACTURA_COMPRA" fieldName="FotocopiaFacturaCompra" label="Fotocopia Factura Compra" />
+    <column name="FOTOCOPIA_FACTURA_VENTA" fieldName="FotocopiaFacturaVenta" label="Fotocopia Factura Venta" />
+    <column name="FOTOGRAFIAS_NEGOCIO" fieldName="FotografiasNegocio" label="Fotografias Negocio" />
+    <column name="CROQUIS_NEGOCIO" fieldName="CroquisNegocio" label="Croquis Negocio" />
+    <column name="MANDATO_GENERAL_PRESENTACION" fieldName="MandatoGeneralPresentacion" label="Mandato General Presentacion" />
+    <column name="PAPELERIA_OTRO_DEUDOR" fieldName="PapeleriaOtroDeudor" label="Papeleria Otro Deudor" />
+    <column name="DOCUMENTOS_EXTRANJERO_LEGALIZADOS" fieldName="DocumentosExtranjeroLegalizados" label="Documentos Extranjero Legalizados" />
+    <column name="CONSTITUCION_EMPRESA_MODIFICACIONES" fieldName="ConstitucionEmpresaModificaciones" label="Constitucion Empresa Modificaciones" />
+    <column name="OFAC" fieldName="Ofac" label="Ofac" />
+    <column name="INTERPOL" fieldName="Interpol" label="Interpol" />
+    <column name="INFORMACION_PUBLICA" fieldName="InformacionPublica" label="Informacion Publica" />
+    <column name="ORGANIZACION_JUDICIAL" fieldName="OrganizacionJudicial" label="Organizacion Judicial" />
+    <column name="INFORNET" fieldName="Infornet" label="Infornet" />
+    <column name="INFO_PUBLICA" fieldName="InfoPublica" label="Info Publica" />
+    <column name="GUATECOMPRAS" fieldName="Guatecompras" label="Guatecompras" />
+    <column name="ACTIVIDAD_ECONOMICA" fieldName="ActividadEconomica" label="Actividad Economica" />
+    <column name="PROCEDENCIA_DE_FONDOS" fieldName="ProcedenciaDeFondos" label="Procedencia De Fondos" />
+    <column name="FORMAS_DE_PAGO" fieldName="FormasDePago" label="Formas De Pago" aliasColumnName="DESCRIPCION" aliasForeignKey="FORMAS_DE_PAGO" />
+    <column name="DESCRIPCION" fieldName="FormasDEPagoDescripcion" label="Formas DE Pago Descripcion" foreignKey="FORMAS_DE_PAGO" />
+    <column name="MODO_COMPRA" fieldName="ModoCompra" label="Modo Compra" aliasColumnName="DESCRIPCION" aliasForeignKey="MODO_COMPRA" />
+    <column name="DESCRIPCION" fieldName="ModoCompraDescripcion" label="Modo Compra Descripcion" foreignKey="MODO_COMPRA" />
+    <column name="PERIODICIDAD_PAGO_ENGANCHE" fieldName="PeriodicidadPagoEnganche" label="Periodicidad Pago Enganche" aliasColumnName="DESCRIPCION" aliasForeignKey="PERIODICIDAD_PAGO_ENGANCHE" />
+    <column name="DESCRIPCION" fieldName="PeriodicidadPagoEngancheDescripcion" label="Periodicidad Pago Enganche Descripcion" foreignKey="PERIODICIDAD_PAGO_ENGANCHE" />
+    <column name="INGRESOS_RAZONABLES" fieldName="IngresosRazonables" label="Ingresos Razonables" aliasColumnName="DESCRIPCION" aliasForeignKey="INGRESOS_RAZONABLES" />
+    <column name="DESCRIPCION" fieldName="IngresosRazonablesDescripcion" label="Ingresos Razonables Descripcion" foreignKey="INGRESOS_RAZONABLES" />
+    <column name="INGRESOS_O_FONDOS_ADICIONALES" fieldName="IngresosOFondosAdicionales" label="Ingresos O Fondos Adicionales" />
+    <column name="NIVEL_ENDEUDAMIENTO" fieldName="NivelEndeudamiento" label="Nivel Endeudamiento" aliasColumnName="DESCRIPCION" aliasForeignKey="NIVEL_ENDEUDAMIENTO" />
+    <column name="DESCRIPCION" fieldName="NivelEndeudamientoDescripcion" label="Nivel Endeudamiento Descripcion" foreignKey="NIVEL_ENDEUDAMIENTO" />
+    <column name="TIPO_PERSOSNA" fieldName="TipoPersosna" label="Tipo Persosna" />
+    <column name="REFERENCIA_BUROS" fieldName="ReferenciaBuros" label="Referencia Buros" aliasColumnName="DESCRIPCION" aliasForeignKey="REFERENCIA_BUROS" />
+    <column name="DESCRIPCION" fieldName="ReferenciaBurosDescripcion" label="Referencia Buros Descripcion" foreignKey="REFERENCIA_BUROS" />
+    <column name="REFERENCIA_OTRAS_FUENTES" fieldName="ReferenciaOtrasFuentes" label="Referencia Otras Fuentes" aliasColumnName="DESCRIPCION" aliasForeignKey="REFERENCIA_OTRAS_FUENTES" />
+    <column name="DESCRIPCION" fieldName="ReferenciaOtrasFuentesDescripcion" label="Referencia Otras Fuentes Descripcion" foreignKey="REFERENCIA_OTRAS_FUENTES" />
+    <column name="CIRCIRCUNSTANCIAS_INUSUALES" fieldName="CircircunstanciasInusuales" label="Circircunstancias Inusuales" aliasColumnName="DESCRIPCION" aliasForeignKey="CIRCIRCUNSTANCIAS_INUSUALES" />
+    <column name="DESCRIPCION" fieldName="CircircunstanciasInusualesDescripcion" label="Circircunstancias Inusuales Descripcion" foreignKey="CIRCIRCUNSTANCIAS_INUSUALES" />
+    <column name="CLIENTE_FRECUENTE" fieldName="ClienteFrecuente" label="Cliente Frecuente" aliasColumnName="DESCRIPCION" aliasForeignKey="CLIENTE_FRECUENTE" />
+    <column name="DESCRIPCION" fieldName="ClienteFrecuenteDescripcion" label="Cliente Frecuente Descripcion" foreignKey="CLIENTE_FRECUENTE" />
+    <column name="CONOCIMIENTO_BENEFICIARIO_FINAL" fieldName="ConocimientoBeneficiarioFinal" label="Conocimiento Beneficiario Final" aliasColumnName="DESCRIPCION" aliasForeignKey="CONOCIMIENTO_BENEFICIARIO_FINAL" />
+    <column name="DESCRIPCION" fieldName="ConocimientoBeneficiarioFinalDescripcion" label="Conocimiento Beneficiario Final Descripcion" foreignKey="CONOCIMIENTO_BENEFICIARIO_FINAL" />
+    <column name="TESTAFERRO" fieldName="Testaferro" label="Testaferro" aliasColumnName="DESCRIPCION" aliasForeignKey="TESTAFERRO" />
+    <column name="DESCRIPCION" fieldName="TestaferroDescripcion" label="Testaferro Descripcion" foreignKey="TESTAFERRO" />
+    <column name="UBICACION_GEOGRAFICA" fieldName="UbicacionGeografica" label="Ubicacion Geografica" />
+    <column name="ZONA_O_DEPARTAMENTO_RESIDENCIAL" fieldName="ZonaODepartamentoResidencial" label="Zona O Departamento Residencial" aliasColumnName="DESCRIPCION" aliasForeignKey="ZONA_O_DEPARTAMENTO_RESIDENCIAL" />
+    <column name="DESCRIPCION" fieldName="ZonaODepartamentoResidencialDescripcion" label="Zona O Departamento Residencial Descripcion" foreignKey="ZONA_O_DEPARTAMENTO_RESIDENCIAL" />
+    <column name="ZONA_DEPARTAMENTO_LABORAL" fieldName="ZonaDepartamentoLaboral" label="Zona Departamento Laboral" aliasColumnName="DESCRIPCION" aliasForeignKey="ZONA_DEPARTAMENTO_LABORAL" />
+    <column name="DESCRIPCION" fieldName="ZonaDepartamentoLaboralDescripcion" label="Zona Departamento Laboral Descripcion" foreignKey="ZONA_DEPARTAMENTO_LABORAL" />
+    <column name="ZONA_O_DEPARTAMENTO_INMUEBLE" fieldName="ZonaODepartamentoInmueble" label="Zona O Departamento Inmueble" aliasColumnName="DESCRIPCION" aliasForeignKey="ZONA_O_DEPARTAMENTO_INMUEBLE" />
+    <column name="DESCRIPCION" fieldName="ZonaODepartamentoInmuebleDescripcion" label="Zona O Departamento Inmueble Descripcion" foreignKey="ZONA_O_DEPARTAMENTO_INMUEBLE" />
+    <column name="CANALES_DISTRIBUCION" fieldName="CanalesDistribucion" label="Canales Distribucion" aliasColumnName="DESCRIPCION" aliasForeignKey="CANALES_DISTRIBUCION" />
+    <column name="DESCRIPCION" fieldName="CanalesDistribucionDescripcion" label="Canales Distribucion Descripcion" foreignKey="CANALES_DISTRIBUCION" />
+    <column name="PRIMER_APELLIDO" fieldName="IDFormularioIveNF30PrimerApellido" label="ID Formulario Ive NF  30 Primer Apellido" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
+    <column name="SEGUNDO_APELLIDO" fieldName="IDFormularioIveNF30SegundoApellido" label="ID Formulario Ive NF  30 Segundo Apellido" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
+    <column name="APELLIDO_CASADA" fieldName="IDFormularioIveNF30ApellidoCasada" label="ID Formulario Ive NF  30 Apellido Casada" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
+    <column name="OTROS_NOMBRES" fieldName="IDFormularioIveNF30OtrosNombres" label="ID Formulario Ive NF  30 Otros Nombres" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
+    <column name="SEGUNDO_NOMBRE" fieldName="IDFormularioIveNF30SegundoNombre" label="ID Formulario Ive NF  30 Segundo Nombre" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
+    <column name="PRIMER_NOMBRE" fieldName="IDFormularioIveNF30PrimerNombre" label="ID Formulario Ive NF  30 Primer Nombre" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
+    <column name="LUGAR_NACIMIENTO_PAIS" fieldName="IDFormularioIveNF30LugarNacimientoPais" label="ID Formulario Ive NF  30 Lugar Nacimiento Pais" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
+    <column name="LUGAR_NACIMIENTO_DEP" fieldName="IDFormularioIveNF30LugarNacimientoDep" label="ID Formulario Ive NF  30 Lugar Nacimiento Dep" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
+    <column name="LUGAR_NACIMIENTO_MUNI" fieldName="IDFormularioIveNF30LugarNacimientoMuni" label="ID Formulario Ive NF  30 Lugar Nacimiento Muni" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
+    <column name="IVE_ARCHIVO_COD" fieldName="IDFormularioIveNF30IveArchivoCod" label="ID Formulario Ive NF  30 Ive Archivo Cod" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
+    <column name="TIPO_IDENTIFICACION" fieldName="IDFormularioIveNF30TipoIdentificacion" label="ID Formulario Ive NF  30 Tipo Identificacion" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
+    <column name="NUMERO_IDENTIFICACION" fieldName="IDFormularioIveNF30NumeroIdentificacion" label="ID Formulario Ive NF  30 Numero Identificacion" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
+    <column name="DEP_EMISION" fieldName="IDFormularioIveNF30DepEmision" label="ID Formulario Ive NF  30 Dep Emision" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
+    <column name="MUNI_EMISION" fieldName="IDFormularioIveNF30MuniEmision" label="ID Formulario Ive NF  30 Muni Emision" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
+    <column name="PAIS_EMISION" fieldName="IDFormularioIveNF30PaisEmision" label="ID Formulario Ive NF  30 Pais Emision" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
+    <column name="TELEFONO_LF" fieldName="IDFormularioIveNF30TelefonoLF" label="ID Formulario Ive NF  30 Telefono LF" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
+    <column name="CELULAR" fieldName="IDFormularioIveNF30Celular" label="ID Formulario Ive NF  30 Celular" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
+    <column name="EMAIL" fieldName="IDFormularioIveNF30Email" label="ID Formulario Ive NF  30 Email" foreignKey="ID_FORMULARIO_IVE_NF_30_" />
+    <column name="ID_FORMULARIO_IVE_NF_30" fieldName="IDFormularioIveNF30" label="ID Formulario Ive NF  30" />
+  </columns>
+</dataModel>

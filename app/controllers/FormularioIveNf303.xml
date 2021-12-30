@@ -201,7 +201,7 @@ from "dbo"."FORMULARIO_IVE_NF_30" "FORMULARIO_IVE_NF_30"
     <field name="Zona" type="String" label="Zona" length="100" />
     <field name="DirecMuni" type="Int32" label="Direc Muni" />
     <field name="DirecDep" type="Int32" label="Direc Dep" />
-    <field name="FuenteIngresoCliente" type="String" label="Fuente Ingreso Cliente" length="300" />
+    <field name="FuenteIngresoCliente" type="Int32" label="Fuente Ingreso Cliente" />
     <field name="DirecPais" type="Int32" label="Direc Pais" />
     <field name="ActuacionClienteSolicitante" type="String" label="Actuacion Cliente Solicitante" length="10" />
     <field name="NOActua" type="String" label="NO Actua" length="300" />
@@ -322,7 +322,7 @@ from "dbo"."FORMULARIO_IVE_NF_30" "FORMULARIO_IVE_NF_30"
         <dataField fieldName="Zona" />
         <dataField fieldName="DirecMuni" columns="15" />
         <dataField fieldName="DirecDep" columns="15" />
-        <dataField fieldName="FuenteIngresoCliente" />
+        <dataField fieldName="FuenteIngresoCliente" columns="15" />
         <dataField fieldName="DirecPais" columns="15" />
         <dataField fieldName="ActuacionClienteSolicitante" columns="10" />
         <dataField fieldName="NOActua" />
@@ -430,7 +430,7 @@ from "dbo"."FORMULARIO_IVE_NF_30" "FORMULARIO_IVE_NF_30"
             <dataField fieldName="Zona" />
             <dataField fieldName="DirecMuni" columns="15" />
             <dataField fieldName="DirecDep" columns="15" />
-            <dataField fieldName="FuenteIngresoCliente" />
+            <dataField fieldName="FuenteIngresoCliente" columns="15" />
             <dataField fieldName="DirecPais" columns="15" />
             <dataField fieldName="ActuacionClienteSolicitante" columns="10" />
             <dataField fieldName="NOActua" />
@@ -556,7 +556,7 @@ from "dbo"."FORMULARIO_IVE_NF_30" "FORMULARIO_IVE_NF_30"
             <dataField fieldName="Zona" />
             <dataField fieldName="DirecMuni" columns="15" />
             <dataField fieldName="DirecDep" columns="15" />
-            <dataField fieldName="FuenteIngresoCliente" />
+            <dataField fieldName="FuenteIngresoCliente" columns="15" />
             <dataField fieldName="DirecPais" columns="15" />
             <dataField fieldName="ActuacionClienteSolicitante" columns="10" />
             <dataField fieldName="NOActua" />

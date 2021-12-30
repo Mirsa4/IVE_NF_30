@@ -191,7 +191,7 @@ from "dbo"."FORMULARIO_IVE_NF_30" "FORMULARIO_IVE_NF_30"
     <field name="DirecPais" type="Int32" label="Direc Pais" />
     <field name="ActuacionClienteSolicitante" type="String" label="Actuacion Cliente Solicitante" length="10" />
     <field name="NOActua" type="String" label="NO Actua" length="300" />
-    <field name="FuenteIngresoCliente" type="String" label="Fuente Ingreso Cliente" length="300" />
+    <field name="FuenteIngresoCliente" type="Int32" label="Fuente Ingreso Cliente" />
     <field name="NombreEmpresaTrabCliente" type="String" label="Nombre Empresa Trab Cliente" length="300" />
     <field name="PuestoDesempenaCliente" type="String" label="Puesto Desempena Cliente" length="300" />
     <field name="TelefonoEmpresaCliente" type="String" label="Telefono Empresa Cliente" length="50" />
@@ -312,7 +312,7 @@ from "dbo"."FORMULARIO_IVE_NF_30" "FORMULARIO_IVE_NF_30"
         <dataField fieldName="DirecPais" columns="15" />
         <dataField fieldName="ActuacionClienteSolicitante" columns="10" />
         <dataField fieldName="NOActua" />
-        <dataField fieldName="FuenteIngresoCliente" />
+        <dataField fieldName="FuenteIngresoCliente" columns="15" />
         <dataField fieldName="NombreEmpresaTrabCliente" />
         <dataField fieldName="PuestoDesempenaCliente" />
         <dataField fieldName="TelefonoEmpresaCliente" columns="50" />
@@ -420,7 +420,7 @@ from "dbo"."FORMULARIO_IVE_NF_30" "FORMULARIO_IVE_NF_30"
             <dataField fieldName="DirecPais" columns="15" />
             <dataField fieldName="ActuacionClienteSolicitante" columns="10" />
             <dataField fieldName="NOActua" />
-            <dataField fieldName="FuenteIngresoCliente" />
+            <dataField fieldName="FuenteIngresoCliente" columns="15" />
             <dataField fieldName="NombreEmpresaTrabCliente" />
             <dataField fieldName="PuestoDesempenaCliente" />
             <dataField fieldName="TelefonoEmpresaCliente" columns="50" />
@@ -546,7 +546,7 @@ from "dbo"."FORMULARIO_IVE_NF_30" "FORMULARIO_IVE_NF_30"
             <dataField fieldName="DirecPais" columns="15" />
             <dataField fieldName="ActuacionClienteSolicitante" columns="10" />
             <dataField fieldName="NOActua" />
-            <dataField fieldName="FuenteIngresoCliente" />
+            <dataField fieldName="FuenteIngresoCliente" columns="15" />
             <dataField fieldName="NombreEmpresaTrabCliente" />
             <dataField fieldName="PuestoDesempenaCliente" />
             <dataField fieldName="TelefonoEmpresaCliente" columns="50" />
